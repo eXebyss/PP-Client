@@ -1,0 +1,44 @@
+$color2: rgb(254, 255, 225);
+
+$timeline-body-bg: #27293d;
+
+.info-block {
+	background-color: $timeline-body-bg;
+	box-shadow: yellow 0px 5px 15px;
+	font-style: normal;
+	font-weight: normal;
+
+	.first-block {
+		color: yellow;
+		text-align: center;
+
+		i {
+			font-size: 10rem;
+		}
+	}
+	.second-block {
+		text-align: justify;
+		text-justify: inter-word;
+		padding: 1rem;
+
+		p {
+			line-height: 1.5;
+			color: white;
+
+			span {
+				color: yellow;
+			}
+		}
+
+		p:first-child::first-letter {
+			font-style: normal;
+			color: yellow;
+			font-weight: bold;
+			font-size: 70px;
+			float: left;
+			line-height: 60px;
+			padding-right: 8px;
+			margin-top: -3px;
+		}
+	}
+}

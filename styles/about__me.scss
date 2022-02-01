@@ -1,0 +1,53 @@
+$color2: rgb(254, 255, 225);
+
+.about__me {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 5vh auto auto;
+
+	.nav-bar {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	.info__about__me {
+		grid-column: 1;
+		grid-row: 2;
+		min-height: 90vh;
+
+		p {
+			color: white;
+			margin: 0 25vw 1.5rem 25vw;
+		}
+
+		h2 {
+			color: white;
+			text-align: center;
+		}
+
+		h3 {
+			color: white;
+			text-align: center;
+		}
+
+		h4 {
+			color: white;
+			text-align: center;
+			font-style: italic;
+			margin-bottom: 1.5rem;
+		}
+
+		.avatar {
+			box-shadow: $color2 0px 5px 15px;
+			left: 45%;
+			margin-bottom: 2rem;
+		}
+	}
+
+	.footer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+	}
+}

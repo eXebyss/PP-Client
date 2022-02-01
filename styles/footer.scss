@@ -1,0 +1,93 @@
+$color1: #7a7a7a;
+$color2: rgb(254, 255, 225);
+
+.footer {
+	line-height: 1.2;
+	background-color: $color2;
+	color: black;
+	min-height: 5vh;
+	text-align: center;
+	background: linear-gradient(
+		45deg,
+		$color2,
+		#f9ffac,
+		#f8ff9b,
+		#f7ff86,
+		#f6ff75,
+		#f5ff5f,
+		#f4ff46,
+		#f3ff33,
+		#f1ff0f,
+		yellow,
+		#f1ff0f,
+		#f3ff33,
+		#f4ff46,
+		#f5ff5f,
+		#f6ff75,
+		#f7ff86,
+		#f8ff9b,
+		#f9ffac,
+		$color2
+	);
+	background-size: 1800% 1800%;
+
+	-webkit-animation: AnimationName 20s ease infinite;
+	-moz-animation: AnimationName 20s ease infinite;
+	-o-animation: AnimationName 20s ease infinite;
+	animation: AnimationName 20s ease infinite;
+
+	p {
+		margin-bottom: 0;
+		margin-left: 0.2rem;
+	}
+
+	a {
+		margin-left: 0.5rem;
+		color: black;
+	}
+}
+
+@-webkit-keyframes AnimationName {
+	0% {
+		background-position: 0% 90%;
+	}
+	50% {
+		background-position: 100% 10%;
+	}
+	100% {
+		background-position: 0% 90%;
+	}
+}
+@-moz-keyframes AnimationName {
+	0% {
+		background-position: 0% 90%;
+	}
+	50% {
+		background-position: 100% 10%;
+	}
+	100% {
+		background-position: 0% 90%;
+	}
+}
+@-o-keyframes AnimationName {
+	0% {
+		background-position: 0% 90%;
+	}
+	50% {
+		background-position: 100% 10%;
+	}
+	100% {
+		background-position: 0% 90%;
+	}
+}
+@keyframes AnimationName {
+	0% {
+		background-position: 0% 90%;
+	}
+	50% {
+		background-position: 100% 10%;
+	}
+	100% {
+		background-position: 0% 90%;
+	}
+}

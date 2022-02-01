@@ -1,0 +1,10 @@
+$color2: rgb(254, 255, 225);
+
+.progress {
+	margin-top: 0.5rem;
+	background-color: $color2;
+
+	.progress-bar {
+		color: white;
+	}
+}

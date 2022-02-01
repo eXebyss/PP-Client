@@ -1,0 +1,46 @@
+$color2: rgb(254, 255, 225);
+
+$timeline-body-bg: #27293d;
+
+.portfolio-works {
+	text-align: center;
+
+	div.container-for-example {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		border: 1px solid yellow;
+		background-color: $timeline-body-bg;
+		box-shadow: yellow 0px 5px 15px;
+
+		a {
+			text-decoration: none;
+
+			h2 {
+				padding-top: 1rem;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: rgb(254, 255, 225);
+			}
+
+			h2:hover {
+				color: yellow;
+			}
+		}
+
+		p {
+			color: $color2;
+		}
+
+		span {
+			color: yellow;
+		}
+
+		img {
+			padding: 1rem;
+			padding-right: 1.5rem;
+			width: 40vw;
+			height: 30vw;
+			color: yellow;
+		}
+	}
+}

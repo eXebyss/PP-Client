@@ -1,0 +1,17 @@
+@media (prefers-reduced-motion: no-preference) {
+	.header__animation {
+		animation: typing 3s steps(22), blink 0.5s step-end infinite alternate;
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+		}
+
+		@keyframes blink {
+			50% {
+				border-color: transparent;
+			}
+		}
+	}
+}
