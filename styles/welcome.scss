@@ -25,9 +25,9 @@ $color2: rgb(254, 255, 225);
 		@keyframes glow {
 			from {
 				color: $color1;
-				text-shadow: 0 0 0.625rem $color2, 0 0 1.25rem $color2, 0 0 1.875rem $color2,
-					0 0 2.5rem $color2, 0 0 3.125rem $color2, 0 0 3.75rem $color2, 0 0 4.375rem $color2,
-					0 0 5.625rem $color2;
+				text-shadow: 0 0 0.625rem $color2, 0 0 1.25rem $color2,
+					0 0 1.875rem $color2, 0 0 2.5rem $color2, 0 0 3.125rem $color2,
+					0 0 3.75rem $color2, 0 0 4.375rem $color2, 0 0 5.625rem $color2;
 			}
 
 			to {
@@ -39,10 +39,8 @@ $color2: rgb(254, 255, 225);
 
 	#second-line {
 		margin-top: 0rem;
-		// width: 8em;
-		// height: 1.2em;
-		width: 45rem;
-		height: 7.3rem;			
+		width: 58vw;
+		height: 10vw;
 		white-space: nowrap;
 		overflow: hidden;
 		border-right: 0.625rem solid;

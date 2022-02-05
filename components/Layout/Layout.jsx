@@ -16,7 +16,7 @@ export default function Layout({ children }) {
 						siteTitle
 					)}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
 				/>
-				<meta name='og:title' content={siteTitle} />
+				<meta name='og:title' content='Mihails Fjodorovs Portfolio Page' />
 				<meta name='twitter:card' content='summary_large_image' />
 				<link
 					rel='stylesheet'

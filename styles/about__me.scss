@@ -38,8 +38,9 @@ $color2: rgb(254, 255, 225);
 		}
 
 		.avatar {
-			box-shadow: $color2 0px 5px 15px;
-			left: 45%;
+			box-shadow: $color2 0px 5px 15px;			
+			margin-left: auto;
+			margin-right: auto;
 			margin-bottom: 2rem;
 		}
 	}
