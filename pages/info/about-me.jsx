@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Footer from '../../components/Footer'
 import InfoAboutMe from '../../components/InfoAboutMe'
-import Layout, { siteTitle } from '../../components/Layout'
+import Layout, { siteTitle } from '../../components/Layout/Layout'
 import Navbar from '../../components/Navbar/Navbar'
 
 export default function AboutMe() {

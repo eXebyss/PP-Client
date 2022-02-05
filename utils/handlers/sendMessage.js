@@ -4,7 +4,7 @@ import { API_URL } from '../../config/config'
 const sendMessage = async (e, name, email, message) => {
 	e.preventDefault()
 	try {
-		await axios.post(`${API_URL}` || process.env.API_URL, {
+		await axios.post(`${API_URL}`, {
 			name: name,
 			email: email,
 			message: message,
