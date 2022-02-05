@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useEffect } from 'react'
-import Layout, { siteTitle } from '../components/Layout'
+import Layout, { siteTitle } from '../components/Layout/Layout'
 import App from '../app/App'
 import observerForHeader from '../utils/observers/observer-header'
 import observersForInfo from '../utils/observers/observer-info'
