@@ -18,6 +18,7 @@ import '../styles/footer.scss'
 import '../styles/react-logo.scss'
 import '../styles/redux-logo.scss'
 import '../styles/about__me.scss'
+import '../styles/@media.scss'
 
 function MyApp({ Component, pageProps }) {
 	return (
