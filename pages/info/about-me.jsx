@@ -8,7 +8,8 @@ export default function AboutMe() {
 	return (
 		<Layout>
 			<Head>
-				<title>{siteTitle}</title>
+				<title>{siteTitle}: Info</title>
+				<meta name='description' content='Information page about M.F.' />
 			</Head>
 			<div className='about__me'>
 				<Navbar />

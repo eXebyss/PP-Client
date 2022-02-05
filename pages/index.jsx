@@ -15,7 +15,11 @@ export default function Home() {
 	return (
 		<Layout>
 			<Head>
-				<title>{siteTitle}</title>
+				<title>{siteTitle}: Main</title>
+				<meta
+					name='description'
+					content='This is Mihails Fjodorovs portfolio page.'
+				/>
 			</Head>
 			<App />
 		</Layout>

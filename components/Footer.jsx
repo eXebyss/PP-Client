@@ -18,6 +18,7 @@ function Footer() {
 				love what I do. And if it could have been done even better, then in the
 				future it will definitely be so. ❤️
 			</p>
+			<p>v1.0</p>
 		</div>
 	)
 }
