@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Navbar from '../components/Navbar/Navbar'
-import Portfolio from '../components/Portfolio'
+import Portfolio from '../components/Portfolio/Portfolio'
 
 function App() {
 

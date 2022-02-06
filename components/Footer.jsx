@@ -14,7 +14,7 @@ function Footer() {
 				<i className='fa-brands fa-linkedin'></i>
 			</a>
 			<p>
-				I know I&apos;m not perfect and could have done better. But still, I
+				I know, I&apos;m not perfect and could have done better. But still, I
 				love what I do. And if it could have been done even better, then in the
 				future it will definitely be so. ❤️
 			</p>

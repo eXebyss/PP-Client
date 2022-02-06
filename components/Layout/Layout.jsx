@@ -18,18 +18,6 @@ export default function Layout({ children }) {
 				/>
 				<meta name='og:title' content='Mihails Fjodorovs Portfolio Page' />
 				<meta name='twitter:card' content='summary_large_image' />
-				<link
-					rel='stylesheet'
-					href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'
-					integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm'
-					crossOrigin='anonymous'
-				/>
-				<link
-					href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css'
-					rel='stylesheet'
-					integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3'
-					crossOrigin='anonymous'
-				/>
 			</Head>
 			<main>
 				<Script
