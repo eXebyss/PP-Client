@@ -6,10 +6,7 @@ export default function ThisWebSite() {
 	return (
 		<>
 			<div className='container-for-example'>
-				<a
-					href='https://pp-nextjs.vercel.app/'
-					title='Portfolio Page'
-					target='blank'>
+				<a href='.' title='Portfolio Page' target='blank'>
 					<h2>Portfolio Page</h2>
 					<p>
 						Technology stack used:{' '}
