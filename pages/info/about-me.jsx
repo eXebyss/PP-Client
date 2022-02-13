@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Footer from '../../components/Footer'
+import Footer from '../../components/Footer/Footer'
 import InfoAboutMe from '../../components/InfoAboutMe'
 import Layout, { siteTitle } from '../../components/Layout/Layout'
 import Navbar from '../../components/Navbar/Navbar'

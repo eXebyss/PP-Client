@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Alert from '@mui/material/Alert'
 import Input from './input/Input'
 import Button from './button/Button'
 import Textarea from './textarea/Textarea'
@@ -35,7 +36,9 @@ function ContactForm() {
 						{success ? (
 							<div className='success'>
 								<h3>Thank you!</h3>
-								<p>Your message has been sent!</p>
+								<Alert severity='success' className='successMessage'>
+									Your message has been sent!
+								</Alert>
 							</div>
 						) : (
 							<div>

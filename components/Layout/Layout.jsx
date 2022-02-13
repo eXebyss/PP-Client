@@ -18,6 +18,10 @@ export default function Layout({ children }) {
 				/>
 				<meta name='og:title' content='Mihails Fjodorovs Portfolio Page' />
 				<meta name='twitter:card' content='summary_large_image' />
+				<meta
+					name='description'
+					content='Mihails Fjodorovs. I am Front-End developer. Working mainly with React.js. Also familiar with Next.js. For Back-End I use Node.js with Express.js.'
+				/>
 			</Head>
 			<main>
 				<Script

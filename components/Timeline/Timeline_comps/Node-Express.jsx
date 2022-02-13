@@ -14,7 +14,7 @@ function NodeJS() {
 					For Back-End I use Node.js with Express.js. A little about the
 					technologies that I can implement on Node.js server: connecting and
 					operating the server with SQL/No-SQL databases, authorizing through
-					the JWT token, implementing Long Polling / Event Sourcing/ WebSocket
+					the JWT token, implementing Long Polling / Event Sourcing / WebSocket
 					(via Socket.io), REST API. At this stage, I spent more time on the
 					Front-End than on the Back-End.
 				</p>
@@ -24,7 +24,7 @@ function NodeJS() {
 						className='progress-bar'
 						role='progressbar'
 						style={{ width: '60%' }}
-						aria-label="NodeJS"
+						aria-label='NodeJS'
 						aria-valuenow='60'
 						aria-valuemin='0'
 						aria-valuemax='100'>

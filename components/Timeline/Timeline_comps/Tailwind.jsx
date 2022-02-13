@@ -12,7 +12,7 @@ function Tailwind() {
 					<span className='badge'>Tailwind</span>
 				</h1>
 				<p>
-					Familiar with such CSS framework as Tailwind CSS. Have use it in my
+					Familiar with such CSS framework as Tailwind CSS. Have used it in my
 					personal projects.
 				</p>
 				<div className='progress'>
@@ -21,7 +21,7 @@ function Tailwind() {
 						className='progress-bar'
 						role='progressbar'
 						style={{ width: '65%' }}
-						aria-label="Tailwind"
+						aria-label='Tailwind'
 						aria-valuenow='65'
 						aria-valuemin='0'
 						aria-valuemax='100'>

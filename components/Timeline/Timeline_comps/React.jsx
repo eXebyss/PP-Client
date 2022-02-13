@@ -1,10 +1,10 @@
 import React from 'react'
-// import '../../../styles/react-logo.css'
+import styles from './react.module.scss'
 
 function ReactJS() {
 	return (
 		<div className='timeline-container-two react' id='front-end'>
-			<div id="app-logo-react" className='timeline-icon'>
+			<div id='app-logo-react' className='timeline-icon'>
 				<i className='fa-brands fa-react'></i>
 			</div>
 			<div className='timeline-body'>
@@ -14,8 +14,11 @@ function ReactJS() {
 				<p>
 					My main focus at the moment is React.js as Front-End framework. After
 					this page was written in plain HTML, it was bootstrapped with
-					React.js. *Link* for my React SPAs. The goal is to master advanced
-					level.
+					React.js. My{' '}
+					<span className={styles.link}>
+						<a href='#reactSPA'>React SPAs</a>
+					</span>
+					. The goal is to master advanced level.
 				</p>
 				<div className='progress'>
 					<div
@@ -23,7 +26,7 @@ function ReactJS() {
 						className='progress-bar'
 						role='progressbar'
 						style={{ width: '65%' }}
-						aria-label="PWA"
+						aria-label='PWA'
 						aria-valuenow='65'
 						aria-valuemin='0'
 						aria-valuemax='100'>

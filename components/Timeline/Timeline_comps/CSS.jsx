@@ -13,9 +13,9 @@ function CSS() {
 				<p>
 					A logical continuation after HTML5. Initially, I didn&apos;t pay much
 					attention to CSS3, as I was more eager to learn JavaScript and various
-					popular frameworks. Therefore, the main goal of creating this site was
-					to improve the skill of working with styles. Especially responsive
-					design.
+					popular frameworks. Therefore, the main goal of creating this website
+					was to improve the skill of working with styles. Especially with
+					adaptive and responsive design.
 				</p>
 				<div className='progress'>
 					<div
@@ -23,7 +23,7 @@ function CSS() {
 						className='progress-bar'
 						role='progressbar'
 						style={{ width: '75%' }}
-						aria-label="CSS"
+						aria-label='CSS'
 						aria-valuenow='75'
 						aria-valuemin='0'
 						aria-valuemax='100'>

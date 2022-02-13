@@ -1,6 +1,6 @@
 import { Avatar } from '@mui/material'
 import Image from 'next/image'
-import avatarPic from '../public/images/mf.jpeg'
+import avatarPic from '../public/images/avatar.jpg'
 
 export default function InfoAboutMe() {
 	return (

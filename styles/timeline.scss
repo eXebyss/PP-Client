@@ -19,6 +19,7 @@ $graphql: #e535ab;
 $apollo: #112b49;
 $nextjs: black;
 $webpack: #1c78c0;
+$materialUI: #007fff;
 
 // timeline variables
 $body-bg: #1e1e2f;
@@ -255,6 +256,13 @@ $timeline-body-shadow1: 1px 3px 9px yellow;
 			.badge,
 			.timeline-icon {
 				background: $nextjs !important;
+			}
+		}
+
+		&.materialUI {
+			.badge,
+			.timeline-icon {
+				background: $materialUI !important;
 			}
 		}
 	}

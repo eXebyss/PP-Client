@@ -1,4 +1,4 @@
-//1 Global Observer for Timeline Component. Every new const is copy-paste.
+//One Global Observer for Timeline Component. Every new const is copy-paste.
 const observersForTimeline = () => {
 	const observerHTML = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
@@ -254,6 +254,21 @@ const observersForTimeline = () => {
 	})
 
 	observerNextJS.observe(document.querySelector('.nextjs'))
+
+	const observerMaterialUI = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+			const materialUI = entry.target.querySelector('#progress-bar-materialUI')
+
+			if (entry.isIntersecting) {
+				materialUI.classList.add('materialUI__animation')
+				return
+			}
+
+			materialUI.classList.remove('materialUI__animation')
+		})
+	})
+
+	observerMaterialUI.observe(document.querySelector('.materialUI'))
 }
 
 export default observersForTimeline

@@ -219,4 +219,17 @@
 			}
 		}
 	}
+
+	.materialUI__animation {
+		animation: progress18 4s linear;
+
+		@keyframes progress18 {
+			0% {
+				width: 0%;
+			}
+			100% {
+				width: 30%;
+			}
+		}
+	}
 }

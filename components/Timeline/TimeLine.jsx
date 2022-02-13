@@ -15,6 +15,7 @@ import SASS from './Timeline_comps/SASS'
 import Tailwind from './Timeline_comps/Tailwind'
 import TS from './Timeline_comps/TS'
 import Webpack from './Timeline_comps/Webpack'
+import MaterialUI from './Timeline_comps/MaterialUI'
 
 function TimeLine() {
 	return (
@@ -38,6 +39,7 @@ function TimeLine() {
 				<GraphQL />
 				<ApolloGraphQL />
 				<NextJS />
+				<MaterialUI />
 			</div>
 		</div>
 	)

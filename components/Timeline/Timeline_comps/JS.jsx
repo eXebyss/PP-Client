@@ -12,8 +12,8 @@ function JS() {
 				</h1>
 				<p>
 					My main aim in my web-dev journey was, is and probably will be
-					JavaScript (ES6) and related frameworks. I use it both for Front-End
-					and Back-End. I can’t say for sure that I studied it completely. I
+					JavaScript and related frameworks. I use it both for Front-End and
+					Back-End. I can&apos;t say for sure that I studied it completely. I
 					still find various interesting things about it. Not to mention the
 					different frameworks.
 				</p>
@@ -23,7 +23,7 @@ function JS() {
 						className='progress-bar'
 						role='progressbar'
 						style={{ width: '75%' }}
-						aria-label="JavaScript"
+						aria-label='JavaScript'
 						aria-valuenow='75'
 						aria-valuemin='0'
 						aria-valuemax='100'>

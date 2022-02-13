@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import priceApp from '../../../public/images/price-app.jpg'
+import styles from './portfolioWorks.module.scss'
 
 export default function PriceApp() {
 	return (
 		<>
-			<div className='container-for-example'>
+			<div className='container-for-example' id='reactSPA'>
 				<a
 					href='https://pricesapp.vercel.app/'
 					title='Price App'
@@ -16,6 +17,7 @@ export default function PriceApp() {
 					</p>
 				</a>
 				<Image src={priceApp} alt='Price-App' />
+				<p className={styles.date}>September 2021</p>
 			</div>
 		</>
 	)

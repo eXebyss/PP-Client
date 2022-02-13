@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import chatApp from '../../../public/images/chat-app.jpg'
+import styles from './portfolioWorks.module.scss'
 
 export default function ChatApp() {
 	return (
@@ -19,6 +20,7 @@ export default function ChatApp() {
 					</p>
 				</a>
 				<Image src={chatApp} alt='Chat-App' />
+				<p className={styles.date}>October 2021</p>
 			</div>
 		</>
 	)

@@ -12,11 +12,11 @@ function PWA() {
 					<span className='badge'>PWA</span>
 				</h1>
 				<p>
-					Familiar with PWA.
+					Familiar with PWA.{' '}
 					<span>
 						<a href='#price-app'>This</a>
-					</span>
-					work is optimized for PWA.
+					</span>{' '}
+					website is optimized for PWA.
 				</p>
 				<div className='progress'>
 					<div

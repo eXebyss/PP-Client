@@ -1,6 +1,7 @@
-import PriceApp from './portfolio_works/PriceApp'
-import ChatApp from './portfolio_works/ChatApp'
-import ThisWebSite from './portfolio_works/ThisWebSite'
+import PriceApp from './portfolioWorks/PriceApp'
+import ChatApp from './portfolioWorks/ChatApp'
+import ThisWebSite from './portfolioWorks/ThisWebSite'
+import TestTaskOne from './portfolioWorks/TestTaskOne'
 
 function Portfolio() {
 	return (
@@ -8,6 +9,7 @@ function Portfolio() {
 			<h1 className='div__heading'>— Some Portfolio Works —</h1>
 			<PriceApp />
 			<ChatApp />
+			<TestTaskOne />
 			<ThisWebSite />
 		</div>
 	)
