@@ -14,11 +14,16 @@ function Footer() {
 				aria-label='LinkedIn'>
 				<i className='fa-brands fa-linkedin'></i>
 			</a>
-			<img
-				src='https://www.codewars.com/users/eXebyss/badges/micro'
-				alt='Codewars'
-				className={styles.codewarsBadge}
-			/>
+			<a
+				href='https://www.codewars.com/users/eXebyss'
+				target='blank'
+				aria-label='Codewars'>
+				<img
+					src='https://www.codewars.com/users/eXebyss/badges/micro'
+					alt='Codewars'
+					className={styles.codewarsBadge}
+				/>
+			</a>
 			<p>
 				I know, I&apos;m not perfect and could have done better. But still, I
 				love what I do. And if it could have been done even better, then in the
