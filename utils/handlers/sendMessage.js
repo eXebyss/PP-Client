@@ -3,12 +3,16 @@ import { API_URL } from '../../config/config'
 
 const sendMessage = async (e, name, email, message) => {
 	e.preventDefault()
+	const date = new Date(Date.now())
 	try {
 		await axios.post(`${API_URL}`, {
 			name: name,
 			email: email,
 			message: message,
-			date: new Date(Date.now()).toLocaleString('lv', { hour12: false }),
+			date: date,
+			dateString: date.toLocaleString('lv-LV', {
+				hour12: false,
+			}),
 		})
 	} catch (err) {
 		console.log(`${err.response.data.message}.`, 'Error 1: post')
