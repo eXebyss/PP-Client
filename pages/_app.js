@@ -2,6 +2,8 @@ import Script from 'next/script'
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
+import { APOLLO_SERVER_API_URL } from '../config/config'
+
 import '../styles/reset.styles.scss'
 import '../styles/index.scss'
 import '../styles/scrollbar.scss'
@@ -23,7 +25,7 @@ import '../styles/about__me.scss'
 import '../styles/@media.scss'
 
 const client = new ApolloClient({
-	uri: process.env.APOLLO_SERVER_API_URL,
+	uri: APOLLO_SERVER_API_URL,
 	cache: new InMemoryCache(),
 })
 
