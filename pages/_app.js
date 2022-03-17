@@ -23,7 +23,7 @@ import '../styles/about__me.scss'
 import '../styles/@media.scss'
 
 const client = new ApolloClient({
-	uri: process.env.API_URL,
+	uri: process.env.APOLLO_SERVER_API_URL,
 	cache: new InMemoryCache(),
 })
 
