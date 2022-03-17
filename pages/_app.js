@@ -1,5 +1,7 @@
 import Script from 'next/script'
 
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
+
 import '../styles/reset.styles.scss'
 import '../styles/index.scss'
 import '../styles/scrollbar.scss'
@@ -20,9 +22,14 @@ import '../styles/redux-logo.scss'
 import '../styles/about__me.scss'
 import '../styles/@media.scss'
 
+const client = new ApolloClient({
+	uri: process.env.API_URL,
+	cache: new InMemoryCache(),
+})
+
 function MyApp({ Component, pageProps }) {
 	return (
-		<>
+		<ApolloProvider client={client}>
 			<Script
 				strategy='lazyOnload'
 				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
@@ -37,7 +44,7 @@ function MyApp({ Component, pageProps }) {
           `}
 			</Script>
 			<Component {...pageProps} />
-		</>
+		</ApolloProvider>
 	)
 }
 
