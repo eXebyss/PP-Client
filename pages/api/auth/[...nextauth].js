@@ -58,5 +58,5 @@ export default NextAuth({
 		deleteDoc,
 		runTransaction,
 	}),
-	secret: process.env.SECRET,
+	secret: 'TEST_SECRET',
 })
