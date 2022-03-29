@@ -1,5 +1,7 @@
 import Script from 'next/script'
 
+import { SessionProvider } from 'next-auth/react'
+
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
 import { APOLLO_SERVER_API_URL } from '../config/config'
@@ -29,25 +31,27 @@ const client = new ApolloClient({
 	cache: new InMemoryCache(),
 })
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps: { session, ...pageProps } }) {
 	return (
-		<ApolloProvider client={client}>
-			<Script
-				strategy='lazyOnload'
-				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-			/>
-			<Script id='ga-analytics'>
-				{`
+		<SessionProvider session={session}>
+			<ApolloProvider client={client}>
+				<Script
+					strategy='lazyOnload'
+					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+				/>
+				<Script id='ga-analytics'>
+					{`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
           `}
-			</Script>
-			<Component {...pageProps} />
-		</ApolloProvider>
+				</Script>
+				<Component {...pageProps} />
+			</ApolloProvider>
+		</SessionProvider>
 	)
 }
 
-export default MyApp
+export default App
