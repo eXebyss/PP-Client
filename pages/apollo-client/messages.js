@@ -46,7 +46,8 @@ function Messages() {
 	}
 	return (
 		<>
-			Not signed in <br />
+			<span style={{ color: 'yellow' }}>Not signed in </span>
+			<br />
 			<button onClick={() => signIn()}>Sign in</button>
 		</>
 	)
