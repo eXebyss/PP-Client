@@ -18,6 +18,7 @@ function Messages() {
 	const { loading, error, data } = useQuery(MESSAGES)
 
 	const { data: session } = useSession()
+
 	if (session) {
 		if (loading) return <p style={{ color: 'yellow' }}>Loading...</p>
 		if (error) return <p style={{ color: 'yellow' }}>Error😕</p>
@@ -44,6 +45,7 @@ function Messages() {
 			</>
 		)
 	}
+
 	return (
 		<>
 			<span style={{ color: 'yellow' }}>Not signed in </span>
