@@ -15,10 +15,11 @@ const MESSAGES = gql`
 `
 
 function Messages() {
-	const { loading, error, data } = useQuery(MESSAGES)
-
 	const { data: session } = useSession()
+
 	if (session) {
+		const { loading, error, data } = useQuery(MESSAGES)
+
 		if (loading) return <p style={{ color: 'yellow' }}>Loading...</p>
 		if (error) return <p style={{ color: 'yellow' }}>Error😕</p>
 
