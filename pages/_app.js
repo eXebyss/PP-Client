@@ -2,10 +2,6 @@ import Script from 'next/script'
 
 import { SessionProvider } from 'next-auth/react'
 
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
-
-import { APOLLO_SERVER_API_URL } from '../config/config'
-
 import '../styles/reset.styles.scss'
 import '../styles/index.scss'
 import '../styles/scrollbar.scss'
@@ -26,30 +22,23 @@ import '../styles/redux-logo.scss'
 import '../styles/about__me.scss'
 import '../styles/@media.scss'
 
-const client = new ApolloClient({
-	uri: APOLLO_SERVER_API_URL,
-	cache: new InMemoryCache(),
-})
-
 function App({ Component, pageProps: { session, ...pageProps } }) {
 	return (
 		<SessionProvider session={session}>
-			<ApolloProvider client={client}>
-				<Script
-					strategy='lazyOnload'
-					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-				/>
-				<Script id='ga-analytics'>
-					{`
+			<Script
+				strategy='lazyOnload'
+				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+			/>
+			<Script id='ga-analytics'>
+				{`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
           `}
-				</Script>
-				<Component {...pageProps} />
-			</ApolloProvider>
+			</Script>
+			<Component {...pageProps} />
 		</SessionProvider>
 	)
 }
