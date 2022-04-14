@@ -1,28 +1,36 @@
-import { useQuery, gql } from '@apollo/client'
+import { gql } from '@apollo/client'
+import client from '../../apollo-client'
 import { useSession, signIn, signOut } from 'next-auth/react'
 
-const MESSAGES = gql`
-	query getMessages {
-		messages {
-			_id
-			name
-			email
-			message
-			date
-			dateString
-		}
+export async function getServerSideProps() {
+	const { data } = await client.query({
+		query: gql`
+			query getMessages {
+				messages {
+					_id
+					name
+					email
+					message
+					date
+					dateString
+				}
+			}
+		`,
+	})
+
+	console.log(data.messages)
+
+	return {
+		props: {
+			messages: data.messages,
+		},
 	}
-`
+}
 
-function Messages() {
-	const { loading, error, data } = useQuery(MESSAGES)
-
+function Messages({ messages }) {
 	const { data: session } = useSession()
 
 	if (session) {
-		if (loading) return <p style={{ color: 'yellow' }}>Loading...</p>
-		if (error) return <p style={{ color: 'yellow' }}>Error😕</p>
-
 		return (
 			<>
 				<span style={{ color: 'yellow' }}>
@@ -30,18 +38,16 @@ function Messages() {
 				</span>{' '}
 				<br />
 				<button onClick={() => signOut()}>Sign out</button>
-				{data.messages.map(
-					({ _id, name, email, message, date, dateString }) => (
-						<div key={_id}>
-							<p style={{ color: 'yellow' }}>
-								📧 {name} ({email}), has written: <br />
-								{message}
-								<br />
-								Date: {dateString ? dateString : date}
-							</p>
-						</div>
-					)
-				)}
+				{messages.map(({ _id, name, email, message, date, dateString }) => (
+					<div key={_id}>
+						<p style={{ color: 'yellow', marginTop: '1rem' }}>
+							📧 {name} ({email}), has written: <br />
+							{message}
+							<br />
+							Date: {dateString ? dateString : date}
+						</p>
+					</div>
+				))}
 			</>
 		)
 	}
@@ -55,11 +61,11 @@ function Messages() {
 	)
 }
 
-export default function ApolloApp() {
+export default function ApolloApp({ messages }) {
 	return (
 		<div>
 			<h2 style={{ color: 'yellow' }}>📫 Message list:</h2>
-			<Messages />
+			<Messages messages={messages} />
 		</div>
 	)
 }
