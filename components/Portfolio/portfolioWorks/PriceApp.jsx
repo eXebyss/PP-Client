@@ -13,7 +13,7 @@ export default function PriceApp() {
 					<h2>Price App</h2>
 					<p>
 						Technology stack used:{' '}
-						<span>React, Redux, Tailwind CSS, PWA, Webpack</span>.
+						<span>React, Redux, Tailwind CSS (2.0), PWA, Webpack</span>.
 					</p>
 				</a>
 				<Image src={priceApp} alt='Price-App' />
