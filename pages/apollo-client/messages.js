@@ -20,8 +20,6 @@ export async function getServerSideProps() {
 		`,
 	})
 
-	console.log(data.messages)
-
 	return {
 		props: {
 			messages: data.messages,
