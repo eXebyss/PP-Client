@@ -1,13 +1,13 @@
 $color1: #7a7a7a;
 $color2: rgb(254, 255, 225);
 
-.header {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+.welcomeScreen {
+	@apply flex
+		items-center
+		justify-center
+		flex-col;
 
-	#first-line {
+	.firstLine {
 		font-weight: normal;
 		font-family: 'Mr Dafoe';
 		font-size: 14vw;
@@ -37,7 +37,7 @@ $color2: rgb(254, 255, 225);
 		}
 	}
 
-	#second-line {
+	.secondLine {
 		margin-top: 0rem;
 		width: 58vw;
 		height: 10vw;
