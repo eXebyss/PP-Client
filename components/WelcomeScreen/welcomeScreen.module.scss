@@ -8,11 +8,15 @@ $color2: rgb(254, 255, 225);
 		flex-col;
 
 	.firstLine {
-		font-weight: normal;
-		font-family: 'Mr Dafoe';
+		@apply font-normal
+			leading-4
+			text-center
+			font-mrDafoe;
+		// font-weight: normal;
+		// font-family: 'Mr Dafoe';
 		font-size: 14vw;
-		text-align: center;
-		line-height: 1;
+		// text-align: center;
+		// line-height: 1;
 		color: $color1;
 		text-shadow: 0.25rem 0.1875rem 0rem yellow;
 		letter-spacing: -0.5rem;

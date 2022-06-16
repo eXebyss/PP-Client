@@ -2,7 +2,7 @@ import Script from 'next/script'
 
 import { SessionProvider } from 'next-auth/react'
 
-import '../styles/reset.styles.scss'
+import '../styles/global.scss'
 import '../styles/index.scss'
 import '../styles/scrollbar.scss'
 import '../styles/animations.scss'
