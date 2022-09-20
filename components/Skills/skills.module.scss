@@ -1,0 +1,93 @@
+.root {
+	@apply hero 
+        bg-base-200;
+}
+
+.heroContent {
+	@apply hero-content 
+        text-center;
+}
+
+.heroSubContent {
+	@apply max-w-md
+                md:max-w-lg
+                lg:max-w-xl
+                xl:max-w-2xl
+                2xl:max-w-3xl;
+}
+
+.headerSkills {
+	@apply font-bold 
+        pt-4
+        md:pt-6;
+}
+
+.headerTechSpec {
+	@apply py-2 
+        md:py-4                
+        text-2xl
+        md:text-3xl
+        fhd:text-4xl;
+}
+
+.techSpecSpan {
+	@apply text-primary;
+}
+
+.skillsInfoContainer {
+	@apply grid;
+}
+
+.skillsGrid {
+	@apply row-start-2
+        grid 
+        gap-x-2        
+        gap-y-2
+        grid-cols-2
+        w-60
+        mx-auto
+        text-start
+        md:w-auto        
+        md:gap-x-4
+        md:gap-y-4
+        md:grid-cols-3
+        lg:grid-cols-4;
+}
+
+.skillsGrid h3 {
+	@apply text-base
+                md:text-xl
+                fhd:text-2xl;
+}
+
+.skillsGrid h6::before {
+	font-family: 'Font Awesome 6 Free';
+	content: '\f0da';
+	@apply text-primary 
+                font-black 
+                pr-2;
+}
+
+.skillsGrid ul {
+	@apply mb-2
+                lg:mb-4;
+}
+
+.skillsInfoText {
+	@apply row-start-1
+        my-4
+        text-justify;
+}
+
+.skillsInfoText p {
+	@apply pb-4
+                md:pb-8;
+}
+
+.skillsInfoText p:nth-of-type(3) {
+	@apply pb-0;
+}
+
+.skillsInfoText p b {
+	@apply text-primary;
+}

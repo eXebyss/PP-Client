@@ -1,0 +1,13 @@
+.tabsContent li p::before {
+	font-family: 'Font Awesome 6 Free';
+	content: '\f0da';
+	@apply text-primary 
+                font-black 
+                pr-2;
+}
+
+.tabsContent h3 {
+	@apply text-base
+	md:text-xl
+	fhd:text-2xl;
+}

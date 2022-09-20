@@ -1,29 +1,10 @@
 import Script from 'next/script'
 
-import { SessionProvider } from 'next-auth/react'
+import '../styles/global/index.scss'
 
-import '../styles/global.scss'
-import '../styles/index.scss'
-import '../styles/scrollbar.scss'
-import '../styles/animations.scss'
-import '../styles/animations-timeline.scss'
-import '../styles/animation-header.scss'
-import '../styles/animation-info.scss'
-import '../styles/navbar.scss'
-import '../styles/info.scss'
-import '../styles/timeline.scss'
-import '../styles/progress-bar.scss'
-import '../styles/portfolio-works.scss'
-import '../styles/contact_form.scss'
-import '../styles/footer.scss'
-import '../styles/react-logo.scss'
-import '../styles/redux-logo.scss'
-import '../styles/about__me.scss'
-import '../styles/@media.scss'
-
-function App({ Component, pageProps: { session, ...pageProps } }) {
+function App({ Component, pageProps: { ...pageProps } }) {
 	return (
-		<SessionProvider session={session}>
+		<>
 			<Script
 				strategy='lazyOnload'
 				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
@@ -38,7 +19,7 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
           `}
 			</Script>
 			<Component {...pageProps} />
-		</SessionProvider>
+		</>
 	)
 }
 

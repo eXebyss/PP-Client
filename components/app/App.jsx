@@ -1,20 +1,18 @@
-import ContactForm from '../ContactForm'
-import Footer from '../Footer/Footer'
-import WelcomeScreen from '../WelcomeScreen'
+import Footer from '../Footer'
 import Main from '../Main'
-import Navbar from '../Navbar/Navbar'
-import Portfolio from '../Portfolio/Portfolio'
+import Navbar from '../Navbar'
+import WelcomeScreen from '../WelcomeScreen'
 
-function App() {
+function App({ props }) {
+	const { portfolioPage } = props
+
 	return (
-		<div className='main-container'>
-			<WelcomeScreen />
-			{/* <Navbar home />
-			<Main />
-			<Portfolio />
-			<ContactForm />
-			<Footer /> */}
-		</div>
+		<>
+			<WelcomeScreen props={portfolioPage} />
+			<Navbar />
+			<Main props={props} />
+			<Footer props={portfolioPage} />
+		</>
 	)
 }
 
