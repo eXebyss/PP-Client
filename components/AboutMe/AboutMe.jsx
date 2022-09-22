@@ -16,6 +16,9 @@ const AboutMe = ({ props }) => {
 							alt={avatar.fields.description}
 							width={avatar.fields.file.details.image.width}
 							height={avatar.fields.file.details.image.height}
+							blurDataURL={'https:' + avatar.fields.file.url}
+							placeholder='blur'
+							priority
 							className='max-w-sm rounded-lg shadow-2xl'
 						/>
 					</div>

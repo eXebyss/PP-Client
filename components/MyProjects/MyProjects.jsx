@@ -71,6 +71,10 @@ const MyProjects = ({ props }) => {
 												height={
 													e.fields.ppImage1.fields.file.details.image.height
 												}
+												blurDataURL={
+													'https:' + e.fields.ppImage1.fields.file.url
+												}
+												placeholder='blur'
 												className='max-w-sm rounded-lg shadow-2xl'
 											/>
 										</figure>

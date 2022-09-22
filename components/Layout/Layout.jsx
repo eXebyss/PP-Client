@@ -2,21 +2,23 @@ import Head from 'next/head'
 import Script from 'next/script'
 
 export const siteTitle = 'Mihails Fjodorovs Portfolio Page'
+const url = 'https://mihails-fjodorovs.vercel.app/'
 
 export default function Layout({ children }) {
 	return (
-		<div>
+		<>
 			<Head>
 				<meta charSet='utf-8' />
 				<link rel='icon' href='/favicon.ico' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<meta property='og:image' content={`/public/logo.png`} />
-				<meta name='og:title' content={`${siteTitle}`} />
-				<meta name='twitter:card' content='summary_large_image' />
+				<meta property='og:title' content={`${siteTitle}`} />
+				<meta property='og:image' content={`/logo.png`} />
+				<meta property='twitter:card' content='summary_large_image' />
 				<meta
-					name='og:description'
+					property='og:description'
 					content={`My name is Mihails Fjodorovs. I'm Front-End developer. I'm developing on React & Next.js. For Back-End development I use Node.js with Express.`}
 				/>
+				<meta property='og:url' content={`${url}`} />
 			</Head>
 			<main>
 				<Script
@@ -30,6 +32,6 @@ export default function Layout({ children }) {
 				/>
 				{children}
 			</main>
-		</div>
+		</>
 	)
 }
