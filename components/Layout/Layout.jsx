@@ -15,12 +15,17 @@ export default function Layout({ children }) {
 				<meta property='og:image' content={`${url}logo.png`} />
 				<meta property='og:image:width' content='1200' />
 				<meta property='og:image:height' content='628' />
-				<meta name='twitter:card' content='summary_large_image' />
 				<meta
 					property='og:description'
-					content={`My name is Mihails Fjodorovs. I'm Front-End developer. I'm developing on React & Next.js. For Back-End development I use Node.js with Express.`}
+					content={`I'm Front-End developer. I'm developing on React & Next.js. For Back-End development I use Node.js with Express.`}
 				/>
 				<meta property='og:url' content={`${url}`} />
+				<meta name='twitter:card' content='summary_large_image' />
+				<meta name='twitter:title' content={`${siteTitle}`} />
+				<meta
+					name='twitter:description'
+					content={`I'm Front-End developer. I'm developing on React & Next.js. For Back-End development I use Node.js with Express.`}
+				/>
 			</Head>
 			<main>
 				<Script
