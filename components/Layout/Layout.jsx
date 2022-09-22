@@ -12,8 +12,10 @@ export default function Layout({ children }) {
 				<link rel='icon' href='/favicon.ico' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<meta property='og:title' content={`${siteTitle}`} />
-				<meta property='og:image' content={`/logo.png`} />
-				<meta property='twitter:card' content='summary_large_image' />
+				<meta property='og:image' content={`${url}/logo.png`} />
+				<meta property='og:image:width' content='1200' />
+				<meta property='og:image:height' content='1200' />
+				<meta name='twitter:card' content='summary_large_image' />
 				<meta
 					property='og:description'
 					content={`My name is Mihails Fjodorovs. I'm Front-End developer. I'm developing on React & Next.js. For Back-End development I use Node.js with Express.`}
