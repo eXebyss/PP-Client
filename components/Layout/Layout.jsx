@@ -22,6 +22,9 @@ export default function Layout({ children }) {
 				<meta property='og:url' content={`${url}`} />
 				<meta name='twitter:card' content='summary_large_image' />
 				<meta name='twitter:title' content={`${siteTitle}`} />
+				<meta name='twitter:image' content={`${url}logo.png`} />
+				<meta name='twitter:image:width' content='1200' />
+				<meta name='twitter:image:height' content='628' />
 				<meta
 					name='twitter:description'
 					content={`I'm Front-End developer. I'm developing on React & Next.js. For Back-End development I use Node.js with Express.`}
