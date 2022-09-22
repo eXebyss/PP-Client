@@ -20,8 +20,8 @@ export default function Layout({ children }) {
 					content={`I'm Front-End developer. I'm developing on React & Next.js. For Back-End development I use Node.js with Express.`}
 				/>
 				<meta property='og:url' content={`${url}`} />
-				<meta property='twitter:card' content='summary_large_image' />
-				<meta property='twitter:title' content={`${siteTitle}`} />
+				<meta name='twitter:card' content='summary_large_image' />
+				<meta name='twitter:title' content={`${siteTitle}`} />
 				<meta property='twitter:image' content={`${url}logo.png`} />
 				<meta
 					name='twitter:description'
