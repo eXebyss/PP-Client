@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Script from 'next/script'
 
-export const siteTitle = 'Mihails Fjodorovs PP'
+export const siteTitle = 'Mihails Fjodorovs Portfolio Page'
 
 export default function Layout({ children }) {
 	return (
@@ -10,17 +10,12 @@ export default function Layout({ children }) {
 				<meta charSet='utf-8' />
 				<link rel='icon' href='/favicon.ico' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<meta
-					property='og:image'
-					content={`https://og-image.vercel.app/${encodeURI(
-						siteTitle
-					)}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-				/>
-				<meta name='og:title' content='Mihails Fjodorovs Portfolio Page' />
+				<meta property='og:image' content={`/public/logo.png`} />
+				<meta name='og:title' content={`${siteTitle}`} />
 				<meta name='twitter:card' content='summary_large_image' />
 				<meta
-					name='description'
-					content='Mihails Fjodorovs. I am Front-End developer. Working mainly with React.js. Also familiar with Next.js. For Back-End I use Node.js with Express.js.'
+					name='og:description'
+					content={`My name is Mihails Fjodorovs. I'm Front-End developer. I'm developing on React & Next.js. For Back-End development I use Node.js with Express.`}
 				/>
 			</Head>
 			<main>

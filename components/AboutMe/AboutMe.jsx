@@ -23,7 +23,7 @@ const AboutMe = ({ props }) => {
 
 				<div>
 					<p className='py-6 fhd:text-lg'>
-						Hi, my{' '}
+						Hi 👋, my{' '}
 						<span className='text-primary tooltip' data-tip='Mihails Fjodorovs'>
 							[ name ]
 						</span>{' '}
