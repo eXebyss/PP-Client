@@ -6,8 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"dev:lint": "next lint",
-		"dev:version": "auto-changelog -p && git add CHANGELOG.md"
+		"lint": "next lint",
+		"version": "auto-changelog -p && git add CHANGELOG.md"
 	},
 	"keyword": "next.js",
 	"author": "Mihails Fjodorovs <mf.mail.service@gmail.com>",
