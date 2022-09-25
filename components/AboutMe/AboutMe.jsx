@@ -18,7 +18,7 @@ const AboutMe = ({ props }) => {
 							height={avatar.fields.file.details.image.height}
 							blurDataURL={'https:' + avatar.fields.file.url}
 							placeholder='blur'
-							priority
+							loading='lazy'
 							className='max-w-sm rounded-lg shadow-2xl'
 						/>
 					</div>

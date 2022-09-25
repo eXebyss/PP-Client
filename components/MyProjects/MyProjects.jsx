@@ -75,6 +75,7 @@ const MyProjects = ({ props }) => {
 													'https:' + e.fields.ppImage1.fields.file.url
 												}
 												placeholder='blur'
+												loading='lazy'
 												className='max-w-sm rounded-lg shadow-2xl'
 											/>
 										</figure>

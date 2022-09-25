@@ -6,8 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"version": "auto-changelog -p && git add CHANGELOG.md"
+		"dev:lint": "next lint",
+		"dev:version": "auto-changelog -p && git add CHANGELOG.md"
 	},
 	"keyword": "next.js",
 	"author": "Mihails Fjodorovs <mf.mail.service@gmail.com>",
@@ -30,6 +30,7 @@
 		"sharp": "^0.29.3"
 	},
 	"devDependencies": {
+		"@next/bundle-analyzer": "^12.3.1",
 		"auto-changelog": "^2.4.0",
 		"autoprefixer": "^10.4.7",
 		"eslint": "8.7.0",
