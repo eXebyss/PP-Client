@@ -30,7 +30,7 @@ const WorkExperience = ({ props }) => {
 					<div className='tabs py-2 md:py-4 justify-center'>
 						{workTitleKeyCollection[0].map((value, index) => (
 							<button
-								className={`tab tab-bordered text-neutral-content active:tab-active focus:tab-active active:text-primary focus:text-primary ${
+								className={`tab tab-bordered text-base-content active:tab-active focus:tab-active active:text-primary focus:text-primary ${
 									index == 0 && currentTab == 1
 										? '!text-primary tab-active'
 										: ''
