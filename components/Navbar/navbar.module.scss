@@ -7,29 +7,6 @@
         fhd:text-lg;
 }
 
-.mobile {
-	@apply mx-auto
-        navbar        
-        bg-base-100
-        md:hidden        
-        sticky
-        top-0
-        z-10
-        px-4;
-}
-
-.desktop {
-	@apply mx-auto
-        navbar
-        bg-base-100
-        hidden
-        md:inline-block
-        text-center
-        sticky
-        top-0
-        z-10;
-}
-
 .navSpan {
 	@apply text-primary;
 }

@@ -12,9 +12,9 @@
 }
 
 .techStackList li p::before {
-	font-family: 'Font Awesome 6 Free';
 	content: '\f0da';
 	@apply text-primary 
-                font-black 
-                pr-2;
+        font-black 
+        pr-2
+		font-fa6f;
 }

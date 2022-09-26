@@ -4,27 +4,19 @@ import classes from './skills.module.scss'
 
 const Skills = ({ props }) => {
 	return (
-		<div className={classes.root} id='skills'>
-			<div className={classes.heroContent}>
-				<div className={classes.heroSubContent}>
-					<h2 className={classes.headerSkills}>Skills</h2>
-					<h2 className={classes.headerTechSpec}>
-						/ <span className={classes.techSpecSpan}>[ My ] </span> tech stack:
+		<div className='hero bg-base-200' id='skills'>
+			<div className='hero-content text-center'>
+				<div className='max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl'>
+					<h2 className='font-bold pt-4 md:pt-6'>Skills</h2>
+					<h2 className='py-2 md:py-4 text-2xl md:text-3xl fhd:text-4xl'>
+						/ <span className='text-primary'>[ My ] </span> tech stack:
 					</h2>
-					<section className={classes.skillsInfoContainer}>
+					<section className='grid'>
 						<div className={classes.skillsGrid}>
-							<div className={classes.skillsGridOne}>
-								{documentToReactComponents(props[0])}
-							</div>
-							<div className={classes.skillsGridTwo}>
-								{documentToReactComponents(props[1])}
-							</div>
-							<div className={classes.skillsGridThree}>
-								{documentToReactComponents(props[2])}
-							</div>
-							<div className={classes.skillsGridFour}>
-								{documentToReactComponents(props[3])}
-							</div>
+							<div>{documentToReactComponents(props[0])}</div>
+							<div>{documentToReactComponents(props[1])}</div>
+							<div>{documentToReactComponents(props[2])}</div>
+							<div>{documentToReactComponents(props[3])}</div>
 						</div>
 						<div className={classes.skillsInfoText}>
 							{documentToReactComponents(props[4])}

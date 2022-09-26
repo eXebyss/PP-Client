@@ -10,6 +10,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				coda: ['Coda'],
+				fa6f: ['"Font Awesome 6 Free"'],
 			},
 			screens: {
 				xs: '414px',
@@ -19,6 +20,9 @@ module.exports = {
 				xl: '1280px',
 				'2xl': '1536px',
 				fhd: '1920px',
+			},
+			strokeWidth: {
+				10: '10px',
 			},
 		},
 	},

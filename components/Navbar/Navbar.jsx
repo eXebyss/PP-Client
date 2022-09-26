@@ -7,7 +7,7 @@ function Navbar() {
 
 	return (
 		<>
-			<nav className={classes.mobile}>
+			<nav className='mx-auto navbar bg-base-100 md:hidden sticky top-0 z-10 px-4'>
 				<label htmlFor='menu-modal' className='btn modal-button'>
 					<i className='fa-solid fa-bars'></i>
 				</label>
@@ -67,7 +67,7 @@ function Navbar() {
 				</label>
 			</nav>
 
-			<nav className={classes.desktop}>
+			<nav className='mx-auto navbar bg-base-100 hidden md:inline-block text-center sticky top-0 z-10'>
 				<a className={classes.navLink} href='#aboutMe'>
 					.me<span className={classes.navSpan}>( )</span>
 				</a>
