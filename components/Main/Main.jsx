@@ -1,10 +1,26 @@
-import classes from './main.module.scss'
-import AboutMe from '../AboutMe'
-import Skills from '../Skills'
+import dynamic from 'next/dynamic'
+
 import Divider from '../Divider'
-import WorkExperience from '../WorkExperience'
-import ContactMe from '../ContactMe'
-import MyProjects from '../MyProjects'
+
+const AboutMe = dynamic(() => import('../AboutMe'), {
+	loading: () => <p>Loading...</p>,
+})
+
+const Skills = dynamic(() => import('../Skills'), {
+	loading: () => <p>Loading...</p>,
+})
+
+const WorkExperience = dynamic(() => import('../WorkExperience'), {
+	loading: () => <p>Loading...</p>,
+})
+
+const ContactMe = dynamic(() => import('../ContactMe'), {
+	loading: () => <p>Loading...</p>,
+})
+
+const MyProjects = dynamic(() => import('../MyProjects'), {
+	loading: () => <p>Loading...</p>,
+})
 
 function Main({ props }) {
 	const {
