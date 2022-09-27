@@ -24,26 +24,29 @@ export async function getServerSideProps() {
 	return {
 		props: {
 			messages: data.messages,
+			whitelistEmail: process.env.WHITELIST_EMAIL,
 		},
 	}
 }
 
-function Messages({ messages }) {
+function Messages({ props }) {
+	const { messages, whitelistEmail } = props
+
 	const { data: session } = useSession()
 
 	if (session) {
-		if (session.user.email === process.env.WHITELIST_EMAIL) {
+		if (session.user.email === whitelistEmail) {
 			return (
 				<>
-					<span>Signed in as: {session.user.email}</span>
-					<br />
+					<h3>
+						Signed in as: <b>{session.user.email}</b>
+					</h3>
 					<button onClick={() => signOut()}>Sign out</button>
 					{messages.map(({ _id, name, email, message, date, dateString }) => (
 						<div key={_id}>
 							<p>
 								📧 {name} ({email}), has written: <br />
 								{message}
-								<br />
 								Date: {dateString ? dateString : date}
 							</p>
 						</div>
@@ -75,7 +78,7 @@ function Messages({ messages }) {
 	)
 }
 
-export default function ApolloApp({ messages }) {
+export default function ApolloApp({ messages, whitelistEmail }) {
 	return (
 		<Layout>
 			<Head>
@@ -85,11 +88,13 @@ export default function ApolloApp({ messages }) {
 					content='Message list send via contact form on M.F. Portfolio Page.'
 				/>
 			</Head>
-			<div className='hero min-h-screen bg-base-200'>
-				<div className='hero-content text-center'>
-					<div className='max-w-md'>
-						<h2 className='justify-center font-bold'>📫 Message list:</h2>
-						<Messages messages={messages} />
+			<div className='grid mx-auto max-w-xs sm:max-w-screen-sm lg:max-w-screen-lg fhd:max-w-screen-2xl'>
+				<div className='hero min-h-screen bg-base-200'>
+					<div className='hero-content text-center'>
+						<div>
+							<h2 className='justify-center font-bold'>📫 Message list:</h2>
+							<Messages props={{ messages, whitelistEmail }} />
+						</div>
 					</div>
 				</div>
 			</div>
