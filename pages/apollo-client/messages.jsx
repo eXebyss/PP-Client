@@ -108,9 +108,7 @@ export default function ApolloApp({ messages, whitelistEmail }) {
 						</div>
 					</div>
 				</div>
-			</div>
-
-			<Footer />
+			</div>			
 		</Layout>
 	)
 }
