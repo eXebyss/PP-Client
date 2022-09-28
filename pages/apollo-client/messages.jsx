@@ -4,6 +4,9 @@ import { useSession, signIn, signOut } from 'next-auth/react'
 
 import client from '../../apollo-client'
 import Layout, { siteTitle } from '../../components/Layout/Layout'
+import ThemeSelector from '../../components/UI/ThemeSelector'
+import Button from '../../components/UI/Button'
+import Footer from '../../components/Footer'
 
 export async function getServerSideProps() {
 	const { data } = await client.query({
@@ -41,13 +44,18 @@ function Messages({ props }) {
 					<h3>
 						Signed in as: <b>{session.user.email}</b>
 					</h3>
-					<button onClick={() => signOut()}>Sign out</button>
+					<Button onClick={() => signOut()}>Sign out</Button>
 					{messages.map(({ _id, name, email, message, date, dateString }) => (
-						<div key={_id}>
+						<div className='mx-auto grid my-2 md:my-4' key={_id}>
 							<p>
-								📧 {name} ({email}), has written: <br />
-								{message}
-								Date: {dateString ? dateString : date}
+								📧 {name}{' '}
+								<a href={`mailto:${email}`}>
+									<b className='hover:text-accent'>{email}</b>
+								</a>
+								, has written: {message}
+							</p>
+							<p>
+								<i>Date: {dateString ? dateString : date}</i>
 							</p>
 						</div>
 					))}
@@ -71,9 +79,7 @@ function Messages({ props }) {
 				<meta name='description' content='Authorization Page.' />
 			</Head>
 			<p className='text-warning font-bold py-2 fhd:py-4'>Not signed in ❗</p>
-			<button className='hover:text-primary' onClick={() => signIn()}>
-				Sign in
-			</button>
+			<Button onClick={() => signIn()}>Sign in</Button>
 		</Layout>
 	)
 }
@@ -88,8 +94,13 @@ export default function ApolloApp({ messages, whitelistEmail }) {
 					content='Message list send via contact form on M.F. Portfolio Page.'
 				/>
 			</Head>
-			<div className='grid mx-auto max-w-xs sm:max-w-screen-sm lg:max-w-screen-lg fhd:max-w-screen-2xl'>
-				<div className='hero min-h-screen bg-base-200'>
+
+			<div className='grid'>
+				<nav className='my-4 mx-auto grid'>
+					<ThemeSelector />
+				</nav>
+
+				<div className='hero bg-base-200'>
 					<div className='hero-content text-center'>
 						<div>
 							<h2 className='justify-center font-bold'>📫 Message list:</h2>
@@ -98,6 +109,8 @@ export default function ApolloApp({ messages, whitelistEmail }) {
 					</div>
 				</div>
 			</div>
+
+			<Footer />
 		</Layout>
 	)
 }
