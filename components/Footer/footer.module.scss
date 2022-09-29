@@ -1,5 +1,5 @@
 .root {
-	@apply footer 
+    @apply footer 
         footer-center 
         p-4 
         bg-base-300 
@@ -7,7 +7,7 @@
 }
 
 .root p {
-	@apply text-xs
+    @apply text-xs
         sm:text-sm
         md:text-base;
 }

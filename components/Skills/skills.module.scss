@@ -1,5 +1,5 @@
 .skillsGrid {
-	@apply row-start-2
+    @apply row-start-2
         grid 
         gap-x-2        
         gap-y-2
@@ -15,39 +15,39 @@
 }
 
 .skillsGrid h3 {
-	@apply text-base
+    @apply text-base
                 md:text-xl
                 fhd:text-2xl;
 }
 
 .skillsGrid h3::before {
-	@apply text-primary 
+    @apply text-primary 
                 font-black 
                 pr-2
                 font-fa6f;
-	content: '\f0da';
+    content: '\f0da';
 }
 
 .skillsGrid ul {
-	@apply mb-2
+    @apply mb-2
                 lg:mb-4;
 }
 
 .skillsInfoText {
-	@apply row-start-1
+    @apply row-start-1
         my-4
         text-justify;
 }
 
 .skillsInfoText p {
-	@apply pb-4
+    @apply pb-4
                 md:pb-8;
 }
 
 .skillsInfoText p:nth-of-type(3) {
-	@apply pb-0;
+    @apply pb-0;
 }
 
 .skillsInfoText p b {
-	@apply text-primary;
+    @apply text-primary;
 }

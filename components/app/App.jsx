@@ -4,16 +4,16 @@ import Navbar from '../Navbar'
 import WelcomeScreen from '../WelcomeScreen'
 
 function App({ props }) {
-	const { portfolioPage } = props
+    const { portfolioPage } = props
 
-	return (
-		<>
-			<WelcomeScreen props={portfolioPage} />
-			<Navbar />
-			<Main props={props} />
-			<Footer props={portfolioPage} />
-		</>
-	)
+    return (
+        <>
+            <WelcomeScreen props={portfolioPage} />
+            <Navbar />
+            <Main props={props} />
+            <Footer props={portfolioPage} />
+        </>
+    )
 }
 
 export default App

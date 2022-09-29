@@ -6,67 +6,67 @@ import App from '../components/app'
 import { siteTitle } from '../constants'
 
 export async function getStaticProps() {
-	const client = createClient({
-		space: process.env.SPACE,
-		accessToken: process.env.ACCESS_TOKEN,
-	})
+    const client = createClient({
+        space: process.env.SPACE,
+        accessToken: process.env.ACCESS_TOKEN,
+    })
 
-	const entriesMainInfo = await client.getEntries({
-		content_type: process.env.CONTENT_TYPE1,
-	})
+    const entriesMainInfo = await client.getEntries({
+        content_type: process.env.CONTENT_TYPE1,
+    })
 
-	const entriesWorkPlaceTitles = await client.getEntries({
-		content_type: process.env.CONTENT_TYPE2,
-	})
+    const entriesWorkPlaceTitles = await client.getEntries({
+        content_type: process.env.CONTENT_TYPE2,
+    })
 
-	const entriesWorkPlaces = await client.getEntries({
-		content_type: process.env.CONTENT_TYPE3,
-	})
+    const entriesWorkPlaces = await client.getEntries({
+        content_type: process.env.CONTENT_TYPE3,
+    })
 
-	const entriesPersonalProjects = await client.getEntries({
-		content_type: process.env.CONTENT_TYPE4,
-	})
+    const entriesPersonalProjects = await client.getEntries({
+        content_type: process.env.CONTENT_TYPE4,
+    })
 
-	const entriesContactMeForm = await client.getEntries({
-		content_type: process.env.CONTENT_TYPE5,
-	})
+    const entriesContactMeForm = await client.getEntries({
+        content_type: process.env.CONTENT_TYPE5,
+    })
 
-	return {
-		props: {
-			portfolioPage: entriesMainInfo.items,
-			myWorkExperiencePlaceTitles: entriesWorkPlaceTitles.items,
-			myWorkExperiencePlaces: entriesWorkPlaces.items,
-			personalProjects: entriesPersonalProjects.items,
-			contactMeForm: entriesContactMeForm.items,
-		},
-	}
+    return {
+        props: {
+            portfolioPage: entriesMainInfo.items,
+            myWorkExperiencePlaceTitles: entriesWorkPlaceTitles.items,
+            myWorkExperiencePlaces: entriesWorkPlaces.items,
+            personalProjects: entriesPersonalProjects.items,
+            contactMeForm: entriesContactMeForm.items,
+        },
+    }
 }
 
 export default function Home({
-	portfolioPage,
-	myWorkExperiencePlaceTitles,
-	myWorkExperiencePlaces,
-	personalProjects,
-	contactMeForm,
+    portfolioPage,
+    myWorkExperiencePlaceTitles,
+    myWorkExperiencePlaces,
+    personalProjects,
+    contactMeForm,
 }) {
-	const props = {
-		portfolioPage: portfolioPage,
-		myWorkExperiencePlaceTitles: myWorkExperiencePlaceTitles,
-		myWorkExperiencePlaces: myWorkExperiencePlaces,
-		personalProjects: personalProjects,
-		contactMeForm: contactMeForm,
-	}
+    const props = {
+        portfolioPage: portfolioPage,
+        myWorkExperiencePlaceTitles: myWorkExperiencePlaceTitles,
+        myWorkExperiencePlaces: myWorkExperiencePlaces,
+        personalProjects: personalProjects,
+        contactMeForm: contactMeForm,
+    }
 
-	return (
-		<Layout>
-			<Head>
-				<title>{`${siteTitle}: Main`}</title>
-				<meta
-					name='description'
-					content='This is Mihails Fjodorovs portfolio page.'
-				/>
-			</Head>
-			<App props={props} />
-		</Layout>
-	)
+    return (
+        <Layout>
+            <Head>
+                <title>{`${siteTitle}: Main`}</title>
+                <meta
+                    name="description"
+                    content="This is Mihails Fjodorovs portfolio page."
+                />
+            </Head>
+            <App props={props} />
+        </Layout>
+    )
 }
