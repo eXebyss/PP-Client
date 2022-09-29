@@ -36,6 +36,10 @@ class MyDocument extends Document {
 						content={`I'm Front-End developer. I'm developing on React & Next.js. For Back-End development I use Node.js with Express.`}
 					/>
 					<meta property='twitter:site' content={`${url}`} />
+					<link
+						href='https://fonts.googleapis.com/css2?family=Coda&display=swap'
+						rel='stylesheet'
+					/>
 				</Head>
 				<body>
 					<Main />
