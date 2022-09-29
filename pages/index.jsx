@@ -1,7 +1,9 @@
 import { createClient } from 'contentful'
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/Layout'
+
+import Layout from '../components/Layout'
 import App from '../components/app'
+import { siteTitle } from '../constants'
 
 export async function getStaticProps() {
 	const client = createClient({
