@@ -3,10 +3,11 @@ import { gql } from '@apollo/client'
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 import client from '../../apollo-client'
-import Layout, { siteTitle } from '../../components/Layout/Layout'
+import Layout from '../../components/Layout/Layout'
 import ThemeSelector from '../../components/UI/ThemeSelector'
 import Button from '../../components/UI/Button'
-import Footer from '../../components/Footer'
+
+const siteTitle = 'Mihails Fjodorovs Portfolio Page'
 
 export async function getServerSideProps() {
 	const { data } = await client.query({
@@ -108,7 +109,7 @@ export default function ApolloApp({ messages, whitelistEmail }) {
 						</div>
 					</div>
 				</div>
-			</div>			
+			</div>
 		</Layout>
 	)
 }
