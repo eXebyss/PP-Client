@@ -39,6 +39,7 @@
         "no-caller": "warn",
         "no-cond-assign": ["warn", "except-parens"],
         "no-const-assign": "warn",
+        "no-console": ["error", { "allow": ["warn", "error"] }],
         "no-control-regex": "warn",
         "no-delete-var": "warn",
         "no-dupe-args": "warn",
@@ -73,6 +74,7 @@
                 "allowSamePrecedence": false
             }
         ],
+        "no-multi-spaces": "warn",
         "no-multi-str": "warn",
         "no-native-reassign": "warn",
         "no-negated-in-lhs": "warn",
@@ -143,6 +145,7 @@
         ],
         "no-with": "warn",
         "no-whitespace-before-property": "warn",
+        "no-warning-comments": "warn",
         "react-hooks/exhaustive-deps": "warn",
         "require-yield": "warn",
         "rest-spread-spacing": ["warn", "never"],
@@ -173,9 +176,11 @@
         "react/no-direct-mutation-state": "warn",
         "react/no-is-mounted": "warn",
         "react/no-typos": "error",
+        // "react/prop-types": "warn",
         "react/react-in-jsx-scope": "off",
         "react/require-render-return": "error",
         "react/style-prop-object": "warn",
-        "react-hooks/rules-of-hooks": "error"
+        "react-hooks/rules-of-hooks": "error",
+        "spaced-comment": "error"
     }
 }

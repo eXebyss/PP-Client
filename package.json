@@ -7,13 +7,13 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "prettier-check": "prettier --check .",
-        "prettier-fix": "prettier --write .",
+        "prettier:check": "prettier --check .",
+        "prettier:fix": "prettier --write .",
         "version": "auto-changelog -p && git add CHANGELOG.md"
     },
     "pre-commit": [
         "lint",
-        "prettier-check"
+        "prettier:check"
     ],
     "keyword": "next.js",
     "author": "Mihails Fjodorovs <mf.mail.service@gmail.com>",

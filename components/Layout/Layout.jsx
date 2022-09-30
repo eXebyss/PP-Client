@@ -7,12 +7,14 @@ export default function Layout({ children }) {
                 src="https://kit.fontawesome.com/f18b884e63.js"
                 crossOrigin="anonymous"
                 strategy="lazyOnload"
+                /* eslint-disable */
                 onLoad={() =>
                     console.log(`script loaded correctly: FontAwesome ✅`)
                 }
                 onError={() =>
                     console.log(`script loaded with error: FontAwesome ❌`)
                 }
+                /* eslint-enable */
             />
             {children}
         </main>

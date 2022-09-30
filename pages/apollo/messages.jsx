@@ -6,7 +6,7 @@ import client from '../../apollo-client'
 import Layout from '../../components/Layout/Layout'
 import ThemeSelector from '../../components/UI/ThemeSelector'
 import Button from '../../components/UI/Button'
-import { siteTitle } from '../constants'
+import { siteTitle } from '../../constants'
 
 export async function getServerSideProps() {
     const { data } = await client.query({
