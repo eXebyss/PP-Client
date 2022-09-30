@@ -15,7 +15,9 @@ const sendMessage = async (e, name, email, message) => {
             }),
         })
     } catch (err) {
+        /* eslint-disable */
         console.log(`${err.response.data.message}.`, 'Error 1: post')
+        /* eslint-enable */
     }
 }
 
