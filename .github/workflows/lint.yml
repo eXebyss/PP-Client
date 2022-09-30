@@ -4,7 +4,7 @@
 name: Lint
 
 on:
-  [push, pull_request]
+  [push]
 
 jobs:
   run-linters:
@@ -22,7 +22,7 @@ jobs:
 
       # ESLint and Prettier must be in `package.json`
       - name: Install Node.js dependencies
-        run: npm ci
+        run: yarn
 
       - name: Run linters
         uses: wearerequired/lint-action@v2
