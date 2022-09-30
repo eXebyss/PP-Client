@@ -1,6 +1,7 @@
 import Script from 'next/script'
+import Footer from '../Footer'
 
-export default function Layout({ children }) {
+export default function Layout({ children, props }) {
     return (
         <main>
             <Script
@@ -17,6 +18,7 @@ export default function Layout({ children }) {
                 /* eslint-enable */
             />
             {children}
+            <Footer props={props} />
         </main>
     )
 }

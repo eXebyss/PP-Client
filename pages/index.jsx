@@ -58,7 +58,7 @@ export default function Home({
     }
 
     return (
-        <Layout>
+        <Layout props={portfolioPage}>
             <Head>
                 <title>{`${siteTitle}: Main`}</title>
                 <meta

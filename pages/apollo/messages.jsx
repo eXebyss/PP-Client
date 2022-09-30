@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { gql } from '@apollo/client'
 import { useSession, signIn, signOut } from 'next-auth/react'
+import { createClient } from 'contentful'
 
 import client from '../../apollo-client'
 import Layout from '../../components/Layout/Layout'
@@ -24,10 +25,20 @@ export async function getServerSideProps() {
         `,
     })
 
+    const contentClient = createClient({
+        space: process.env.SPACE,
+        accessToken: process.env.ACCESS_TOKEN,
+    })
+
+    const entriesMainInfo = await contentClient.getEntries({
+        content_type: process.env.CONTENT_TYPE1,
+    })
+
     return {
         props: {
             messages: data.messages,
             whitelistEmail: process.env.WHITELIST_EMAIL,
+            portfolioPage: entriesMainInfo.items,
         },
     }
 }
@@ -82,7 +93,7 @@ function Messages({ props }) {
     }
 
     return (
-        <Layout>
+        <>
             <Head>
                 <title>{`${siteTitle}: Authorization`}</title>
                 <meta name="description" content="Authorization Page." />
@@ -91,13 +102,13 @@ function Messages({ props }) {
                 Not signed in ❗
             </p>
             <Button onClick={() => signIn()}>Sign in</Button>
-        </Layout>
+        </>
     )
 }
 
-export default function ApolloApp({ messages, whitelistEmail }) {
+export default function ApolloApp({ messages, whitelistEmail, portfolioPage }) {
     return (
-        <Layout>
+        <Layout props={portfolioPage}>
             <Head>
                 <title>{`${siteTitle}: Message List`}</title>
                 <meta
@@ -111,13 +122,18 @@ export default function ApolloApp({ messages, whitelistEmail }) {
                     <ThemeSelector />
                 </nav>
 
-                <div className="hero bg-base-200">
+                <div className="hero min-h-[90vh] bg-base-200">
                     <div className="hero-content text-center">
                         <div>
                             <h2 className="justify-center font-bold">
                                 📫 Message list:
                             </h2>
-                            <Messages props={{ messages, whitelistEmail }} />
+                            <Messages
+                                props={{
+                                    messages,
+                                    whitelistEmail,
+                                }}
+                            />
                         </div>
                     </div>
                 </div>
