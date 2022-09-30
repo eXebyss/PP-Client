@@ -113,3 +113,26 @@ svg {
 ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary-focus;
 }
+
+/* width */
+::-moz-scrollbar {
+    @apply w-2 
+		2xl:w-2.5;
+}
+
+/* Track */
+::-moz-scrollbar-track {
+    @apply bg-primary-content 
+		rounded;
+}
+
+/* Handle */
+::-moz-scrollbar-thumb {
+    @apply bg-primary 
+		rounded;
+}
+
+/* Handle on hover */
+::-moz-scrollbar-thumb:hover {
+    @apply bg-primary-focus;
+}
