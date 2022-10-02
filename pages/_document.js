@@ -17,10 +17,6 @@ class MyDocument extends Document {
                     <meta name="theme-color" content="#fff" />
                     <meta charSet="utf-8" />
                     <link rel="icon" href="/favicon.ico" />
-                    <meta
-                        name="viewport"
-                        content="width=device-width, initial-scale=1"
-                    />
                     <meta property="og:title" content={`${siteTitle}`} />
                     <meta property="og:image" content={`${ogUrl}logo.png`} />
                     <meta property="og:image:width" content="1200" />

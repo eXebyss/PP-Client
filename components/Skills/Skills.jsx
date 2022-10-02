@@ -1,6 +1,7 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import classes from './skills.module.scss'
+import TechStack from '../TechStack'
 
 const Skills = ({ props }) => {
     return (
@@ -12,6 +13,8 @@ const Skills = ({ props }) => {
                         / <span className="text-primary">[ My ] </span> tech
                         stack:
                     </h2>
+
+                    <TechStack />
                     <section className="grid">
                         <div className={classes.skillsGrid}>
                             <div>{documentToReactComponents(props[0])}</div>
