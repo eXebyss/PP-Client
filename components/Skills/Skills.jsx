@@ -1,7 +1,7 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
-import classes from './skills.module.scss'
 import TechStack from '../TechStack'
+import classes from './skills.module.scss'
 
 const Skills = ({ props }) => {
     return (

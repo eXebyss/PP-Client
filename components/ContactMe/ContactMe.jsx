@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import React, { useEffect, useState } from 'react'
 
-import Input from '../UI/Input'
-import Button from '../UI/Button'
-import Textarea from '../UI/Textarea'
-import emailHandler from '../../utils/handlers/emailHandler'
 import blurHandler from '../../utils/handlers/blurHandler'
+import emailHandler from '../../utils/handlers/emailHandler'
 import handleClickForMessage from '../../utils/handlers/sendMessage'
+import Button from '../UI/Button'
+import Input from '../UI/Input'
+import Textarea from '../UI/Textarea'
 
 function ContactMe({ props }) {
     const [name, setName] = useState('')

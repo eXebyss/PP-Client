@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 import { REST_API_URL } from '../../config/config'
 
 const sendMessage = async (e, name, email, message) => {

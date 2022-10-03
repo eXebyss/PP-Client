@@ -1,4 +1,5 @@
 import Image from 'next/image'
+
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import classes from './aboutMe.module.scss'

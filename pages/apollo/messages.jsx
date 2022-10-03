@@ -1,12 +1,13 @@
 import Head from 'next/head'
+
 import { gql } from '@apollo/client'
-import { useSession, signIn, signOut } from 'next-auth/react'
 import { createClient } from 'contentful'
+import { signIn, signOut, useSession } from 'next-auth/react'
 
 import client from '../../apollo-client'
 import Layout from '../../components/Layout/Layout'
-import ThemeSelector from '../../components/UI/ThemeSelector'
 import Button from '../../components/UI/Button'
+import ThemeSelector from '../../components/UI/ThemeSelector'
 import { siteTitle } from '../../constants'
 
 export async function getServerSideProps() {

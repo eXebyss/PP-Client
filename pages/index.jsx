@@ -1,5 +1,6 @@
-import { createClient } from 'contentful'
 import Head from 'next/head'
+
+import { createClient } from 'contentful'
 
 import Layout from '../components/Layout'
 import App from '../components/app'

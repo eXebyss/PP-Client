@@ -1,8 +1,9 @@
+import Head from 'next/head'
 import Script from 'next/script'
+
 import { SessionProvider } from 'next-auth/react'
 
 import '../styles/global/index.scss'
-import Head from 'next/head'
 
 function App({ Component, pageProps: { session, ...pageProps } }) {
     return (

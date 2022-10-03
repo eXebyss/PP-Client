@@ -1,6 +1,6 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-import { siteTitle, ogUrl } from '../constants'
+import { ogUrl, siteTitle } from '../constants'
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {

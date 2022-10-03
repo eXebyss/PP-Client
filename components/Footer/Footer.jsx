@@ -1,9 +1,9 @@
-import React from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import React from 'react'
 
-import classes from './footer.module.scss'
 import { LinkedIn } from '../Icons'
 import Github from '../Icons/Github'
+import classes from './footer.module.scss'
 
 function Footer({ props }) {
     const { footer } = props[0].fields

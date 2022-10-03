@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { useState } from 'react'
 
 import classes from './workExperience.module.scss'
 

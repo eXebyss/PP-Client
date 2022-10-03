@@ -1,7 +1,11 @@
 {
     "root": true,
     "parser": "@babel/eslint-parser",
-    "extends": ["eslint:recommended", "prettier"],
+    "extends": [
+        "plugin:@next/next/recommended",
+        "eslint:recommended",
+        "prettier"
+    ],
     "plugins": ["react", "react-hooks", "import"],
     "env": {
         "browser": true,
