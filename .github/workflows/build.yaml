@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [12.x]
 
     steps:
       - uses: actions/checkout@v3
@@ -19,4 +19,5 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn
-      - run: yarn build --if-present
+      - run: yarn build
+      - run: yarn start
