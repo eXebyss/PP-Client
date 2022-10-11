@@ -1,8 +1,7 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { Github, Linkedin } from '@icons-pack/react-simple-icons'
 import React from 'react'
 
-import { LinkedIn } from '../Icons'
-import Github from '../Icons/Github'
 import classes from './footer.module.scss'
 
 function Footer({ props }) {
@@ -18,7 +17,7 @@ function Footer({ props }) {
                         href={process.env.LINKEDIN_URI}
                         target="blank"
                     >
-                        <LinkedIn className="w-6 h-6 fill-base-content hover:fill-primary" />
+                        <Linkedin className="w-6 h-6 fill-base-content hover:fill-primary" />
                     </a>
                     <a href={process.env.GITHUB_URI} target="blank">
                         <Github className="w-6 h-6 fill-base-content hover:fill-primary" />

@@ -11,3 +11,7 @@
         sm:text-sm
         md:text-base;
 }
+
+.root a b {
+    @apply hover:text-accent;
+}

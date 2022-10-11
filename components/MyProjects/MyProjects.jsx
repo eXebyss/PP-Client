@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { Github } from '@icons-pack/react-simple-icons'
 
 import classes from './myProjects.module.scss'
 
@@ -58,14 +59,14 @@ const MyProjects = ({ props }) => {
                                                 e.fields.projectTechStack
                                             )}
                                         </div>
-                                        <div className="pt-2 md:pt-4 text-left">
+                                        <div className="pt-2 md:pt-4 text-left grid grid-flow-col gap-x-4 items-center w-fit">
                                             {e.fields.githubLink ? (
                                                 <a
                                                     href={e.fields.githubLink}
                                                     aria-label="Check GitHub repository for the current project"
                                                     target="blank"
                                                 >
-                                                    <i className="fa-brands fa-github text-2xl pr-2 md:pr-4"></i>
+                                                    <Github className="text-base-content hover:text-primary" />
                                                 </a>
                                             ) : (
                                                 ''
