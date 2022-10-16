@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-import { REST_API_URL } from '../../config/config'
+// import { REST_API_URL } from '../../config/config'
 
 const sendMessage = async (e, name, email, message) => {
     e.preventDefault()
     const date = new Date(Date.now())
     try {
-        await axios.post(`${REST_API_URL}`, {
+        await axios.post(process.env.NEXT_PUBLIC_REST_API_URL, {
             name: name,
             email: email,
             message: message,

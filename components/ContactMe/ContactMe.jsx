@@ -1,9 +1,9 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import React, { useEffect, useState } from 'react'
 
+import handleClickForMessage from '../../context/actions/sendMessage'
+import emailRegExCheck from '../../helpers/emailRegExCheck'
 import blurHandler from '../../utils/handlers/blurHandler'
-import emailHandler from '../../utils/handlers/emailHandler'
-import handleClickForMessage from '../../utils/handlers/sendMessage'
 import Button from '../UI/Button'
 import Input from '../UI/Input'
 import Textarea from '../UI/Textarea'
@@ -41,7 +41,7 @@ function ContactMe({ props }) {
                 placeholder={'Your e-mail'}
                 type={'email'}
                 value={email}
-                onChange={(e) => emailHandler(e, setEmail, setEmailError)}
+                onChange={(e) => emailRegExCheck(e, setEmail, setEmailError)}
                 onBlur={(e) => blurHandler(e, setEmailDirty)}
             />
             {emailDirty && emailError && (
