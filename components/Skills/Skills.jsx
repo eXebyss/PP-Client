@@ -4,6 +4,8 @@ import TechStack from '../TechStack'
 import classes from './skills.module.scss'
 
 const Skills = ({ props }) => {
+    const { skillScopes, skillSet } = props
+
     return (
         <div className="hero bg-base-200" id="skills">
             <div className="hero-content text-center">
@@ -13,17 +15,21 @@ const Skills = ({ props }) => {
                         / <span className="text-primary">[ My ] </span> tech
                         stack:
                     </h2>
-
                     <TechStack />
+                    <div className={classes.skillsInfoText}>
+                        {documentToReactComponents(
+                            skillScopes[0].fields.skillScopeInfo
+                        )}
+                    </div>
                     <section className="grid">
                         <div className={classes.skillsGrid}>
-                            <div>{documentToReactComponents(props[0])}</div>
-                            <div>{documentToReactComponents(props[1])}</div>
-                            <div>{documentToReactComponents(props[2])}</div>
-                            <div>{documentToReactComponents(props[3])}</div>
-                        </div>
-                        <div className={classes.skillsInfoText}>
-                            {documentToReactComponents(props[4])}
+                            {skillSet.map((skill, index) => (
+                                <div key={index}>
+                                    {documentToReactComponents(
+                                        skill.fields.stackInfo
+                                    )}
+                                </div>
+                            ))}
                         </div>
                     </section>
                 </div>

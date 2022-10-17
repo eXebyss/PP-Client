@@ -32,6 +32,14 @@ export async function getStaticProps() {
         content_type: process.env.CONTENT_TYPE5,
     })
 
+    const entriesSkillScopes = await client.getEntries({
+        content_type: process.env.CONTENT_TYPE6,
+    })
+
+    const entriesSkillSet = await client.getEntries({
+        content_type: process.env.CONTENT_TYPE7,
+    })
+
     return {
         props: {
             portfolioPage: entriesMainInfo.items,
@@ -39,6 +47,8 @@ export async function getStaticProps() {
             myWorkExperiencePlaces: entriesWorkPlaces.items,
             personalProjects: entriesPersonalProjects.items,
             contactMeForm: entriesContactMeForm.items,
+            skillScopes: entriesSkillScopes.items,
+            skillSet: entriesSkillSet.items,
         },
     }
 }
@@ -49,6 +59,8 @@ export default function Home({
     myWorkExperiencePlaces,
     personalProjects,
     contactMeForm,
+    skillScopes,
+    skillSet,
 }) {
     const props = {
         portfolioPage: portfolioPage,
@@ -56,6 +68,8 @@ export default function Home({
         myWorkExperiencePlaces: myWorkExperiencePlaces,
         personalProjects: personalProjects,
         contactMeForm: contactMeForm,
+        skillScopes: skillScopes,
+        skillSet: skillSet,
     }
 
     return (

@@ -29,18 +29,12 @@ function Main({ props }) {
         myWorkExperiencePlaces,
         personalProjects,
         contactMeForm,
+        skillScopes,
+        skillSet,
     } = props
 
-    const {
-        avatar,
-        aboutMeDeveloperState,
-        aboutMeDeveloperPosition,
-        skillsFrontEnd,
-        skillsBackEnd,
-        skillsDatabases,
-        skillsOthers,
-        skillsMainFocus,
-    } = portfolioPage[0].fields
+    const { avatar, aboutMeDeveloperState, aboutMeDeveloperPosition } =
+        portfolioPage[0].fields
 
     return (
         <div className="main">
@@ -52,15 +46,7 @@ function Main({ props }) {
                 }}
             />
             <Divider />
-            <Skills
-                props={[
-                    skillsFrontEnd,
-                    skillsBackEnd,
-                    skillsDatabases,
-                    skillsOthers,
-                    skillsMainFocus,
-                ]}
-            />
+            <Skills props={{ skillScopes, skillSet }} />
             <Divider />
             <WorkExperience
                 props={{ myWorkExperiencePlaceTitles, myWorkExperiencePlaces }}
