@@ -25,7 +25,7 @@ const WorkExperience = ({ props }) => {
     return (
         <div className="hero bg-base-200" id="experience">
             <div className="hero-content w-full text-center max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl fhd:max-w-5xl 2k:max-w-6xl 4k:max-w-7xl">
-                <div>
+                <div className="w-full">
                     <h2 className="font-bold pt-3 md:pt-6">Experience</h2>
                     <div className="tabs py-2 md:py-4 justify-center">
                         {workTitleKeyCollection[0].map((value, index) => (
