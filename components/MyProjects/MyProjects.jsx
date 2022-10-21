@@ -8,14 +8,8 @@ import classes from './myProjects.module.scss'
 const MyProjects = ({ props }) => {
     return (
         <div className="hero bg-base-200" id="projects">
-            <div className="hero-content text-center">
-                <div
-                    className="max-w-[90vw]
-		                md:max-w-lg
-		                lg:max-w-xl
-		                xl:max-w-2xl
-		                2xl:max-w-3xl"
-                >
+            <div className="hero-content text-center w-full">
+                <div className="max-w-[90vw] md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl fhd:max-w-5xl 2k:max-w-6xl 4k:max-w-7xl">
                     <h2 className="font-bold">Projects I&apos;ve Built</h2>
                     <h2 className="font-bold py-2 md:py-4 text-2xl md:text-3xl fhd:text-4xl">
                         / <b>Or</b> Contributed

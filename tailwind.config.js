@@ -15,6 +15,8 @@ module.exports = {
             screens: {
                 xs: '414px',
                 fhd: '1920px',
+                '2k': '2560px',
+                '4k': '3840px',
             },
             strokeWidth: {
                 10: '10px',

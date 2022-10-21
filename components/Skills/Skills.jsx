@@ -8,8 +8,8 @@ const Skills = ({ props }) => {
 
     return (
         <div className="hero bg-base-200" id="skills">
-            <div className="hero-content text-center">
-                <div className="max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl">
+            <div className="hero-content w-full text-center max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl fhd:max-w-5xl 2k:max-w-6xl 4k:max-w-7xl">
+                <div>
                     <h2 className="font-bold pt-4 md:pt-6">Skills</h2>
                     <h2 className="py-2 md:py-4 text-2xl md:text-3xl fhd:text-4xl">
                         / <span className="text-primary">[ My ] </span> tech
