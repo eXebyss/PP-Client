@@ -18,6 +18,7 @@ import {
     Mysql,
     Nextdotjs,
     Nodedotjs,
+    Php,
     Postgresql,
     Pwa,
     ReactJs,
@@ -31,7 +32,7 @@ import {
 
 const TechStack = () => {
     return (
-        <div className="flex flex-wrap justify-evenly bg-neutral p-4 rounded-md">
+        <div className="flex flex-wrap justify-evenly bg-neutral p-4 rounded-md gap-2">
             <Html5 className="text-base-content hover:text-[#E34F26] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <CssThree className="text-base-content hover:text-[#1572B6] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Sass className="text-base-content hover:text-[#CC6699] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
@@ -39,6 +40,7 @@ const TechStack = () => {
             <Tailwindcss className="text-base-content hover:text-[#06B6D4] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Javascript className="text-base-content hover:text-[#F7DF1E] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Typescript className="text-base-content hover:text-[#3178C6] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Php className="text-base-content hover:text-[#777BB4] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Nodedotjs className="text-base-content hover:text-[#339933] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Express className="text-base-content hover:text-[#000000] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <ReactJs className="text-base-content hover:text-[#61DAFB] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />

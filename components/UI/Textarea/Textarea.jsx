@@ -1,4 +1,4 @@
-const Textarea = ({ text, placeholder }) => {
+const Textarea = ({ text, placeholder, ...props }) => {
     return (
         <div className="form-control">
             <label className="label">
@@ -7,6 +7,7 @@ const Textarea = ({ text, placeholder }) => {
             <textarea
                 className="textarea textarea-bordered"
                 placeholder={placeholder}
+                {...props}
             ></textarea>
         </div>
     )
