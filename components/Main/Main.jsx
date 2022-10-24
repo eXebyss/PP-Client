@@ -22,6 +22,10 @@ const MyProjects = dynamic(() => import('../MyProjects'), {
     loading: () => <p>Loading...</p>,
 })
 
+const Inspiration = dynamic(() => import('../Inspiration'), {
+    loading: () => <p>Loading...</p>,
+})
+
 function Main({ props }) {
     const {
         portfolioPage,
@@ -31,6 +35,7 @@ function Main({ props }) {
         contactMeForm,
         skillScopes,
         skillSet,
+        inspiration,
     } = props
 
     const { avatar, aboutMeDeveloperState, aboutMeDeveloperPosition } =
@@ -53,6 +58,8 @@ function Main({ props }) {
             />
             <Divider />
             <MyProjects props={personalProjects} />
+            <Divider />
+            <Inspiration props={inspiration} />
             <Divider />
             <ContactMe props={contactMeForm} />
         </div>

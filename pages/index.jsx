@@ -40,6 +40,10 @@ export async function getStaticProps() {
         content_type: process.env.CONTENT_TYPE7,
     })
 
+    const entriesInspiration = await client.getEntries({
+        content_type: process.env.CONTENT_TYPE8,
+    })
+
     return {
         props: {
             portfolioPage: entriesMainInfo.items,
@@ -49,6 +53,7 @@ export async function getStaticProps() {
             contactMeForm: entriesContactMeForm.items,
             skillScopes: entriesSkillScopes.items,
             skillSet: entriesSkillSet.items,
+            inspiration: entriesInspiration.items,
         },
     }
 }
@@ -61,6 +66,7 @@ export default function Home({
     contactMeForm,
     skillScopes,
     skillSet,
+    inspiration,
 }) {
     const props = {
         portfolioPage: portfolioPage,
@@ -70,6 +76,7 @@ export default function Home({
         contactMeForm: contactMeForm,
         skillScopes: skillScopes,
         skillSet: skillSet,
+        inspiration: inspiration,
     }
 
     return (
