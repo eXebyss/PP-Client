@@ -6,6 +6,14 @@ import { Github } from '@icons-pack/react-simple-icons'
 import classes from './myProjects.module.scss'
 
 const MyProjects = ({ props }) => {
+    const sortedArrayOfProjects = props.sort((a, b) =>
+        b.fields.projectId > a.fields.projectId
+            ? 1
+            : a.fields.projectId > b.fields.projectId
+            ? -1
+            : 0
+    )
+
     return (
         <div className="hero bg-base-200" id="projects">
             <div className="hero-content text-center w-full">
@@ -16,7 +24,7 @@ const MyProjects = ({ props }) => {
                     </h2>
 
                     <div className="carousel w-full">
-                        {props.map((e, i) => (
+                        {sortedArrayOfProjects.map((e, i) => (
                             <div
                                 id={i}
                                 className="carousel-item w-full"

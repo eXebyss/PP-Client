@@ -6,6 +6,14 @@ import classes from './skills.module.scss'
 const Skills = ({ props }) => {
     const { skillScopes, skillSet } = props
 
+    const sortedArrayOfSkillSet = skillSet.sort((a, b) =>
+        a.fields.stackId > b.fields.stackId
+            ? 1
+            : b.fields.stackId > a.fields.stackId
+            ? -1
+            : 0
+    )
+
     return (
         <div className="hero bg-base-200" id="skills">
             <div className="hero-content w-full text-center max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl fhd:max-w-5xl 2k:max-w-6xl 4k:max-w-7xl">
@@ -23,7 +31,7 @@ const Skills = ({ props }) => {
                     </div>
                     <section className="grid">
                         <div className={classes.skillsGrid}>
-                            {skillSet.map((skill, index) => (
+                            {sortedArrayOfSkillSet.map((skill, index) => (
                                 <div key={index}>
                                     {documentToReactComponents(
                                         skill.fields.stackInfo
