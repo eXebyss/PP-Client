@@ -1,5 +1,7 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
+import classes from './inspiration.module.scss'
+
 const Inspiration = ({ props }) => {
     const sortedArrayOfInspirationCollection = props.sort((a, b) =>
         a.fields.inspirationId > b.fields.inspirationId
@@ -17,12 +19,19 @@ const Inspiration = ({ props }) => {
                     <h2 className="py-2 md:py-4 text-2xl md:text-3xl fhd:text-4xl">
                         <b>[ By ] </b> :
                     </h2>
-                    <section className="grid">
-                        <ul>
+                    <section className="grid text-start">
+                        <ul className="grid gap-2 md:gap-4">
                             {sortedArrayOfInspirationCollection.map(
                                 (element, index) => (
-                                    <li key={index}>
-                                        <p>{element.fields.inspirationTitle}</p>
+                                    <li
+                                        key={index}
+                                        className={`${classes.inspirationListItem} text-neutral-content bg-neutral p-2 md:p-4 rounded-md`}
+                                    >
+                                        <h3
+                                            className={`inline-block ${classes.inspirationTitle}`}
+                                        >
+                                            {element.fields.inspirationTitle},
+                                        </h3>
                                         {documentToReactComponents(
                                             element.fields.inspirationSubHeader
                                         )}
