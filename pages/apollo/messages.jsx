@@ -74,7 +74,14 @@ function Messages({ props }) {
                                 </p>
                                 <p>
                                     <i>
-                                        Date: {dateString ? dateString : date}
+                                        Date:{' '}
+                                        {dateString
+                                            ? dateString
+                                            : new Date(
+                                                  Number(date)
+                                              ).toLocaleString('lv-LV', {
+                                                  hour12: false,
+                                              })}
                                     </i>
                                 </p>
                             </div>
