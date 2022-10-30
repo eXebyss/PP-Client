@@ -15,7 +15,7 @@ export async function getServerSideProps() {
         query: gql`
             query getMessages {
                 messages {
-                    _id
+                    id
                     name
                     email
                     message
@@ -31,7 +31,7 @@ export async function getServerSideProps() {
         accessToken: process.env.ACCESS_TOKEN,
     })
 
-    const entriesMainInfo = await contentClient.getEntries({
+    const entriesFooterInfo = await contentClient.getEntries({
         content_type: process.env.CONTENT_TYPE1,
     })
 
@@ -39,7 +39,7 @@ export async function getServerSideProps() {
         props: {
             messages: data.messages,
             whitelistEmail: process.env.WHITELIST_EMAIL,
-            portfolioPage: entriesMainInfo.items,
+            footerInfo: entriesFooterInfo.items,
         },
     }
 }
@@ -107,9 +107,9 @@ function Messages({ props }) {
     )
 }
 
-export default function ApolloApp({ messages, whitelistEmail, portfolioPage }) {
+export default function ApolloApp({ messages, whitelistEmail, footerInfo }) {
     return (
-        <Layout props={portfolioPage}>
+        <Layout props={footerInfo}>
             <Head>
                 <title>{`${siteTitle}: Message List`}</title>
                 <meta
