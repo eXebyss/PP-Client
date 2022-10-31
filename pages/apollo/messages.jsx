@@ -15,7 +15,7 @@ export async function getServerSideProps() {
         query: gql`
             query getMessages {
                 messages {
-                    id
+                    _id
                     name
                     email
                     message
