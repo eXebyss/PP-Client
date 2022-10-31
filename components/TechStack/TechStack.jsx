@@ -1,6 +1,7 @@
 import {
     Alpinedotjs,
     Apollographql,
+    Axios,
     Bootstrap,
     Contentful,
     CssThree,
@@ -8,6 +9,8 @@ import {
     Express,
     Git,
     Github,
+    Googleanalytics,
+    Googlecloud,
     Graphql,
     Heroku,
     Html5,
@@ -20,6 +23,7 @@ import {
     Nodedotjs,
     Php,
     Postgresql,
+    Prisma,
     Pwa,
     ReactJs,
     Redux,
@@ -27,6 +31,7 @@ import {
     Socketdotio,
     Tailwindcss,
     Typescript,
+    Vercel,
     Webpack,
 } from '@icons-pack/react-simple-icons'
 
@@ -50,16 +55,21 @@ const TechStack = () => {
             <Graphql className="text-neutral-content hover:text-[#E10098] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Apollographql className="text-neutral-content hover:text-[#311C87] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Socketdotio className="text-neutral-content hover:text-[#010101] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Axios className="text-neutral-content hover:text-[#5A29E4] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Mongodb className="text-neutral-content hover:text-[#47A248] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Mysql className="text-neutral-content hover:text-[#4479A1] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Postgresql className="text-neutral-content hover:text-[#4169E1] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Prisma className="text-neutral-content hover:text-[#2D3748] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Webpack className="text-neutral-content hover:text-[#8DD6F9] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Pwa className="text-neutral-content hover:text-[#5A0FC8] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Git className="text-neutral-content hover:text-[#F05032] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Github className="text-neutral-content hover:text-[#181717] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Docker className="text-neutral-content hover:text-[#2496ED] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Contentful className="text-neutral-content hover:text-[#2478CC] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Googleanalytics className="text-neutral-content hover:text-[#E37400] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Googlecloud className="text-neutral-content hover:text-[#4285F4] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Heroku className="text-neutral-content hover:text-[#430098] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Vercel className="text-neutral-content hover:text-[#000000] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Microsoftazure className="text-neutral-content hover:text-[#0078D4] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Magento className="text-neutral-content hover:text-[#EE672F] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
         </div>
