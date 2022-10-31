@@ -1,0 +1,52 @@
+.skillsGrid {
+    @apply mt-4        
+        grid
+        gap-x-2
+        gap-y-2
+        grid-cols-2
+        w-60
+        mx-auto
+        text-start
+        md:w-auto
+        md:gap-x-4
+        md:gap-y-4
+        md:grid-cols-3
+        lg:grid-cols-4;
+}
+
+.skillsGrid h3 {
+    @apply text-base
+        md:text-xl
+        fhd:text-2xl;
+}
+
+.skillsGrid h3::before {
+    @apply text-primary 
+        font-black 
+        pr-2
+        font-fa6f;
+    content: '\f0da';
+}
+
+.skillsGrid ul {
+    @apply mb-2
+        lg:mb-4;
+}
+
+.skillsInfoText {
+    @apply my-4
+        text-justify;
+}
+
+.skillsInfoText p {
+    @apply pb-4
+        md:pb-8;
+}
+
+.skillsInfoText p:nth-of-type(3) {
+    @apply pb-0;
+}
+
+.skillsInfoText p b {
+    @apply text-primary;
+}
