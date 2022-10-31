@@ -1,37 +1,31 @@
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { Github, Linkedin } from '@icons-pack/react-simple-icons'
 import React from 'react'
-import styles from './footer.module.scss'
 
-function Footer() {
-	return (
-		<div className='footer'>
-			<p>Copyright © Mihails Fjodorovs 2021-2022</p>
-			<a href='https://github.com/eXebyss/' target='blank' aria-label='GitHub'>
-				<i className='fa-brands fa-github'></i>
-			</a>
-			<a
-				href='https://www.linkedin.com/in/mihails-fjodorovs-361a0a182/'
-				target='blank'
-				aria-label='LinkedIn'>
-				<i className='fa-brands fa-linkedin'></i>
-			</a>
-			<a
-				href='https://www.codewars.com/users/eXebyss'
-				target='blank'
-				aria-label='Codewars'>
-				<img
-					src='https://www.codewars.com/users/eXebyss/badges/micro'
-					alt='Codewars'
-					className={styles.codewarsBadge}
-				/>
-			</a>
-			<p>
-				I know, I&apos;m not perfect and could have done better. But still, I
-				love what I do. And if it could have been done even better, then in the
-				future it will definitely be so. ❤️
-			</p>
-			<p>v1.0</p>
-		</div>
-	)
+import classes from './footer.module.scss'
+
+function Footer({ props }) {
+    const { footer } = props[0].fields
+
+    return (
+        <footer className={classes.root}>
+            <div className="items-center md:grid-flow-col">
+                {documentToReactComponents(footer)}
+                <div className="grid grid-flow-col">
+                    <a
+                        className="mr-2"
+                        href={process.env.LINKEDIN_URI}
+                        target="blank"
+                    >
+                        <Linkedin className="w-6 h-6 fill-base-content hover:fill-primary" />
+                    </a>
+                    <a href={process.env.GITHUB_URI} target="blank">
+                        <Github className="w-6 h-6 fill-base-content hover:fill-primary" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    )
 }
 
 export default Footer

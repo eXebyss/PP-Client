@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Client for the personal Portfolio Page
 
-## Getting Started
+❗ As the client stands for personal Portfolio Page, only brief information will be provided.
 
-First, run the development server:
+## Features 💎
 
-```bash
-npm run dev
-# or
+-   React
+-   Next.js
+-   Tailwind
+-   DaisyUI
+-   Contentful
+-   Apollo Client
+-   MongoDB
+-   NextAuth
+-   PWA
+
+## Tech ⚙️
+
+Portfolio Page client uses a number of open source projects to work properly:
+
+-   [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+-   [Next.js](https://nextjs.org/) - Next.js is a flexible React framework that gives you building blocks to create fast web applications.
+-   [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.
+-   [DaisyUI](https://daisyui.com/) - The most popular, free and open-source Tailwind CSS component library
+-   [Contentful](https://www.contentful.com/) - More than a headless CMS, Contentful is the API-first content management platform to create, manage and publish content on any digital channel.
+-   [Apollo](https://www.apollographql.com/) - Apollo is a platform for building a supergraph, a unified network of all your data, services, and capabilities that connects to your application clients (such as web and native apps). At the heart of the supergraph is a query language called GraphQL.
+-   [MongoDB](https://www.mongodb.com/) - MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need.
+-   [NextAuth](https://next-auth.js.org/) - NextAuth. js is a complete open source authentication solution for Next. js applications. It is designed from the ground up to support Next. js and Serverless.
+
+## Installation 📀
+
+PP Client requires [Node.js](https://nodejs.org/) v12+ to run.
+
+Install the dependencies and devDependencies and start the client.
+
+```sh
+cd PP-Client
+yarn
+yarn build
+yarn start
+```
+
+## Development 🛠️
+
+```sh
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## License ⚖️
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+ISC
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Free Software 👑**

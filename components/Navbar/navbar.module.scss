@@ -1,0 +1,12 @@
+.navLink {
+    @apply btn 
+        btn-ghost 
+        normal-case
+        text-sm
+        md:text-base
+        fhd:text-lg;
+}
+
+.navSpan {
+    @apply text-primary;
+}
