@@ -4,7 +4,7 @@ import { gql } from '@apollo/client'
 import { createClient } from 'contentful'
 import { signIn, signOut, useSession } from 'next-auth/react'
 
-import client from '../../apollo-client'
+import client from '../../apollo/client'
 import Layout from '../../components/Layout/Layout'
 import Button from '../../components/UI/Button'
 import ThemeSelector from '../../components/UI/ThemeSelector'
