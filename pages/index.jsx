@@ -2,8 +2,8 @@ import Head from 'next/head'
 
 import { createClient } from 'contentful'
 
+import App from '../components/App'
 import Layout from '../components/Layout'
-import App from '../components/app'
 import { siteTitle } from '../constants'
 
 export async function getStaticProps() {

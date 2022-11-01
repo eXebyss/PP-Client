@@ -6,7 +6,7 @@ import classes from './workExperience.module.scss'
 const WorkExperience = ({ props }) => {
     const { myWorkExperiencePlaceTitles, myWorkExperiencePlaces } = props
 
-    const [currentTab, setCurrentTab] = useState('1')
+    const [currentTab, setCurrentTab] = useState(1)
 
     const workTitles = myWorkExperiencePlaceTitles[0].fields
     const workPlaces = myWorkExperiencePlaces[0].fields
