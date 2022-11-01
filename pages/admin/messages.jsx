@@ -44,7 +44,7 @@ export async function getServerSideProps() {
     }
 }
 
-function Messages({ props }) {
+function MessageList({ props }) {
     const { messages, whitelistEmail } = props
 
     const { data: session } = useSession()
@@ -53,7 +53,7 @@ function Messages({ props }) {
         if (session.user.email === whitelistEmail) {
             return (
                 <>
-                    <h3>
+                    <h3 className="mx-auto grid my-2 md:my-4 break-all">
                         Signed in as: <b>{session.user.email}</b>
                     </h3>
                     <Button onClick={() => signOut()}>Sign out</Button>
@@ -114,7 +114,7 @@ function Messages({ props }) {
     )
 }
 
-export default function ApolloApp({ messages, whitelistEmail, footerInfo }) {
+export default function Messages({ messages, whitelistEmail, footerInfo }) {
     return (
         <Layout props={footerInfo}>
             <Head>
@@ -130,13 +130,13 @@ export default function ApolloApp({ messages, whitelistEmail, footerInfo }) {
                     <ThemeSelector />
                 </nav>
 
-                <div className="hero min-h-[90vh] bg-base-200">
+                <div className="hero bg-base-200">
                     <div className="hero-content text-center">
-                        <div>
+                        <div className="w-full max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl fhd:max-w-5xl 2k:max-w-6xl 4k:max-w-7xl">
                             <h2 className="justify-center font-bold">
                                 📫 Message list:
                             </h2>
-                            <Messages
+                            <MessageList
                                 props={{
                                     messages,
                                     whitelistEmail,
