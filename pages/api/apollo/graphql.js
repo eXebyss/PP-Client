@@ -1,34 +1,41 @@
-import { ApolloServer } from 'apollo-server'
+import { ApolloServer } from 'apollo-server-micro'
 
 import { resolvers } from '../../../apollo/resolvers'
-// import { schema } from '../../../apollo/schema'
 import { typeDefs } from '../../../apollo/type-defs'
-import { prisma } from '../../../context/prisma/prisma'
+import { prisma } from '../../../context/client/prisma'
 
 const apolloServer = new ApolloServer({
     typeDefs,
-    resolvers: { resolvers },
+    resolvers,
     context: { prisma },
 })
 
-// export const config = {
-//     api: {
-//         bodyParser: false,
-//     },
-// }
-
-async function startApolloServer() {
-    const { url, port } = await apolloServer.listen({
-        port: process.env.PORT || 4000,
-    })
-
-    /* eslint-disable */
-    console.log(`
-		🚀  Server is running
-		🔉  Listening on port ${port}
-		📭  Query at ${url}
-    `)
-    /* eslint-enable */
+export const config = {
+    api: {
+        bodyParser: false,
+    },
 }
 
-export default startApolloServer()
+const startServer = apolloServer.start()
+
+export default async (req, res) => {
+    res.setHeader('Access-Control-Allow-Credentials', 'true')
+    res.setHeader(
+        'Access-Control-Allow-Origin',
+        'https://studio.apollographql.com'
+    )
+    res.setHeader(
+        'Access-Control-Allow-Headers',
+        'Origin, X-Requested-With, Content-Type, Accept'
+    )
+    if (req.method === 'OPTIONS') {
+        res.end()
+        return false
+    }
+
+    await startServer
+
+    await apolloServer.createHandler({
+        path: '/api/apollo/graphql',
+    })(req, res)
+}

@@ -9,10 +9,11 @@
 -   Tailwind
 -   DaisyUI
 -   Contentful
--   Apollo Client
+-   Apollo Server & Client
 -   MongoDB
 -   NextAuth
 -   PWA
+-   Prisma
 
 ## Tech ⚙️
 
@@ -26,6 +27,7 @@ Portfolio Page client uses a number of open source projects to work properly:
 -   [Apollo](https://www.apollographql.com/) - Apollo is a platform for building a supergraph, a unified network of all your data, services, and capabilities that connects to your application clients (such as web and native apps). At the heart of the supergraph is a query language called GraphQL.
 -   [MongoDB](https://www.mongodb.com/) - MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need.
 -   [NextAuth](https://next-auth.js.org/) - NextAuth. js is a complete open source authentication solution for Next. js applications. It is designed from the ground up to support Next. js and Serverless.
+-   [Prisma](https://www.prisma.io/) - Prisma is a next-generation Node.js and TypeScript ORM for PostgreSQL, MySQL, SQL Server, SQLite, MongoDB, and CockroachDB.
 
 ## Installation 📀
 

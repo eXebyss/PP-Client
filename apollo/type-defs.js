@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server'
+import { gql } from 'apollo-server-micro'
 
 export const typeDefs = gql`
     "Message send via contact form"
