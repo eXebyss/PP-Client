@@ -20,11 +20,11 @@ const ThemeSelector = () => {
             <option value="default" disabled>
                 Choose style theme
             </option>
-            <option value="light">🌞 Light</option>
-            <option value="lofi">🌞 Lofi</option>
+            <option value="light">🌝 Light</option>
+            <option value="lofi">🌟 Lofi</option>
             <option value="night">🌚 Night</option>
             <option value="cyberpunk">🤖 Cyberpunk</option>
-            <option value="luxury">🌜 Luxury</option>
+            <option value="luxury">💎 Luxury</option>
         </select>
     )
 }
