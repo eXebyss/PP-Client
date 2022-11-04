@@ -2,10 +2,13 @@ import Image from 'next/image'
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Github } from '@icons-pack/react-simple-icons'
+import { useState } from 'react'
 
 import classes from './myProjects.module.scss'
 
 const MyProjects = ({ props }) => {
+    const [currentSlide, setCurrentSlide] = useState(0)
+
     const sortedArrayOfProjects = props.sort((a, b) =>
         b.fields.projectId > a.fields.projectId
             ? 1
@@ -124,7 +127,16 @@ const MyProjects = ({ props }) => {
 
                     <div className="flex justify-center w-full py-2 gap-2">
                         {props.map((_, i) => (
-                            <a href={`#${i}`} className="btn btn-xs" key={i}>
+                            <a
+                                href={`#${i}`}
+                                className={`btn btn-xs hover:text-primary hover:bg-primary-content active:text-primary active:bg-primary-content focus:text-primary focus:bg-primary-content ${
+                                    i === currentSlide
+                                        ? 'text-primary bg-primary-content'
+                                        : ''
+                                }`}
+                                key={i}
+                                onClick={() => setCurrentSlide(i)}
+                            >
                                 {i + 1}
                             </a>
                         ))}

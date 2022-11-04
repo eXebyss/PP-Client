@@ -31,7 +31,7 @@ const WorkExperience = ({ props }) => {
                         {workTitleKeyCollection[0].map((value, index) => (
                             <button
                                 className={`tab tab-bordered text-base-content active:tab-active focus:tab-active active:text-primary focus:text-primary ${
-                                    index === 0 && currentTab === 1
+                                    index + 1 === currentTab
                                         ? '!text-primary tab-active'
                                         : ''
                                 }`}

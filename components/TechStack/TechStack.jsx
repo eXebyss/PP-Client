@@ -46,15 +46,27 @@ const TechStack = () => {
             <Javascript className="text-neutral-content hover:text-[#F7DF1E] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Typescript className="text-neutral-content hover:text-[#3178C6] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Php className="text-neutral-content hover:text-[#777BB4] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
-            <Nodedotjs className="text-neutral-content hover:text-[#339933] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Nodedotjs
+                className="text-neutral-content hover:text-[#339933] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150"
+                title="Node.js"
+            />
             <Express className="text-neutral-content hover:text-[#000000] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <ReactJs className="text-neutral-content hover:text-[#61DAFB] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Redux className="text-neutral-content hover:text-[#764ABC] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
-            <Nextdotjs className="text-neutral-content hover:text-[#000000] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
-            <Alpinedotjs className="text-neutral-content hover:text-[#8BC0D0] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Nextdotjs
+                className="text-neutral-content hover:text-[#000000] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150"
+                title="Next.js"
+            />
+            <Alpinedotjs
+                className="text-neutral-content hover:text-[#8BC0D0] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150"
+                title="Alpine.js"
+            />
             <Graphql className="text-neutral-content hover:text-[#E10098] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Apollographql className="text-neutral-content hover:text-[#311C87] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
-            <Socketdotio className="text-neutral-content hover:text-[#010101] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Socketdotio
+                className="text-neutral-content hover:text-[#010101] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150"
+                title="Socket.io"
+            />
             <Axios className="text-neutral-content hover:text-[#5A29E4] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Mongodb className="text-neutral-content hover:text-[#47A248] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Mysql className="text-neutral-content hover:text-[#4479A1] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
