@@ -124,7 +124,11 @@ const MyProjects = ({ props }) => {
 
                     <div className="flex justify-center w-full py-2 gap-2">
                         {props.map((_, i) => (
-                            <a href={`#${i}`} className="btn btn-xs" key={i}>
+                            <a
+                                href={`#${i}`}
+                                className="btn btn-xs hover:text-primary hover:bg-primary-content active:text-primary active:bg-primary-content focus:text-primary focus:bg-primary-content"
+                                key={i}
+                            >
                                 {i + 1}
                             </a>
                         ))}

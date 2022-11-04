@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 import handleClickForMessage from '../../context/actions/sendMessage'
 import emailRegExCheck from '../../helpers/emailRegExCheck'
-import blurHandler from '../../utils/handlers/blurHandler'
+import { blurHandler } from '../../utils/handlers'
 import Button from '../UI/Button'
 import Input from '../UI/Input'
 import Textarea from '../UI/Textarea'
