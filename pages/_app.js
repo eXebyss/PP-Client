@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Script from 'next/script'
 
-import { SessionProvider } from 'next-auth/react'
+import { UserProvider } from '@auth0/nextjs-auth0'
 
 import '../styles/global/index.scss'
 
-function App({ Component, pageProps: { session, ...pageProps } }) {
+function App({ Component, pageProps: { ...pageProps } }) {
     return (
-        <SessionProvider session={session}>
+        <UserProvider>
             <Head>
                 <meta
                     name="viewport"
@@ -41,7 +41,7 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
           `}
             </Script>
             <Component {...pageProps} />
-        </SessionProvider>
+        </UserProvider>
     )
 }
 
