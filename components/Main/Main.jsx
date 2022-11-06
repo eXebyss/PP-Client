@@ -1,29 +1,30 @@
 import dynamic from 'next/dynamic'
 
 import Divider from '../Divider'
+import { Spinner } from '../Icons'
 
 const AboutMe = dynamic(() => import('../AboutMe'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <Spinner className="animate-spin h-5 w-5" />,
 })
 
 const Skills = dynamic(() => import('../Skills'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <Spinner className="animate-spin h-5 w-5" />,
 })
 
 const WorkExperience = dynamic(() => import('../WorkExperience'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <Spinner className="animate-spin h-5 w-5" />,
 })
 
 const ContactMe = dynamic(() => import('../ContactMe'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <Spinner className="animate-spin h-5 w-5" />,
 })
 
 const MyProjects = dynamic(() => import('../MyProjects'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <Spinner className="animate-spin h-5 w-5" />,
 })
 
 const Inspiration = dynamic(() => import('../Inspiration'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <Spinner className="animate-spin h-5 w-5" />,
 })
 
 function Main({ props }) {
