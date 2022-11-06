@@ -1,12 +1,12 @@
 import Head from 'next/head'
 
 import { gql } from '@apollo/client'
+import { useUser } from '@auth0/nextjs-auth0'
 import { createClient } from 'contentful'
-import { signIn, signOut, useSession } from 'next-auth/react'
 
 import client from '../../apollo/client'
+import { Spinner } from '../../components/Icons'
 import Layout from '../../components/Layout/Layout'
-import Button from '../../components/UI/Button'
 import ThemeSelector from '../../components/UI/ThemeSelector'
 import { siteTitle } from '../../constants'
 
@@ -47,16 +47,24 @@ export async function getServerSideProps() {
 function MessageList({ props }) {
     const { messages, whitelistEmail } = props
 
-    const { data: session } = useSession()
+    const { user, error, isLoading } = useUser()
 
-    if (session) {
-        if (session.user.email === whitelistEmail) {
+    if (isLoading) return <Spinner />
+    if (error) return <div>{error.message}</div>
+
+    // const { data: session } = useSession()
+
+    if (user) {
+        if (user.email === whitelistEmail) {
             return (
                 <>
                     <h3 className="mx-auto grid my-2 md:my-4 break-all">
-                        Signed in as: <b>{session.user.email}</b>
+                        Signed in as: <b>[ {user.name} ]</b>
                     </h3>
-                    <Button onClick={() => signOut()}>Sign out</Button>
+                    <h4>{user.email}</h4>
+                    <a href="/api/auth/logout" aria-label="Logout">
+                        Logout
+                    </a>
                     {messages.map(
                         ({ _id, name, email, message, date, dateString }) => (
                             <div
@@ -109,7 +117,9 @@ function MessageList({ props }) {
             <p className="text-warning font-bold py-2 fhd:py-4">
                 Not signed in ❗
             </p>
-            <Button onClick={() => signIn()}>Sign in</Button>
+            <a href="/api/auth/login" aria-label="Login to see messages">
+                Login
+            </a>
         </>
     )
 }
