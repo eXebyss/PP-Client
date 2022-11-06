@@ -1,7 +1,7 @@
 import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
 import NextAuth from 'next-auth'
+import Auth0Provider from 'next-auth/providers/auth0'
 import EmailProvider from 'next-auth/providers/email'
-import GoogleProvider from 'next-auth/providers/google'
 
 import clientPromise from './lib/mongodb'
 
@@ -19,9 +19,10 @@ export default NextAuth({
             },
             from: process.env.EMAIL_FROM,
         }),
-        GoogleProvider({
-            clientId: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        Auth0Provider({
+            clientId: process.env.AUTH0_CLIENT_ID,
+            clientSecret: process.env.AUTH0_CLIENT_SECRET,
+            issuer: process.env.AUTH0_ISSUER,
         }),
     ],
     secret: process.env.NEXT_PUBLIC_SECRET,

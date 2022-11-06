@@ -1,6 +1,7 @@
 import {
     Alpinedotjs,
     Apollographql,
+    Auth0,
     Axios,
     Bootstrap,
     Contentful,
@@ -77,6 +78,7 @@ const TechStack = () => {
             <Git className="text-neutral-content hover:text-[#F05032] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Github className="text-neutral-content hover:text-[#181717] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Docker className="text-neutral-content hover:text-[#2496ED] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Auth0 className="text-neutral-content hover:text-[#EB5424] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Contentful className="text-neutral-content hover:text-[#2478CC] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Googleanalytics className="text-neutral-content hover:text-[#E37400] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Googlecloud className="text-neutral-content hover:text-[#4285F4] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
