@@ -7,6 +7,7 @@ import { createClient } from 'contentful'
 import client from '../../apollo/client'
 import { Spinner } from '../../components/Icons'
 import Layout from '../../components/Layout/Layout'
+import ButtonLink from '../../components/UI/ButtonLink'
 import ThemeSelector from '../../components/UI/ThemeSelector'
 import { siteTitle } from '../../constants'
 
@@ -49,10 +50,11 @@ function MessageList({ props }) {
 
     const { user, error, isLoading } = useUser()
 
-    if (isLoading) return <Spinner />
+    if (isLoading)
+        return (
+            <Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
+        )
     if (error) return <div>{error.message}</div>
-
-    // const { data: session } = useSession()
 
     if (user) {
         if (user.email === whitelistEmail) {
@@ -62,9 +64,9 @@ function MessageList({ props }) {
                         Signed in as: <b>[ {user.name} ]</b>
                     </h3>
                     <h4>{user.email}</h4>
-                    <a href="/api/auth/logout" aria-label="Logout">
+                    <ButtonLink href="/api/auth/logout" aria-label="Logout">
                         Logout
-                    </a>
+                    </ButtonLink>
                     {messages.map(
                         ({ _id, name, email, message, date, dateString }) => (
                             <div
@@ -100,9 +102,17 @@ function MessageList({ props }) {
         } else {
             return (
                 <>
-                    <h3 className="text-error py-2 fhd:py-4">Access Denied</h3>
+                    <h3 className="text-error py-2 fhd:py-4">
+                        Access Denied For:
+                    </h3>
+                    <h4>
+                        <b>[ {user.name} ]</b> ({user.email})
+                    </h4>
                     <p>It seems, like you are not added to a whitelist.</p>
                     <p>Please, contact system administrator.</p>
+                    <ButtonLink href="/api/auth/logout" aria-label="Logout">
+                        Logout
+                    </ButtonLink>
                 </>
             )
         }
@@ -117,9 +127,12 @@ function MessageList({ props }) {
             <p className="text-warning font-bold py-2 fhd:py-4">
                 Not signed in ❗
             </p>
-            <a href="/api/auth/login" aria-label="Login to see messages">
+            <ButtonLink
+                href="/api/auth/login"
+                aria-label="Login to see messages"
+            >
                 Login
-            </a>
+            </ButtonLink>
         </>
     )
 }

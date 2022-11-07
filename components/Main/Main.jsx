@@ -4,27 +4,39 @@ import Divider from '../Divider'
 import { Spinner } from '../Icons'
 
 const AboutMe = dynamic(() => import('../AboutMe'), {
-    loading: () => <Spinner className="animate-spin h-5 w-5" />,
+    loading: () => (
+        <Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
+    ),
 })
 
 const Skills = dynamic(() => import('../Skills'), {
-    loading: () => <Spinner className="animate-spin h-5 w-5" />,
+    loading: () => (
+        <Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
+    ),
 })
 
 const WorkExperience = dynamic(() => import('../WorkExperience'), {
-    loading: () => <Spinner className="animate-spin h-5 w-5" />,
+    loading: () => (
+        <Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
+    ),
 })
 
 const ContactMe = dynamic(() => import('../ContactMe'), {
-    loading: () => <Spinner className="animate-spin h-5 w-5" />,
+    loading: () => (
+        <Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
+    ),
 })
 
 const MyProjects = dynamic(() => import('../MyProjects'), {
-    loading: () => <Spinner className="animate-spin h-5 w-5" />,
+    loading: () => (
+        <Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
+    ),
 })
 
 const Inspiration = dynamic(() => import('../Inspiration'), {
-    loading: () => <Spinner className="animate-spin h-5 w-5" />,
+    loading: () => (
+        <Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
+    ),
 })
 
 function Main({ props }) {
