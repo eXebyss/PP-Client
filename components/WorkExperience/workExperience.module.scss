@@ -2,12 +2,12 @@
     @apply text-primary 
         font-black 
         pr-2
-		font-fa6f;
+        font-fa6f;
     content: '\f0da';
 }
 
 .tabsContent h3 {
     @apply text-base
-		md:text-xl
+        md:text-xl
 		fhd:text-2xl;
 }

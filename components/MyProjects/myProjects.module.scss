@@ -1,11 +1,11 @@
 .cardTitle h3 {
     @apply text-xl
-		md:text-2xl
+        md:text-2xl
 		fhd:text-3xl;
 }
 .techStackList ol {
     @apply flex
-		flex-wrap
+        flex-wrap
 		justify-start
 		gap-x-2
 		md:gap-x-4;
@@ -16,5 +16,5 @@
     @apply text-primary 
         font-black 
         pr-2
-		font-fa6f;
+        font-fa6f;
 }

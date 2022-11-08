@@ -9,12 +9,12 @@ html {
 html,
 body {
     @apply p-0
-		m-0;
+        m-0;
 }
 
 a {
     @apply text-inherit
-		no-underline
+        no-underline
 		link
 		link-primary;
 }
@@ -25,49 +25,49 @@ html {
 
 body {
     @apply mx-auto
-		grid;
+        grid;
 }
 
 h1 {
     @apply text-6xl
-		md:text-7xl
+        md:text-7xl
 		xl:text-8xl
 		2xl:text-9xl;
 }
 
 h2 {
     @apply text-4xl
-		md:text-5xl
+        md:text-5xl
 		fhd:text-6xl;
 }
 
 h3 {
     @apply text-3xl
-		md:text-4xl
+        md:text-4xl
 		fhd:text-5xl;
 }
 
 h4 {
     @apply text-2xl
-		md:text-3xl
+        md:text-3xl
 		fhd:text-4xl;
 }
 
 h5 {
     @apply text-xl
-		md:text-2xl
+        md:text-2xl
 		fhd:text-3xl;
 }
 
 h6 {
     @apply text-base
-		md:text-xl
+        md:text-xl
 		fhd:text-2xl;
 }
 
 p {
     @apply text-sm
-		md:text-base;
+        md:text-base;
 }
 
 h1,
@@ -94,19 +94,19 @@ svg {
 /* width */
 ::-webkit-scrollbar {
     @apply w-2 
-		2xl:w-2.5;
+        2xl:w-2.5;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
     @apply bg-primary-content 
-		rounded;
+        rounded;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     @apply bg-primary 
-		rounded;
+        rounded;
 }
 
 /* Handle on hover */
@@ -117,19 +117,19 @@ svg {
 /* width */
 ::-moz-scrollbar {
     @apply w-2 
-		2xl:w-2.5;
+        2xl:w-2.5;
 }
 
 /* Track */
 ::-moz-scrollbar-track {
     @apply bg-primary-content 
-		rounded;
+        rounded;
 }
 
 /* Handle */
 ::-moz-scrollbar-thumb {
     @apply bg-primary 
-		rounded;
+        rounded;
 }
 
 /* Handle on hover */
