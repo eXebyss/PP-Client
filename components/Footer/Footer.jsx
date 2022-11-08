@@ -1,5 +1,5 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { Github, Linkedin } from '@icons-pack/react-simple-icons'
+import { Codewars, Github, Linkedin } from '@icons-pack/react-simple-icons'
 import React from 'react'
 
 import classes from './footer.module.scss'
@@ -13,14 +13,25 @@ function Footer({ props }) {
                 {documentToReactComponents(footer)}
                 <div className="grid grid-flow-col">
                     <a
-                        className="mr-2"
-                        href={process.env.LINKEDIN_URI}
+                        className="mx-1 fhd:mx-2"
+                        href={process.env.LINKEDIN_URL}
                         target="blank"
                     >
                         <Linkedin className="w-6 h-6 fill-base-content hover:fill-primary" />
                     </a>
-                    <a href={process.env.GITHUB_URI} target="blank">
+                    <a
+                        className="mx-1 fhd:mx-2"
+                        href={process.env.GITHUB_URL}
+                        target="blank"
+                    >
                         <Github className="w-6 h-6 fill-base-content hover:fill-primary" />
+                    </a>
+                    <a
+                        className="mx-1 fhd:mx-2"
+                        href={process.env.CODEWARS_URL}
+                        target="blank"
+                    >
+                        <Codewars className="w-6 h-6 fill-base-content hover:fill-primary" />
                     </a>
                 </div>
             </div>
