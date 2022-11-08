@@ -1,46 +1,40 @@
 import Head from 'next/head'
 
-import { createClient } from 'contentful'
-
 import App from '../components/App'
 import Layout from '../components/Layout'
 import { siteTitle } from '../constants'
+import { contentful as contentfulClient } from '../context/client/contentful'
 
 export async function getStaticProps() {
-    const client = createClient({
-        space: process.env.SPACE,
-        accessToken: process.env.ACCESS_TOKEN,
-    })
-
-    const entriesMainInfo = await client.getEntries({
+    const entriesMainInfo = await contentfulClient.getEntries({
         content_type: process.env.CONTENT_TYPE1,
     })
 
-    const entriesWorkPlaceTitles = await client.getEntries({
+    const entriesWorkPlaceTitles = await contentfulClient.getEntries({
         content_type: process.env.CONTENT_TYPE2,
     })
 
-    const entriesWorkPlaces = await client.getEntries({
+    const entriesWorkPlaces = await contentfulClient.getEntries({
         content_type: process.env.CONTENT_TYPE3,
     })
 
-    const entriesPersonalProjects = await client.getEntries({
+    const entriesPersonalProjects = await contentfulClient.getEntries({
         content_type: process.env.CONTENT_TYPE4,
     })
 
-    const entriesContactMeForm = await client.getEntries({
+    const entriesContactMeForm = await contentfulClient.getEntries({
         content_type: process.env.CONTENT_TYPE5,
     })
 
-    const entriesSkillScopes = await client.getEntries({
+    const entriesSkillScopes = await contentfulClient.getEntries({
         content_type: process.env.CONTENT_TYPE6,
     })
 
-    const entriesSkillSet = await client.getEntries({
+    const entriesSkillSet = await contentfulClient.getEntries({
         content_type: process.env.CONTENT_TYPE7,
     })
 
-    const entriesInspiration = await client.getEntries({
+    const entriesInspiration = await contentfulClient.getEntries({
         content_type: process.env.CONTENT_TYPE8,
     })
 

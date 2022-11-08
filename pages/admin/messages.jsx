@@ -2,7 +2,6 @@ import Head from 'next/head'
 
 import { gql } from '@apollo/client'
 import { useUser } from '@auth0/nextjs-auth0'
-import { createClient } from 'contentful'
 
 import client from '../../apollo/client'
 import { Spinner } from '../../components/Icons'
@@ -10,6 +9,7 @@ import Layout from '../../components/Layout/Layout'
 import ButtonLink from '../../components/UI/ButtonLink'
 import ThemeSelector from '../../components/UI/ThemeSelector'
 import { siteTitle } from '../../constants'
+import { contentful as contentfulClient } from '../../context/client/contentful'
 
 export async function getServerSideProps() {
     const { data } = await client.query({
@@ -27,12 +27,7 @@ export async function getServerSideProps() {
         `,
     })
 
-    const contentClient = createClient({
-        space: process.env.SPACE,
-        accessToken: process.env.ACCESS_TOKEN,
-    })
-
-    const entriesFooterInfo = await contentClient.getEntries({
+    const entriesFooterInfo = await contentfulClient.getEntries({
         content_type: process.env.CONTENT_TYPE1,
     })
 
@@ -102,12 +97,11 @@ function MessageList({ props }) {
         } else {
             return (
                 <>
-                    <h3 className="text-error py-2 fhd:py-4">
-                        Access Denied For:
-                    </h3>
+                    <h3 className="text-error py-2 fhd:py-4">Access Denied</h3>
                     <h4>
-                        <b>[ {user.name} ]</b> ({user.email})
+                        <b>[ {user.name} ]</b>
                     </h4>
+                    <h4>{user.email}</h4>
                     <p>It seems, like you are not added to a whitelist.</p>
                     <p>Please, contact system administrator.</p>
                     <ButtonLink href="/api/auth/logout" aria-label="Logout">
