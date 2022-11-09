@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Script from 'next/script'
 
 import { UserProvider } from '@auth0/nextjs-auth0'
+import { Partytown } from '@builder.io/partytown/react'
 
 import '../styles/global/index.scss'
 
@@ -13,6 +14,7 @@ function App({ Component, pageProps: { ...pageProps } }) {
                     name="viewport"
                     content="width=device-width, initial-scale=1.0, viewport-fit=cover"
                 />
+                <Partytown debug={true} forward={['dataLayer.push']} />
             </Head>
             <Script
                 src="https://kit.fontawesome.com/f18b884e63.js"
@@ -20,18 +22,20 @@ function App({ Component, pageProps: { ...pageProps } }) {
                 strategy="lazyOnload"
                 /* eslint-disable */
                 onLoad={() =>
-                    console.log(`script loaded correctly: FontAwesome ✅`)
+                    console.log('Script loaded correctly: FontAwesome ✅')
                 }
                 onError={() =>
-                    console.log(`script loaded with error: FontAwesome ❌`)
+                    console.log('Script loaded with error: FontAwesome ❌')
                 }
                 /* eslint-enable */
+                type="text/partytown"
             />
             <Script
                 strategy="lazyOnload"
                 src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+                type="text/partytown"
             />
-            <Script id="ga-analytics">
+            <Script id="ga-analytics" type="text/partytown">
                 {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
