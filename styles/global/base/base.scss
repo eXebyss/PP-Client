@@ -15,8 +15,8 @@ body {
 a {
     @apply text-inherit
         no-underline
-		link
-		link-primary;
+        link
+        link-primary;
 }
 
 html {
@@ -31,38 +31,38 @@ body {
 h1 {
     @apply text-6xl
         md:text-7xl
-		xl:text-8xl
-		2xl:text-9xl;
+        xl:text-8xl
+        2xl:text-9xl;
 }
 
 h2 {
     @apply text-4xl
         md:text-5xl
-		fhd:text-6xl;
+        fhd:text-6xl;
 }
 
 h3 {
     @apply text-3xl
         md:text-4xl
-		fhd:text-5xl;
+        fhd:text-5xl;
 }
 
 h4 {
     @apply text-2xl
         md:text-3xl
-		fhd:text-4xl;
+        fhd:text-4xl;
 }
 
 h5 {
     @apply text-xl
         md:text-2xl
-		fhd:text-3xl;
+        fhd:text-3xl;
 }
 
 h6 {
     @apply text-base
         md:text-xl
-		fhd:text-2xl;
+        fhd:text-2xl;
 }
 
 p {

@@ -1,14 +1,14 @@
 .cardTitle h3 {
     @apply text-xl
         md:text-2xl
-		fhd:text-3xl;
+        fhd:text-3xl;
 }
 .techStackList ol {
     @apply flex
         flex-wrap
-		justify-start
-		gap-x-2
-		md:gap-x-4;
+        justify-start
+        gap-x-2
+        md:gap-x-4;
 }
 
 .techStackList li p::before {

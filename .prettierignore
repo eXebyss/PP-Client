@@ -31,3 +31,4 @@ public/sw.js
 public/workbox*.js
 .github/workflows/*
 CHANGELOG.md
+public/~partytown
