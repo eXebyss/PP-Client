@@ -11,7 +11,7 @@
 -   Contentful
 -   Apollo Server & Client
 -   MongoDB
--   NextAuth
+-   Auth0
 -   PWA
 -   Prisma
 
@@ -26,7 +26,7 @@ Portfolio Page client uses a number of open source projects to work properly:
 -   [Contentful](https://www.contentful.com/) - More than a headless CMS, Contentful is the API-first content management platform to create, manage and publish content on any digital channel.
 -   [Apollo](https://www.apollographql.com/) - Apollo is a platform for building a supergraph, a unified network of all your data, services, and capabilities that connects to your application clients (such as web and native apps). At the heart of the supergraph is a query language called GraphQL.
 -   [MongoDB](https://www.mongodb.com/) - MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need.
--   [NextAuth](https://next-auth.js.org/) - NextAuth. js is a complete open source authentication solution for Next. js applications. It is designed from the ground up to support Next. js and Serverless.
+-   [Auth0](https://auth0.com/) - Auth0 is a flexible, drop-in solution to add authentication and authorization services to your applications. Your team and organization can avoid the cost, time, and risk that come with building your own solution to authenticate and authorize users.
 -   [Prisma](https://www.prisma.io/) - Prisma is a next-generation Node.js and TypeScript ORM for PostgreSQL, MySQL, SQL Server, SQLite, MongoDB, and CockroachDB.
 
 ## Installation 📀

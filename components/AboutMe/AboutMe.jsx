@@ -13,11 +13,11 @@ const AboutMe = ({ props }) => {
                 <div className="avatar">
                     <div className="w-56 rounded-full ring ring-primary  ring-offset-base-100 ring-offset-2 hover:shadow-lg hover:shadow-primary/50">
                         <Image
-                            src={'https:' + avatar.fields.file.url}
+                            src={`https:${avatar.fields.file.url}`}
                             alt={avatar.fields.description}
                             width={avatar.fields.file.details.image.width}
                             height={avatar.fields.file.details.image.height}
-                            blurDataURL={'https:' + avatar.fields.file.url}
+                            blurDataURL={`https:${avatar.fields.file.url}`}
                             placeholder="blur"
                             loading="lazy"
                             className="max-w-sm rounded-lg shadow-2xl"
