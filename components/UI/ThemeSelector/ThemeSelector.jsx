@@ -1,9 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { themeHandler } from '../../../utils/handlers'
 
 const ThemeSelector = () => {
     const [theme, setTheme] = useState('')
+
+    useEffect(() => {
+        const storedTheme = JSON.parse(localStorage.getItem('selectedTheme'))
+        document.documentElement.setAttribute('data-theme', storedTheme)
+    }, [])
+
+    useEffect(() => {
+        theme && localStorage.setItem('selectedTheme', JSON.stringify(theme))
+    }, [theme])
 
     const changeTheme = (themeValue) => {
         document.documentElement.setAttribute('data-theme', themeValue)
@@ -17,7 +26,7 @@ const ThemeSelector = () => {
                 themeHandler(e.target.value, setTheme, changeTheme)
             }
         >
-            <option value="default" disabled>
+            <option value="default" disabled={true}>
                 Choose style theme
             </option>
             <option value="light">🌝 Light</option>
