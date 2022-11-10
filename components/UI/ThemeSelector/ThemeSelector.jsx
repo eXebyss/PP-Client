@@ -6,13 +6,15 @@ const ThemeSelector = () => {
     const [theme, setTheme] = useState('')
 
     useEffect(() => {
-        const storedTheme = JSON.parse(localStorage.getItem('selectedTheme'))
-        document.documentElement.setAttribute('data-theme', storedTheme)
-    }, [])
+        theme && localStorage.setItem('styleTheme', JSON.stringify(theme))
+    }, [theme])
 
     useEffect(() => {
-        theme && localStorage.setItem('selectedTheme', JSON.stringify(theme))
-    }, [theme])
+        const storedTheme = JSON.parse(localStorage.getItem('styleTheme'))
+        storedTheme &&
+            document.documentElement.setAttribute('data-theme', storedTheme)
+        storedTheme && setTheme(storedTheme)
+    }, [])
 
     const changeTheme = (themeValue) => {
         document.documentElement.setAttribute('data-theme', themeValue)
