@@ -11,7 +11,7 @@ const AboutMe = ({ props }) => {
         <div className="hero bg-base-200" id="aboutMe">
             <div className="hero-content w-full justify-evenly flex-col lg:flex-row max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl fhd:max-w-5xl 2k:max-w-6xl 4k:max-w-7xl">
                 <div className="avatar">
-                    <div className="w-56 rounded-full ring ring-primary  ring-offset-base-100 ring-offset-2 hover:shadow-lg hover:shadow-primary/50">
+                    <div className="w-56 rounded-full ring ring-primary  ring-offset-base-100 ring-offset-2 shadow-lg hover:shadow-lg hover:shadow-primary/50">
                         <Image
                             src={`https:${avatar.fields.file.url}`}
                             alt={avatar.fields.description}
@@ -20,7 +20,7 @@ const AboutMe = ({ props }) => {
                             blurDataURL={`https:${avatar.fields.file.url}`}
                             placeholder="blur"
                             loading="lazy"
-                            className="max-w-sm rounded-lg shadow-2xl"
+                            className="max-w-sm rounded-lg"
                         />
                     </div>
                 </div>

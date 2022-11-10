@@ -14,7 +14,11 @@ module.exports = withBundleAnalyzer(
         reactStrictMode: true,
         swcMinify: true,
         images: {
-            domains: ['images.ctfassets.net', 'placeimg.com'],
+            domains: [
+                'images.ctfassets.net',
+                'placeimg.com',
+                'lh3.googleusercontent.com',
+            ],
         },
     })
 )

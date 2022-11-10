@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 import { gql } from '@apollo/client'
 import { useUser } from '@auth0/nextjs-auth0'
@@ -45,16 +46,34 @@ function MessageList({ props }) {
 
     const { user, error, isLoading } = useUser()
 
-    if (isLoading)
+    if (isLoading) {
         return (
             <Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
         )
-    if (error) return <div>{error.message}</div>
+    }
+
+    if (error) {
+        return <div>{error.message}</div>
+    }
 
     if (user) {
         if (user.email === whitelistEmail) {
             return (
                 <>
+                    <div className="avatar mt-2 md:mt-4">
+                        <div className="w-24 md:w-32 rounded-full ring ring-primary  ring-offset-base-100 ring-offset-2 shadow-lg hover:shadow-lg hover:shadow-primary/50">
+                            <Image
+                                src={user.picture}
+                                alt="User picture"
+                                layout="fill"
+                                blurDataURL={user.picture}
+                                placeholder="blur"
+                                loading="lazy"
+                                className="max-w-sm rounded-full"
+                            />
+                        </div>
+                    </div>
+
                     <h3 className="mx-auto grid my-2 md:my-4 break-all">
                         Signed in as: <b>[ {user.name} ]</b>
                     </h3>
@@ -98,6 +117,20 @@ function MessageList({ props }) {
             return (
                 <>
                     <h3 className="text-error py-2 fhd:py-4">Access Denied</h3>
+                    <div className="avatar my-2 md:my-4">
+                        <div className="w-24 md:w-32 rounded-full ring ring-primary  ring-offset-base-100 ring-offset-2 shadow-lg hover:shadow-lg hover:shadow-primary/50">
+                            <Image
+                                src={user.picture}
+                                alt="User picture"
+                                layout="fill"
+                                blurDataURL={user.picture}
+                                placeholder="blur"
+                                loading="lazy"
+                                className="max-w-sm rounded-full"
+                            />
+                        </div>
+                    </div>
+
                     <h4>
                         <b>[ {user.name} ]</b>
                     </h4>
