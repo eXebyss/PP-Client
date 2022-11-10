@@ -1,5 +1,6 @@
 import Main from '../Main'
 import Navbar from '../Navbar'
+import ButtonScrollTop from '../UI/ButtonScrollTop'
 import WelcomeScreen from '../WelcomeScreen'
 
 function App({ props }) {
@@ -9,6 +10,7 @@ function App({ props }) {
         <>
             <WelcomeScreen props={portfolioPage} />
             <Navbar />
+            <ButtonScrollTop />
             <Main props={props} />
         </>
     )

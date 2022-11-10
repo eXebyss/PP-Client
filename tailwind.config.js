@@ -20,6 +20,7 @@ module.exports = {
             },
             strokeWidth: {
                 10: '10px',
+                15: '15px',
             },
         },
     },

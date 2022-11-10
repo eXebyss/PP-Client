@@ -1,4 +1,4 @@
-function ArrowDownward({ className }) {
+function ArrowDown({ className }) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -10,4 +10,4 @@ function ArrowDownward({ className }) {
     )
 }
 
-export default ArrowDownward
+export default ArrowDown
