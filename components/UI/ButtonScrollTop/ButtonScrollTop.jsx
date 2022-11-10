@@ -8,7 +8,7 @@ const ButtonScrollTop = () => {
 
     useEffect(() => {
         const handleScrollButtonVisibility = () => {
-            window.pageYOffset > 300
+            window.pageYOffset > window.screen.height
                 ? setShowButton(true)
                 : setShowButton(false)
         }
