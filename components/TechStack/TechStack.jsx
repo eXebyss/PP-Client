@@ -7,6 +7,7 @@ import {
     Contentful,
     CssThree,
     Docker,
+    Eslint,
     Express,
     Git,
     Github,
@@ -24,12 +25,14 @@ import {
     Nodedotjs,
     Php,
     Postgresql,
+    Prettier,
     Prisma,
     Pwa,
     ReactJs,
     Redux,
     Sass,
     Socketdotio,
+    Stylelint,
     Tailwindcss,
     Typescript,
     Vercel,
@@ -52,8 +55,8 @@ const TechStack = () => {
                 title="Node.js"
             />
             <Express className="text-neutral-content hover:text-[#000000] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
-            <ReactJs className="text-neutral-content hover:text-[#61DAFB] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
-            <Redux className="text-neutral-content hover:text-[#764ABC] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <ReactJs className="animate-spin-slow text-neutral-content hover:text-[#61DAFB] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Redux className="animate-bounce-slow text-neutral-content hover:text-[#764ABC] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Nextdotjs
                 className="text-neutral-content hover:text-[#000000] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150"
                 title="Next.js"
@@ -69,6 +72,9 @@ const TechStack = () => {
                 title="Socket.io"
             />
             <Axios className="text-neutral-content hover:text-[#5A29E4] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Eslint className="text-neutral-content hover:text-[#4B32C3] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Prettier className="text-neutral-content hover:text-[#F7B93E] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+            <Stylelint className="text-neutral-content hover:text-[#263238] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Mongodb className="text-neutral-content hover:text-[#47A248] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Mysql className="text-neutral-content hover:text-[#4479A1] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
             <Postgresql className="text-neutral-content hover:text-[#4169E1] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
