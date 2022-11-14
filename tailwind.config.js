@@ -22,6 +22,10 @@ module.exports = {
                 10: '10px',
                 15: '15px',
             },
+            animation: {
+                'spin-slow': 'spin 20s linear infinite',
+                'bounce-slow': 'bounce 3s linear infinite',
+            },
         },
     },
     daisyui: {
