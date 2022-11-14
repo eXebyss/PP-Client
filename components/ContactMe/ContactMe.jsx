@@ -15,7 +15,8 @@ function ContactMe({ props }) {
     const [emailError, setEmailError] = useState('Email address is required')
     const [emailDirty, setEmailDirty] = useState(false)
     const [formValid, setFormValid] = useState(false)
-    const [success, setSuccess] = useState(false)
+    const [sendMessageSuccess, setSendMessageSuccess] = useState(false)
+    const [messageSendError, setMessageSendError] = useState('')
 
     useEffect(() => {
         if (emailError) {
@@ -41,8 +42,10 @@ function ContactMe({ props }) {
                 placeholder={'Your e-mail'}
                 type={'email'}
                 value={email}
-                onChange={(e) => emailRegExCheck(e, setEmail, setEmailError)}
-                onBlur={(e) => blurHandler(e, setEmailDirty)}
+                onChange={(e) =>
+                    emailRegExCheck(e.target.value, setEmail, setEmailError)
+                }
+                onBlur={(e) => blurHandler(e.target.name, setEmailDirty)}
             />
             {emailDirty && emailError && (
                 <div className="text-error mb-2 md:mb-4">{emailError}</div>
@@ -64,7 +67,8 @@ function ContactMe({ props }) {
                         setEmail,
                         message,
                         setMessage,
-                        setSuccess
+                        setSendMessageSuccess,
+                        setMessageSendError
                     )
                 }
             >
@@ -73,9 +77,9 @@ function ContactMe({ props }) {
         </>
     )
 
-    const successToast = (
+    const SuccessToast = (
         <div className="toast">
-            <div className="alert alert-success">
+            <div className="alert alert-success shadow-lg">
                 <div>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -96,12 +100,49 @@ function ContactMe({ props }) {
         </div>
     )
 
+    const ErrorToast = (
+        <div className="toast">
+            <div className="alert alert-error shadow-lg">
+                <div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="stroke-base-300 flex-shrink-0 h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                    </svg>
+                    <span>{messageSendError}</span>
+                </div>
+            </div>
+        </div>
+    )
+
     const successMessage = (
         <div className="card w-96 bg-base-100 shadow-lg my-2 md:my-4 mx-auto">
             <div className="card-body">
                 <h2 className="card-title text-center justify-center text-primary">
                     Thank you!
                 </h2>
+            </div>
+        </div>
+    )
+
+    const errorMessage = (
+        <div className="card w-96 bg-base-100 shadow-lg my-2 md:my-4 mx-auto">
+            <div className="card-body">
+                <h2 className="card-title text-center justify-center text-error">
+                    An error occurred!
+                </h2>
+                <p>
+                    <b>[ Error message ]:</b>
+                </p>
+                <p>{messageSendError}</p>
             </div>
         </div>
     )
@@ -113,13 +154,18 @@ function ContactMe({ props }) {
                     <h2 className="text-5xl font-bold pt-3 md:pt-6">
                         {contactFormData.contactMeTitle}
                     </h2>
-                    <div className="text-justify py-2 md:py-4">
+                    <div className="text-justify md:text-center py-2 md:py-4">
                         {documentToReactComponents(
                             contactFormData.contactMeFormText
                         )}
                     </div>
-                    {success ? successMessage : contactMeForm}
-                    {success ? successToast : ''}
+                    {sendMessageSuccess
+                        ? successMessage
+                        : messageSendError
+                        ? errorMessage
+                        : contactMeForm}
+                    {sendMessageSuccess ? SuccessToast : ''}
+                    {messageSendError ? ErrorToast : ''}
                 </form>
             </div>
         </div>

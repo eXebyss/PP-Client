@@ -1,5 +1,5 @@
 const blurHandler = (e, setEmailDirty) => {
-    switch (e.target.name) {
+    switch (e) {
         case 'email':
             setEmailDirty(true)
             break
