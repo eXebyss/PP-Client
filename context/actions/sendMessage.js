@@ -1,6 +1,13 @@
 import axios from 'axios'
 
-const sendMessage = async (e, name, email, message) => {
+const sendMessage = async (
+    e,
+    name,
+    email,
+    message,
+    setSendMessageSuccess,
+    setMessageSendError
+) => {
     e.preventDefault()
     const date = new Date(Date.now())
     try {
@@ -13,10 +20,9 @@ const sendMessage = async (e, name, email, message) => {
                 hour12: false,
             }),
         })
+        setSendMessageSuccess(true)
     } catch (err) {
-        /* eslint-disable */
-        console.log(`${err.response.data.message}.`, 'Error 1: post')
-        /* eslint-enable */
+        setMessageSendError(err.response.data.message)
     }
 }
 
@@ -28,13 +34,20 @@ const handleClickForMessage = async (
     setEmail,
     message,
     setMessage,
-    setSuccess
+    setSendMessageSuccess,
+    setMessageSendError
 ) => {
-    sendMessage(e, name, email, message)
+    sendMessage(
+        e,
+        name,
+        email,
+        message,
+        setSendMessageSuccess,
+        setMessageSendError
+    )
     setName('')
     setEmail('')
     setMessage('')
-    setSuccess(true)
 }
 
 export default handleClickForMessage
