@@ -1,39 +1,39 @@
 import { gql } from 'apollo-server-micro'
 
 export const typeDefs = gql`
-    "Message send via contact form"
-    type Message @cacheControl(maxAge: 60) {
-        "Message id"
-        _id: ID! @deprecated(reason: "Prisma does not support '_'. Use 'id'.")
-        "Message id v2"
-        id: ID!
-        "Name of the message author"
-        name: String
-        "Email of the message author"
-        email: String
-        "Message content"
-        message: String
-        "Date when the message was sent"
-        date: String
-        "DateString when the message was sent"
-        dateString: String
-    }
+	"Message send via contact form"
+	type Message @cacheControl(maxAge: 60) {
+		"Message id"
+		_id: ID! @deprecated(reason: "Prisma does not support '_'. Use 'id'.")
+		"Message id v2"
+		id: ID!
+		"Name of the message author"
+		name: String
+		"Email of the message author"
+		email: String
+		"Message content"
+		message: String
+		"Date when the message was sent"
+		date: String
+		"DateString when the message was sent"
+		dateString: String
+	}
 
-    type Query @cacheControl(maxAge: 60) {
-        "Query to get message array"
-        messages: [Message!]!
-        "Fetch specific message"
-        message(id: ID!): Message!
-    }
+	type Query @cacheControl(maxAge: 60) {
+		"Query to get message array"
+		messages: [Message!]!
+		"Fetch specific message"
+		message(id: ID!): Message!
+	}
 
-    enum CacheControlScope {
-        PUBLIC
-        PRIVATE
-    }
+	enum CacheControlScope {
+		PUBLIC
+		PRIVATE
+	}
 
-    directive @cacheControl(
-        maxAge: Int
-        scope: CacheControlScope
-        inheritMaxAge: Boolean
-    ) on FIELD_DEFINITION | OBJECT | INTERFACE | UNION
+	directive @cacheControl(
+		maxAge: Int
+		scope: CacheControlScope
+		inheritMaxAge: Boolean
+	) on FIELD_DEFINITION | OBJECT | INTERFACE | UNION
 `

@@ -1,13 +1,13 @@
 .tabsContent li p::before {
-    @apply text-primary 
+	@apply text-primary 
         font-black 
         pr-2
         font-fa6f;
-    content: '\f0da';
+	content: '\f0da';
 }
 
 .tabsContent h3 {
-    @apply text-base
+	@apply text-base
         md:text-xl
         fhd:text-2xl;
 }
