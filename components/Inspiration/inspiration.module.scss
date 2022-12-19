@@ -1,23 +1,23 @@
 .inspirationListItem h3 {
-    @apply inline-block;
+	@apply inline-block;
 }
 
 .inspirationListItem h3:first-of-type {
-    @apply text-2xl
+	@apply text-2xl
         md:text-3xl
         fhd:text-4xl;
 }
 
 .inspirationListItem h3 {
-    @apply text-xl
+	@apply text-xl
         md:text-2xl
         fhd:text-3xl;
 }
 
 .inspirationTitle::before {
-    @apply text-primary 
+	@apply text-primary 
         font-black 
         pr-2
         font-fa6f;
-    content: '\f0da';
+	content: '\f0da';
 }

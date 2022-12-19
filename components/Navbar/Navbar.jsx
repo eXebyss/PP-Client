@@ -2,93 +2,93 @@ import ThemeSelector from '../UI/ThemeSelector'
 import classes from './navbar.module.scss'
 
 function Navbar() {
-    return (
-        <>
-            {/* Mobile navigation menu */}
-            <nav className="mx-auto navbar bg-base-100 md:hidden sticky top-0 z-10 px-4">
-                <label htmlFor="menu-modal" className="btn modal-button">
-                    <i className="fa-solid fa-bars"></i>
-                </label>
+	return (
+		<>
+			{/* Mobile navigation menu */}
+			<nav className="mx-auto navbar bg-base-100 md:hidden sticky top-0 z-10 px-4">
+				<label htmlFor="menu-modal" className="btn modal-button">
+					<i className="fa-solid fa-bars"></i>
+				</label>
 
-                <ThemeSelector />
+				<ThemeSelector />
 
-                <input
-                    type="checkbox"
-                    id="menu-modal"
-                    className="modal-toggle"
-                />
-                <label
-                    htmlFor="menu-modal"
-                    className="modal cursor-pointer modal-bottom sm:modal-middle"
-                >
-                    <label className="modal-box relative" htmlFor="">
-                        <label
-                            htmlFor="menu-modal"
-                            className="btn btn-sm btn-circle absolute right-2 top-2"
-                        >
-                            ✕
-                        </label>
-                        <ul className="text-center">
-                            <li>
-                                <a className={classes.navLink} href="#aboutMe">
-                                    .me
-                                    <span className={classes.navSpan}>( )</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a className={classes.navLink} href="#skills">
-                                    .skills
-                                    <span className={classes.navSpan}>( )</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    className={classes.navLink}
-                                    href="#experience"
-                                >
-                                    .experience
-                                    <span className={classes.navSpan}>( )</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a className={classes.navLink} href="#projects">
-                                    .projects
-                                    <span className={classes.navSpan}>( )</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a className={classes.navLink} href="#contact">
-                                    .contact
-                                    <span className={classes.navSpan}>( )</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </label>
-                </label>
-            </nav>
+				<input
+					type="checkbox"
+					id="menu-modal"
+					className="modal-toggle"
+				/>
+				<label
+					htmlFor="menu-modal"
+					className="modal cursor-pointer modal-bottom sm:modal-middle"
+				>
+					<label className="modal-box relative" htmlFor="">
+						<label
+							htmlFor="menu-modal"
+							className="btn btn-sm btn-circle absolute right-2 top-2"
+						>
+							✕
+						</label>
+						<ul className="text-center">
+							<li>
+								<a className={classes.navLink} href="#aboutMe">
+									.me
+									<span className={classes.navSpan}>( )</span>
+								</a>
+							</li>
+							<li>
+								<a className={classes.navLink} href="#skills">
+									.skills
+									<span className={classes.navSpan}>( )</span>
+								</a>
+							</li>
+							<li>
+								<a
+									className={classes.navLink}
+									href="#experience"
+								>
+									.experience
+									<span className={classes.navSpan}>( )</span>
+								</a>
+							</li>
+							<li>
+								<a className={classes.navLink} href="#projects">
+									.projects
+									<span className={classes.navSpan}>( )</span>
+								</a>
+							</li>
+							<li>
+								<a className={classes.navLink} href="#contact">
+									.contact
+									<span className={classes.navSpan}>( )</span>
+								</a>
+							</li>
+						</ul>
+					</label>
+				</label>
+			</nav>
 
-            {/* Desktop navigation menu */}
-            <nav className="mx-auto navbar bg-base-100 hidden md:inline-block text-center sticky top-0 z-10">
-                <a className={classes.navLink} href="#aboutMe">
-                    .me<span className={classes.navSpan}>( )</span>
-                </a>
-                <a className={classes.navLink} href="#skills">
-                    .skills<span className={classes.navSpan}>( )</span>
-                </a>
-                <a className={classes.navLink} href="#experience">
-                    .experience<span className={classes.navSpan}>( )</span>
-                </a>
-                <a className={classes.navLink} href="#projects">
-                    .projects<span className={classes.navSpan}>( )</span>
-                </a>
-                <a className={classes.navLink} href="#contact">
-                    .contact<span className={classes.navSpan}>( )</span>
-                </a>
+			{/* Desktop navigation menu */}
+			<nav className="mx-auto navbar bg-base-100 hidden md:inline-block text-center sticky top-0 z-10">
+				<a className={classes.navLink} href="#aboutMe">
+					.me<span className={classes.navSpan}>( )</span>
+				</a>
+				<a className={classes.navLink} href="#skills">
+					.skills<span className={classes.navSpan}>( )</span>
+				</a>
+				<a className={classes.navLink} href="#experience">
+					.experience<span className={classes.navSpan}>( )</span>
+				</a>
+				<a className={classes.navLink} href="#projects">
+					.projects<span className={classes.navSpan}>( )</span>
+				</a>
+				<a className={classes.navLink} href="#contact">
+					.contact<span className={classes.navSpan}>( )</span>
+				</a>
 
-                <ThemeSelector />
-            </nav>
-        </>
-    )
+				<ThemeSelector />
+			</nav>
+		</>
+	)
 }
 
 export default Navbar
