@@ -1144,10 +1144,10 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@builder.io/partytown@^0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.1.tgz#aa13b56022609ba2a4d61cf8bf282a94221c1133"
-  integrity sha512-hvu2gG9NDtCa5aoL4JkvDe3E5SegXlHAkhtA+Az96uTtFA0PYuEPjDYGiayGTkZuRKUmxetebWjIFgSDNdlBOw==
+"@builder.io/partytown@^0.7.3":
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.3.tgz#879052ca7175757eaa3e0a85b735f7231bc7c32f"
+  integrity sha512-hA6WYBFD/exyrEvs0JSvQIILfH0/Jlr5amqE3lt1nPehCus+eQm4ob3LBMRkSaFDWz9clHSLtsGwG52dUjGy3g==
 
 "@contentful/rich-text-react-renderer@^15.12.1":
   version "15.12.1"
@@ -1344,11 +1344,6 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
-
-"@next-auth/mongodb-adapter@^1.0.3":
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/@next-auth/mongodb-adapter/-/mongodb-adapter-1.0.4.tgz"
-  integrity sha512-vRSPo2o9Ok+S5JpOvtgVtMExPFgrg2ybz1zVs0YJwUZ+GIPHKRGYxa1NsJRmWjZ1DesrUDkvoInzGAmE1dWx6Q==
 
 "@next/bundle-analyzer@^12.3.1":
   version "12.3.1"
