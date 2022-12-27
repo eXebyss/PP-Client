@@ -21,8 +21,8 @@ const sendMessage = async (
 			}),
 		})
 		setSendMessageSuccess(true)
-	} catch (err) {
-		setMessageSendError(err.response.data.message)
+	} catch (error) {
+		setMessageSendError(error.message)
 	}
 }
 

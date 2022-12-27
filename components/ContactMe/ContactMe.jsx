@@ -7,6 +7,7 @@ import { blurHandler } from '../../utils/handlers'
 import Button from '../UI/Button'
 import Input from '../UI/Input'
 import Textarea from '../UI/Textarea'
+import Toast from '../UI/Toast'
 
 function ContactMe({ props }) {
 	const [name, setName] = useState('')
@@ -77,52 +78,6 @@ function ContactMe({ props }) {
 		</>
 	)
 
-	const SuccessToast = (
-		<div className="toast">
-			<div className="alert alert-success shadow-lg">
-				<div>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						className="stroke-base-300 flex-shrink-0 h-6 w-6"
-						fill="none"
-						viewBox="0 0 24 24"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth="2"
-							d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-						/>
-					</svg>
-					<span>Your message has been sent!</span>
-				</div>
-			</div>
-		</div>
-	)
-
-	const ErrorToast = (
-		<div className="toast">
-			<div className="alert alert-error shadow-lg">
-				<div>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						className="stroke-base-300 flex-shrink-0 h-6 w-6"
-						fill="none"
-						viewBox="0 0 24 24"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth="2"
-							d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-						/>
-					</svg>
-					<span>{messageSendError}</span>
-				</div>
-			</div>
-		</div>
-	)
-
 	const successMessage = (
 		<div className="card w-96 bg-base-100 shadow-lg my-2 md:my-4 mx-auto">
 			<div className="card-body">
@@ -164,8 +119,12 @@ function ContactMe({ props }) {
 						: messageSendError
 						? errorMessage
 						: contactMeForm}
-					{sendMessageSuccess ? SuccessToast : ''}
-					{messageSendError ? ErrorToast : ''}
+					{sendMessageSuccess ? <Toast type="success" /> : ''}
+					{messageSendError ? (
+						<Toast errorMessage={messageSendError} />
+					) : (
+						''
+					)}
 				</form>
 			</div>
 		</div>
