@@ -33,6 +33,7 @@
 		"@contentful/rich-text-react-renderer": "^15.12.1",
 		"@icons-pack/react-simple-icons": "^5.8.0",
 		"@prisma/client": "^4.8.0",
+		"@sentry/nextjs": "^7.28.1",
 		"apollo-server-micro": "^3.10.4",
 		"axios": "^0.25.0",
 		"contentful": "^9.1.34",
