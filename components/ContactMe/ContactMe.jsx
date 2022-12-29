@@ -1,6 +1,7 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import React, { useEffect, useState } from 'react'
 
+import { Spinner } from '../../components/Icons'
 import handleClickForMessage from '../../context/actions/sendMessage'
 import emailRegExCheck from '../../helpers/emailRegExCheck'
 import { blurHandler } from '../../utils/handlers'
@@ -18,6 +19,7 @@ function ContactMe({ props }) {
 	const [formValid, setFormValid] = useState(false)
 	const [sendMessageSuccess, setSendMessageSuccess] = useState(false)
 	const [messageSendError, setMessageSendError] = useState('')
+	const [isLoading, setIsLoading] = useState(false)
 
 	useEffect(() => {
 		if (emailError) {
@@ -26,6 +28,10 @@ function ContactMe({ props }) {
 			setFormValid(true)
 		}
 	}, [emailError])
+
+	useEffect(() => {
+		;(sendMessageSuccess || messageSendError) && setIsLoading(false)
+	}, [sendMessageSuccess, messageSendError])
 
 	const contactFormData = props[0].fields
 
@@ -69,7 +75,8 @@ function ContactMe({ props }) {
 						message,
 						setMessage,
 						setSendMessageSuccess,
-						setMessageSendError
+						setMessageSendError,
+						setIsLoading
 					)
 				}
 			>
@@ -114,12 +121,25 @@ function ContactMe({ props }) {
 							contactFormData.contactMeFormText
 						)}
 					</div>
-					{sendMessageSuccess
-						? successMessage
-						: messageSendError
-						? errorMessage
-						: contactMeForm}
-					{sendMessageSuccess ? <Toast type="success" /> : ''}
+
+					{(isLoading && (
+						<Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
+					)) ||
+						(sendMessageSuccess
+							? successMessage
+							: messageSendError
+							? errorMessage
+							: contactMeForm)}
+
+					{sendMessageSuccess ? (
+						<Toast
+							type="success"
+							message={'Your message has been sent!'}
+						/>
+					) : (
+						''
+					)}
+
 					{messageSendError ? (
 						<Toast errorMessage={messageSendError} />
 					) : (

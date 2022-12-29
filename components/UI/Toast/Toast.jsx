@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Toast = ({ type, errorMessage }) => {
+const Toast = ({ type, message, errorMessage }) => {
 	const SuccessToast = (
 		<div className="toast">
 			<div className="alert alert-success shadow-lg">
@@ -18,7 +18,7 @@ const Toast = ({ type, errorMessage }) => {
 							d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
 						/>
 					</svg>
-					<span>Your message has been sent!</span>
+					<span>{message}</span>
 				</div>
 			</div>
 		</div>

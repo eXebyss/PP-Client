@@ -35,7 +35,8 @@ const handleClickForMessage = async (
 	message,
 	setMessage,
 	setSendMessageSuccess,
-	setMessageSendError
+	setMessageSendError,
+	setIsLoading
 ) => {
 	sendMessage(
 		e,
@@ -48,6 +49,7 @@ const handleClickForMessage = async (
 	setName('')
 	setEmail('')
 	setMessage('')
+	setIsLoading(true)
 }
 
 export default handleClickForMessage
