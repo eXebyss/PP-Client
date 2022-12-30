@@ -39,6 +39,7 @@
 		"contentful": "^9.1.34",
 		"daisyui": "^2.19.0",
 		"graphql": "^16.3.0",
+		"logrocket": "^3.0.1",
 		"micro": "^9.4.1",
 		"mongodb": "^4.4.1",
 		"next": "12.3.2",

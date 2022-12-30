@@ -3,10 +3,13 @@ import Script from 'next/script'
 
 import { UserProvider } from '@auth0/nextjs-auth0'
 import { Partytown } from '@builder.io/partytown/react'
+import LogRocket from 'logrocket'
 
 import '../styles/global/index.scss'
 
 function App({ Component, pageProps: { ...pageProps } }) {
+	LogRocket.init('2eqczx/personal-portfolio-page')
+
 	return (
 		<UserProvider>
 			<Head>

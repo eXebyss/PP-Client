@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import { gql } from '@apollo/client'
 import { useUser } from '@auth0/nextjs-auth0'
+import LogRocket from 'logrocket'
 
 import client from '../../apollo/client'
 import { Spinner } from '../../components/Icons'
@@ -57,6 +58,11 @@ function MessageList({ props }) {
 	}
 
 	if (user) {
+		LogRocket.identify(user.email, {
+			name: user.name,
+			email: user.email,
+		})
+
 		if (user.email === whitelistEmail) {
 			return (
 				<>
