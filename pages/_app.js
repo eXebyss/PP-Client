@@ -4,11 +4,17 @@ import Script from 'next/script'
 import { UserProvider } from '@auth0/nextjs-auth0'
 import { Partytown } from '@builder.io/partytown/react'
 import LogRocket from 'logrocket'
+import { useEffect } from 'react'
+import { hotjar } from 'react-hotjar'
 
 import '../styles/global/index.scss'
 
 function App({ Component, pageProps: { ...pageProps } }) {
 	LogRocket.init('2eqczx/personal-portfolio-page')
+
+	useEffect(() => {
+		hotjar.initialize(3305622, 6)
+	}, [])
 
 	return (
 		<UserProvider>
