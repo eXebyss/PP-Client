@@ -15,6 +15,7 @@ import {
 	Googlecloud,
 	Graphql,
 	Heroku,
+	Hotjar,
 	Html5,
 	Javascript,
 	Magento,
@@ -31,6 +32,7 @@ import {
 	ReactJs,
 	Redux,
 	Sass,
+	Sentry,
 	Socketdotio,
 	Stylelint,
 	Tailwindcss,
@@ -88,6 +90,8 @@ const TechStack = () => {
 			<Contentful className="text-neutral-content hover:text-[#2478CC] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Googleanalytics className="text-neutral-content hover:text-[#E37400] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Googlecloud className="text-neutral-content hover:text-[#4285F4] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+			<Sentry className="text-neutral-content hover:text-[#362D59] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+			<Hotjar className="text-neutral-content hover:text-[#FD3A5C] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Heroku className="text-neutral-content hover:text-[#430098] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Vercel className="text-neutral-content hover:text-[#000000] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Microsoftazure className="text-neutral-content hover:text-[#0078D4] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
