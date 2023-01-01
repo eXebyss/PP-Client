@@ -1,6 +1,6 @@
 import Main from '../Main'
-import Navbar from '../Navbar'
 import ButtonScrollTop from '../UI/ButtonScrollTop'
+import Navbar from '../UI/Navbar'
 import WelcomeScreen from '../WelcomeScreen'
 
 function App({ props }) {
