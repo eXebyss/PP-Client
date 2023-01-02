@@ -1,6 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-import { ogUrl, siteTitle } from '../constants'
+import { ogUrl, siteDescription, siteTitle } from '../constants'
 
 class MyDocument extends Document {
 	static async getInitialProps(ctx) {
@@ -13,7 +13,7 @@ class MyDocument extends Document {
 			<Html lang="en">
 				<Head>
 					<link rel="manifest" href="/manifest.json" />
-					<link rel="apple-touch-icon" href="/icon.png"></link>
+					<link rel="apple-touch-icon" href="/icon.png" />
 					<meta name="theme-color" content="#fff" />
 					<meta charSet="utf-8" />
 					<link rel="icon" href="/favicon.ico" />
@@ -21,10 +21,7 @@ class MyDocument extends Document {
 					<meta property="og:image" content={`${ogUrl}logo.png`} />
 					<meta property="og:image:width" content="1200" />
 					<meta property="og:image:height" content="628" />
-					<meta
-						property="og:description"
-						content={`I'm Front-End developer. I'm developing on React & Next.js. For Back-End development I use Node.js with Express.`}
-					/>
+					<meta property="og:description" content={siteDescription} />
 					<meta property="og:url" content={`${ogUrl}`} />
 					<meta name="twitter:card" content="summary_large_image" />
 					<meta name="twitter:title" content={`${siteTitle}`} />
@@ -34,7 +31,7 @@ class MyDocument extends Document {
 					/>
 					<meta
 						name="twitter:description"
-						content={`I'm Front-End developer. I'm developing on React & Next.js. For Back-End development I use Node.js with Express.`}
+						content={siteDescription}
 					/>
 					<meta property="twitter:site" content={`${ogUrl}`} />
 					<link

@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import App from '../components/App'
 import Layout from '../components/Layout'
-import { siteTitle } from '../constants'
+import { siteDescription, siteTitle } from '../constants'
 import { contentful as contentfulClient } from '../context/client/contentful'
 
 export async function getStaticProps() {
@@ -77,10 +77,7 @@ export default function Home({
 		<Layout props={portfolioPage}>
 			<Head>
 				<title>{`${siteTitle}: Main`}</title>
-				<meta
-					name="description"
-					content="This is Mihails Fjodorovs portfolio page."
-				/>
+				<meta name="description" content={siteDescription} />
 			</Head>
 			<App props={props} />
 		</Layout>
