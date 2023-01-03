@@ -1,6 +1,8 @@
 {
-	"name": "PP Next.js",
-	"short_name": "PP Next.js",
+	"name": "M.F. Personal Portfolio Page",
+	"short_name": "M.F. Personal Portfolio Page",
+	"description": "Install Mihails Fjodrovos personal portfolio page as web application.",
+	"categories": ["developer"],
 	"icons": [
 		{
 			"src": "icon.png",
