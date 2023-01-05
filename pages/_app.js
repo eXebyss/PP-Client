@@ -10,10 +10,13 @@ import { hotjar } from 'react-hotjar'
 import '../styles/global/index.scss'
 
 function App({ Component, pageProps: { ...pageProps } }) {
-	LogRocket.init(process.env.LOGROCKET_URI)
+	LogRocket.init(process.env.NEXT_PUBLIC_LOGROCKET_APPID)
 
 	useEffect(() => {
-		hotjar.initialize(process.env.HOTJAR_HJID, process.env.HOTJAR_HJSV)
+		hotjar.initialize(
+			process.env.NEXT_PUBLIC_HOTJAR_HJID,
+			process.env.NEXT_PUBLIC_HOTJAR_HJSV
+		)
 	}, [])
 
 	return (
