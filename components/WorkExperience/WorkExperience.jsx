@@ -37,6 +37,7 @@ const WorkExperience = ({ props }) => {
 								}`}
 								key={index}
 								onClick={() => setCurrentTab(index + 1)}
+								onKeyUp={() => setCurrentTab(index + 1)}
 							>
 								{workTitles[value]}
 							</button>
