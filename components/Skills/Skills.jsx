@@ -2,17 +2,12 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import TechStack from '../TechStack'
 import classes from './skills.module.scss'
+import useSkillSort from './useSkillSort'
 
 const Skills = ({ props }) => {
 	const { skillScopes, skillSet } = props
 
-	const sortedArrayOfSkillSet = skillSet.sort((a, b) =>
-		a.fields.stackId > b.fields.stackId
-			? 1
-			: b.fields.stackId > a.fields.stackId
-			? -1
-			: 0
-	)
+	const sortedArrayOfSkillSet = useSkillSort(skillSet)
 
 	return (
 		<div className="hero bg-base-200" id="skills">
