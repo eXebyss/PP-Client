@@ -49,6 +49,7 @@ export async function getStaticProps() {
 			skillSet: entriesSkillSet.items,
 			inspiration: entriesInspiration.items,
 		},
+		revalidate: 60,
 	}
 }
 
