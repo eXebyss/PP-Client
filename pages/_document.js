@@ -12,6 +12,10 @@ class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
+					<link
+						rel="canonical"
+						href="https://www.mihailsfjodorovs.com/"
+					/>
 					<link rel="manifest" href="manifest.json" />
 					<link rel="apple-touch-icon" href="apple-icon-180.png" />
 					<meta name="apple-mobile-web-app-capable" content="yes" />
