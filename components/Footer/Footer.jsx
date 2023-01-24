@@ -1,34 +1,51 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Codewars, Github, Linkedin } from '@icons-pack/react-simple-icons'
 import React from 'react'
 
+import { codewarsUrl, githubUrl, linkedinUrl } from '../../constants'
+import useBrowserCheck from '../../hooks/useBrowserCheck'
 import classes from './footer.module.scss'
 
-function Footer({ props }) {
-	const { footer } = props[0].fields
+function Footer() {
+	const isBrowser = useBrowserCheck()
+
+	const footerCopyRight = (isBrowser && window.location.pathname === '/' && (
+		<b>
+			<a href="#aboutMe">[ me ]</a>
+		</b>
+	)) || (
+		<span
+			className="text-primary font-bold tooltip"
+			data-tip="Mihails Fjodorovs"
+		>
+			[ me ]
+		</span>
+	)
 
 	return (
 		<footer className={classes.root}>
 			<div className="items-center md:grid-flow-col">
-				{documentToReactComponents(footer)}
+				<p>
+					Copyright © {new Date().getFullYear()} - All right reserved
+					by {footerCopyRight} 👌
+				</p>
 				<div className="grid grid-flow-col">
 					<a
 						className="mx-1 fhd:mx-2"
-						href={process.env.LINKEDIN_URL}
+						href={linkedinUrl}
 						target="blank"
 					>
 						<Linkedin className="w-6 h-6 fill-base-content hover:fill-primary" />
 					</a>
 					<a
 						className="mx-1 fhd:mx-2"
-						href={process.env.GITHUB_URL}
+						href={githubUrl}
 						target="blank"
 					>
 						<Github className="w-6 h-6 fill-base-content hover:fill-primary" />
 					</a>
 					<a
 						className="mx-1 fhd:mx-2"
-						href={process.env.CODEWARS_URL}
+						href={codewarsUrl}
 						target="blank"
 					>
 						<Codewars className="w-6 h-6 fill-base-content hover:fill-primary" />
