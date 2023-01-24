@@ -1,15 +1,10 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import classes from './inspiration.module.scss'
+import useInspirationSort from './useInspirationSort'
 
 const Inspiration = ({ props }) => {
-	const sortedArrayOfInspirationCollection = props.sort((a, b) =>
-		a.fields.inspirationId > b.fields.inspirationId
-			? 1
-			: b.fields.inspirationId > a.fields.inspirationId
-			? -1
-			: 0
-	)
+	const sortedArrayOfInspirationCollection = useInspirationSort(props)
 
 	return (
 		<div className="hero bg-base-200" id="skills">
