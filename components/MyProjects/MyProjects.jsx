@@ -5,17 +5,12 @@ import { Github } from '@icons-pack/react-simple-icons'
 import { useState } from 'react'
 
 import classes from './myProjects.module.scss'
+import useProjectSort from './useProjectSort'
 
 const MyProjects = ({ props }) => {
 	const [currentSlide, setCurrentSlide] = useState(0)
 
-	const sortedArrayOfProjects = props.sort((a, b) =>
-		b.fields.projectId > a.fields.projectId
-			? 1
-			: a.fields.projectId > b.fields.projectId
-			? -1
-			: 0
-	)
+	const sortedArrayOfProjects = useProjectSort(props)
 
 	return (
 		<div className="hero bg-base-200" id="projects">
@@ -67,7 +62,7 @@ const MyProjects = ({ props }) => {
 										<div className="pt-2 md:pt-4 text-left grid grid-flow-col gap-x-4 items-center w-fit">
 											{e.fields.githubLink ? (
 												<a
-													href={e.fields.githubLink}
+													href={`${e.fields.githubLink}`}
 													aria-label="Check GitHub repository for the current project"
 													target="blank"
 												>
@@ -78,11 +73,11 @@ const MyProjects = ({ props }) => {
 											)}
 											{e.fields.directLink ? (
 												<a
-													href={e.fields.directLink}
+													href={`${e.fields.directLink}`}
 													aria-label="Check the project site itself"
 													target="blank"
 												>
-													<i className="fa-solid fa-arrow-up-right-from-square text-2xl pr-2 md:pr-4"></i>
+													<i className="fa-solid fa-arrow-up-right-from-square text-2xl pr-2 md:pr-4" />
 												</a>
 											) : (
 												''
@@ -90,11 +85,7 @@ const MyProjects = ({ props }) => {
 										</div>
 										<figure>
 											<Image
-												src={
-													'https:' +
-													e.fields.ppImage1.fields
-														.file.url
-												}
+												src={`https:${e.fields.ppImage1.fields.file.url}`}
 												alt={
 													e.fields.ppImage1.fields
 														.description
@@ -109,11 +100,7 @@ const MyProjects = ({ props }) => {
 														.file.details.image
 														.height
 												}
-												blurDataURL={
-													'https:' +
-													e.fields.ppImage1.fields
-														.file.url
-												}
+												blurDataURL={`https:${e.fields.ppImage1.fields.file.url}`}
 												placeholder="blur"
 												loading="lazy"
 												className="max-w-sm rounded-lg shadow-2xl"
@@ -136,6 +123,7 @@ const MyProjects = ({ props }) => {
 								}`}
 								key={i}
 								onClick={() => setCurrentSlide(i)}
+								onKeyDown={() => setCurrentSlide(i)}
 							>
 								{i + 1}
 							</a>
