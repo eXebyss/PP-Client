@@ -1,37 +1,30 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import { Spinner } from '../../components/Icons'
-import handleClickForMessage from '../../context/actions/sendMessage'
-import emailRegExCheck from '../../helpers/emailRegExCheck'
-import { blurHandler } from '../../utils/handlers'
 import Button from '../UI/Button'
 import Input from '../UI/Input'
 import Textarea from '../UI/Textarea'
 import Toast from '../UI/Toast'
+import useContactMe from './useContactMe'
 
 function ContactMe({ props }) {
-	const [name, setName] = useState('')
-	const [email, setEmail] = useState('')
-	const [message, setMessage] = useState('')
-	const [emailError, setEmailError] = useState('Email address is required')
-	const [emailDirty, setEmailDirty] = useState(false)
-	const [formValid, setFormValid] = useState(false)
-	const [sendMessageSuccess, setSendMessageSuccess] = useState(false)
-	const [messageSendError, setMessageSendError] = useState('')
-	const [isLoading, setIsLoading] = useState(false)
-
-	useEffect(() => {
-		if (emailError) {
-			setFormValid(false)
-		} else {
-			setFormValid(true)
-		}
-	}, [emailError])
-
-	useEffect(() => {
-		;(sendMessageSuccess || messageSendError) && setIsLoading(false)
-	}, [sendMessageSuccess, messageSendError])
+	const {
+		name,
+		setName,
+		email,
+		setEmail,
+		message,
+		setMessage,
+		emailDirty,
+		isLoading,
+		emailErrorMessage,
+		formValid,
+		messageSendSuccess,
+		messageSendError,
+		blurHandler,
+		handleSendMessage,
+	} = useContactMe()
 
 	const contactFormData = props[0].fields
 
@@ -49,13 +42,11 @@ function ContactMe({ props }) {
 				placeholder={'Your e-mail'}
 				type={'email'}
 				value={email}
-				onChange={(e) =>
-					emailRegExCheck(e.target.value, setEmail, setEmailError)
-				}
-				onBlur={(e) => blurHandler(e.target.name, setEmailDirty)}
+				onChange={(e) => setEmail(e.target.value)}
+				onBlur={(e) => blurHandler(e.target.name)}
 			/>
-			{emailDirty && emailError && (
-				<div className="text-error mb-2 md:mb-4">{emailError}</div>
+			{emailDirty && emailErrorMessage && (
+				<div className="text-error mt-2">{emailErrorMessage}</div>
 			)}
 			<Textarea
 				text={'What is your message?'}
@@ -63,23 +54,7 @@ function ContactMe({ props }) {
 				value={message}
 				onChange={(e) => setMessage(e.target.value)}
 			/>
-			<Button
-				disabled={!formValid}
-				onClick={(e) =>
-					handleClickForMessage(
-						e,
-						name,
-						setName,
-						email,
-						setEmail,
-						message,
-						setMessage,
-						setSendMessageSuccess,
-						setMessageSendError,
-						setIsLoading
-					)
-				}
-			>
+			<Button disabled={!formValid} onClick={(e) => handleSendMessage(e)}>
 				Submit
 			</Button>
 		</>
@@ -125,13 +100,13 @@ function ContactMe({ props }) {
 					{(isLoading && (
 						<Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
 					)) ||
-						(sendMessageSuccess
+						(messageSendSuccess
 							? successMessage
 							: messageSendError
 							? errorMessage
 							: contactMeForm)}
 
-					{sendMessageSuccess ? (
+					{messageSendSuccess ? (
 						<Toast
 							type="success"
 							message={'Your message has been sent!'}
