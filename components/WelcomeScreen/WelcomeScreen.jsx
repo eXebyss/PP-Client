@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
+import { ContentfulContext } from '../../context'
 import { ArrowDown } from '../Icons'
 
-function WelcomeScreen({ props }) {
-	const { title, subTitle } = props[0].fields
+function WelcomeScreen() {
+	const { portfolioPage } = useContext(ContentfulContext)
+	const { title, subTitle } = portfolioPage[0].fields
 
 	return (
 		<div className="h-screen grid content-center justify-items-center">

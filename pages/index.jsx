@@ -1,43 +1,22 @@
 import Head from 'next/head'
 
+// import { createContext } from 'react'
 import App from '../components/App'
 import Layout from '../components/Layout'
 import { siteDescription, siteTitle } from '../constants'
-import { contentful as contentfulClient } from '../context/client/contentful'
+import { ContentfulContext } from '../context'
+import {
+	entriesContactMeForm,
+	entriesInspiration,
+	entriesMainInfo,
+	entriesPersonalProjects,
+	entriesSkillScopes,
+	entriesSkillSet,
+	entriesWorkPlaceTitles,
+	entriesWorkPlaces,
+} from '../helpers/data'
 
 export async function getStaticProps() {
-	const entriesMainInfo = await contentfulClient.getEntries({
-		content_type: process.env.CONTENT_TYPE1,
-	})
-
-	const entriesWorkPlaceTitles = await contentfulClient.getEntries({
-		content_type: process.env.CONTENT_TYPE2,
-	})
-
-	const entriesWorkPlaces = await contentfulClient.getEntries({
-		content_type: process.env.CONTENT_TYPE3,
-	})
-
-	const entriesPersonalProjects = await contentfulClient.getEntries({
-		content_type: process.env.CONTENT_TYPE4,
-	})
-
-	const entriesContactMeForm = await contentfulClient.getEntries({
-		content_type: process.env.CONTENT_TYPE5,
-	})
-
-	const entriesSkillScopes = await contentfulClient.getEntries({
-		content_type: process.env.CONTENT_TYPE6,
-	})
-
-	const entriesSkillSet = await contentfulClient.getEntries({
-		content_type: process.env.CONTENT_TYPE7,
-	})
-
-	const entriesInspiration = await contentfulClient.getEntries({
-		content_type: process.env.CONTENT_TYPE8,
-	})
-
 	return {
 		props: {
 			portfolioPage: entriesMainInfo.items,
@@ -75,12 +54,14 @@ export default function Home({
 	}
 
 	return (
-		<Layout props={portfolioPage}>
-			<Head>
-				<title>{`${siteTitle}: Main`}</title>
-				<meta name="description" content={siteDescription} />
-			</Head>
-			<App props={props} />
-		</Layout>
+		<ContentfulContext.Provider value={props}>
+			<Layout>
+				<Head>
+					<title>{`${siteTitle}: Main`}</title>
+					<meta name="description" content={siteDescription} />
+				</Head>
+				<App />
+			</Layout>
+		</ContentfulContext.Provider>
 	)
 }

@@ -1,10 +1,12 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 
+import { ContentfulContext } from '../../context'
 import classes from './workExperience.module.scss'
 
-const WorkExperience = ({ props }) => {
-	const { myWorkExperiencePlaceTitles, myWorkExperiencePlaces } = props
+const WorkExperience = () => {
+	const { myWorkExperiencePlaceTitles, myWorkExperiencePlaces } =
+		useContext(ContentfulContext)
 
 	const [currentTab, setCurrentTab] = useState(1)
 

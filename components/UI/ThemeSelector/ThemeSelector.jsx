@@ -1,32 +1,13 @@
-import { useEffect, useState } from 'react'
-
-import { themeHandler } from '../../../utils/handlers'
+import useThemeSelector from './useThemeSelector'
 
 const ThemeSelector = () => {
-	const [theme, setTheme] = useState('')
-
-	useEffect(() => {
-		theme && localStorage.setItem('styleTheme', JSON.stringify(theme))
-	}, [theme])
-
-	useEffect(() => {
-		const storedTheme = JSON.parse(localStorage.getItem('styleTheme'))
-		storedTheme &&
-			document.documentElement.setAttribute('data-theme', storedTheme)
-		storedTheme && setTheme(storedTheme)
-	}, [])
-
-	const changeTheme = (themeValue) => {
-		document.documentElement.setAttribute('data-theme', themeValue)
-	}
+	const { theme, themeHandler } = useThemeSelector()
 
 	return (
 		<select
 			className="select select-primary mx-auto text-sm md:w-full md:max-w-xs"
 			value={theme ? `${theme}` : 'default'}
-			onChange={(e) =>
-				themeHandler(e.target.value, setTheme, changeTheme)
-			}
+			onChange={(e) => themeHandler(e.target.value)}
 		>
 			<option value="default" disabled={true}>
 				Choose style theme

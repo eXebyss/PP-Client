@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-import useValidation from '../../hooks/useValidation'
+import { useValidation } from '../../hooks'
 
 function useContactMe() {
 	const [name, setName] = useState('')

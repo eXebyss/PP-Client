@@ -1,10 +1,13 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { useContext } from 'react'
 
+import { ContentfulContext } from '../../context'
 import classes from './inspiration.module.scss'
 import useInspirationSort from './useInspirationSort'
 
-const Inspiration = ({ props }) => {
-	const sortedArrayOfInspirationCollection = useInspirationSort(props)
+const Inspiration = () => {
+	const { inspiration } = useContext(ContentfulContext)
+	const sortedArrayOfInspirationCollection = useInspirationSort(inspiration)
 
 	return (
 		<div className="hero bg-base-200" id="skills">

@@ -2,7 +2,7 @@ import { Codewars, Github, Linkedin } from '@icons-pack/react-simple-icons'
 import React from 'react'
 
 import { codewarsUrl, githubUrl, linkedinUrl } from '../../constants'
-import useBrowserCheck from '../../hooks/useBrowserCheck'
+import { useBrowserCheck } from '../../hooks'
 import classes from './footer.module.scss'
 
 function Footer() {

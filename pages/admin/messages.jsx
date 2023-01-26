@@ -11,7 +11,7 @@ import Layout from '../../components/Layout/Layout'
 import ButtonLink from '../../components/UI/ButtonLink'
 import ThemeSelector from '../../components/UI/ThemeSelector'
 import { siteTitle } from '../../constants'
-import { contentful as contentfulClient } from '../../context/client/contentful'
+import { contentful as contentfulClient } from '../../helpers/client/contentful'
 
 export async function getServerSideProps() {
 	const { data } = await client.query({

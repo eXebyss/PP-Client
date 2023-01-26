@@ -3,15 +3,13 @@ import ButtonScrollTop from '../UI/ButtonScrollTop'
 import Navbar from '../UI/Navbar'
 import WelcomeScreen from '../WelcomeScreen'
 
-function App({ props }) {
-	const { portfolioPage } = props
-
+function App() {
 	return (
 		<>
-			<WelcomeScreen props={portfolioPage} />
+			<WelcomeScreen />
 			<Navbar />
 			<ButtonScrollTop />
-			<Main props={props} />
+			<Main />
 		</>
 	)
 }

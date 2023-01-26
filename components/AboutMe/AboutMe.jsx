@@ -1,11 +1,16 @@
 import Image from 'next/image'
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { useContext } from 'react'
 
+import { ContentfulContext } from '../../context'
 import classes from './aboutMe.module.scss'
 
-const AboutMe = ({ props }) => {
-	const { avatar, aboutMeDeveloperState, aboutMeDeveloperPosition } = props
+const AboutMe = () => {
+	const { portfolioPage } = useContext(ContentfulContext)
+
+	const { avatar, aboutMeDeveloperState, aboutMeDeveloperPosition } =
+		portfolioPage[0].fields
 
 	return (
 		<div className="hero bg-base-200" id="aboutMe">

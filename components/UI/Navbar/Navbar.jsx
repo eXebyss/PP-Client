@@ -1,4 +1,4 @@
-import useWindowSize from '../../../hooks/useWindowSize'
+import { useWindowSize } from '../../../hooks'
 import DesktopNavigation from './DesktopNavigation'
 import MobileNavigation from './MobileNavigation'
 

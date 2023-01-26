@@ -1,11 +1,13 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { useContext } from 'react'
 
+import { ContentfulContext } from '../../context'
 import TechStack from '../TechStack'
 import classes from './skills.module.scss'
 import useSkillSort from './useSkillSort'
 
-const Skills = ({ props }) => {
-	const { skillScopes, skillSet } = props
+const Skills = () => {
+	const { skillScopes, skillSet } = useContext(ContentfulContext)
 
 	const sortedArrayOfSkillSet = useSkillSort(skillSet)
 

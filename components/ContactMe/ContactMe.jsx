@@ -1,14 +1,17 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { Spinner } from '../../components/Icons'
+import { ContentfulContext } from '../../context'
 import Button from '../UI/Button'
 import Input from '../UI/Input'
 import Textarea from '../UI/Textarea'
 import Toast from '../UI/Toast'
 import useContactMe from './useContactMe'
 
-function ContactMe({ props }) {
+function ContactMe() {
+	const { contactMeForm: contactFormCMSData } = useContext(ContentfulContext)
+
 	const {
 		name,
 		setName,
@@ -26,7 +29,7 @@ function ContactMe({ props }) {
 		handleSendMessage,
 	} = useContactMe()
 
-	const contactFormData = props[0].fields
+	const contactFormData = contactFormCMSData[0].fields
 
 	const contactMeForm = (
 		<>

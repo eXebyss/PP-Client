@@ -6,42 +6,20 @@ import MyProjects from '../MyProjects'
 import Skills from '../Skills'
 import WorkExperience from '../WorkExperience'
 
-function Main({ props }) {
-	const {
-		portfolioPage,
-		myWorkExperiencePlaceTitles,
-		myWorkExperiencePlaces,
-		personalProjects,
-		contactMeForm,
-		skillScopes,
-		skillSet,
-		inspiration,
-	} = props
-
-	const { avatar, aboutMeDeveloperState, aboutMeDeveloperPosition } =
-		portfolioPage[0].fields
-
+function Main() {
 	return (
 		<div className="main">
-			<AboutMe
-				props={{
-					avatar,
-					aboutMeDeveloperState,
-					aboutMeDeveloperPosition,
-				}}
-			/>
+			<AboutMe />
 			<Divider />
-			<Skills props={{ skillScopes, skillSet }} />
+			<Skills />
 			<Divider />
-			<WorkExperience
-				props={{ myWorkExperiencePlaceTitles, myWorkExperiencePlaces }}
-			/>
+			<WorkExperience />
 			<Divider />
-			<MyProjects props={personalProjects} />
+			<MyProjects />
 			<Divider />
-			<Inspiration props={inspiration} />
+			<Inspiration />
 			<Divider />
-			<ContactMe props={contactMeForm} />
+			<ContactMe />
 		</div>
 	)
 }

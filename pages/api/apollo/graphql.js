@@ -2,7 +2,7 @@ import { ApolloServer } from 'apollo-server-micro'
 
 import { resolvers } from '../../../apollo/resolvers'
 import { typeDefs } from '../../../apollo/type-defs'
-import { prisma } from '../../../context/client/prisma'
+import { prisma } from '../../../helpers/client'
 
 const apolloServer = new ApolloServer({
 	typeDefs,

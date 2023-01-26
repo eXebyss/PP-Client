@@ -1,10 +1,10 @@
 import Footer from '../Footer'
 
-export default function Layout({ children, props }) {
+export default function Layout({ children }) {
 	return (
 		<main>
 			{children}
-			<Footer props={props} />
+			<Footer />
 		</main>
 	)
 }

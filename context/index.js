@@ -1,0 +1,1 @@
+export { ContentfulContext } from './ContentfulContext'
