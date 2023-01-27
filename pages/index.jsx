@@ -1,6 +1,5 @@
 import Head from 'next/head'
 
-// import { createContext } from 'react'
 import App from '../components/App'
 import Layout from '../components/Layout'
 import { siteDescription, siteTitle } from '../constants'
