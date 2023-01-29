@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: 18
 
       # ESLint and Prettier must be in `package.json`
       - name: Install Node.js dependencies
@@ -26,11 +26,11 @@ jobs:
 
       - name: Run linters
         uses: wearerequired/lint-action@v2
-        
+
         with:
           eslint: true
           prettier: true
-      
+
       - name: stylelint
         uses: reviewdog/action-stylelint@v1
         with:
