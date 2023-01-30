@@ -1,8 +1,13 @@
 {
-	"name": "M.F. Personal Portfolio Page",
-	"short_name": "M.F. Personal Portfolio Page",
-	"description": "Install Mihails Fjodrovos personal portfolio page as web application.",
-	"categories": ["developer"],
+	"name": "Mihails Fjodorovos personal portfolio page",
+	"short_name": "M.F. portfolio page",
+	"description": "This is a personal portfolio page for Mihails Fjodorovos giving some useful information about him regarding development stuff.",
+	"categories": ["react", "next.js", "node.js", "developer"],
+	"theme_color": "#0f172a",
+	"background_color": "#0f172a",
+	"start_url": "https://www.mihailsfjodorovs.com/",
+	"display": "standalone",
+	"orientation": "portrait",
 	"icons": [
 		{
 			"src": "icon.png",
@@ -39,10 +44,5 @@
 			"type": "image/png",
 			"purpose": "maskable"
 		}
-	],
-	"theme_color": "#FFFFFF",
-	"background_color": "#FFFFFF",
-	"start_url": "/",
-	"display": "standalone",
-	"orientation": "portrait"
+	]
 }

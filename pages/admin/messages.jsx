@@ -11,7 +11,6 @@ import Layout from '../../components/Layout/Layout'
 import ButtonLink from '../../components/UI/ButtonLink'
 import ThemeSelector from '../../components/UI/ThemeSelector'
 import { siteTitle } from '../../constants'
-import { contentful as contentfulClient } from '../../helpers/client/contentful'
 
 export async function getServerSideProps() {
 	const { data } = await client.query({
@@ -29,15 +28,10 @@ export async function getServerSideProps() {
 		`,
 	})
 
-	const entriesFooterInfo = await contentfulClient.getEntries({
-		content_type: process.env.CONTENT_TYPE1,
-	})
-
 	return {
 		props: {
 			messages: data.messages,
 			whitelistEmail: process.env.WHITELIST_EMAIL,
-			footerInfo: entriesFooterInfo.items,
 		},
 	}
 }
@@ -58,10 +52,11 @@ function MessageList({ props }) {
 	}
 
 	if (user) {
-		LogRocket.identify(user.email, {
-			name: user.name,
-			email: user.email,
-		})
+		process.env.NODE_ENV !== 'development' &&
+			LogRocket.identify(user.email, {
+				name: user.name,
+				email: user.email,
+			})
 
 		if (user.email === whitelistEmail) {
 			return (
@@ -170,9 +165,9 @@ function MessageList({ props }) {
 	)
 }
 
-export default function Messages({ messages, whitelistEmail, footerInfo }) {
+export default function Messages({ messages, whitelistEmail }) {
 	return (
-		<Layout props={footerInfo}>
+		<Layout>
 			<Head>
 				<title>{`${siteTitle}: Message List`}</title>
 				<meta
@@ -180,7 +175,6 @@ export default function Messages({ messages, whitelistEmail, footerInfo }) {
 					content="Message list send via contact form on M.F. Portfolio Page."
 				/>
 			</Head>
-
 			<div className="grid">
 				<nav className="my-4 mx-auto grid">
 					<ThemeSelector />
