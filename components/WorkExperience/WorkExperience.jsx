@@ -2,7 +2,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useContext, useState } from 'react'
 
 import { ContentfulContext } from '../../context'
-import useIntersectionObserver from '../../hooks/useIntersectionObserver'
+import { useIntersectionObserver } from '../../hooks'
 import classes from './workExperience.module.scss'
 
 const WorkExperience = () => {

@@ -6,7 +6,7 @@ import { useContext } from 'react'
 import { useState } from 'react'
 
 import { ContentfulContext } from '../../context'
-import useIntersectionObserver from '../../hooks/useIntersectionObserver'
+import { useIntersectionObserver } from '../../hooks'
 import classes from './myProjects.module.scss'
 import useProjectSort from './useProjectSort'
 

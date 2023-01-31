@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 
 import { Spinner } from '../../components/Icons'
 import { ContentfulContext } from '../../context'
-import useIntersectionObserver from '../../hooks/useIntersectionObserver'
+import { useIntersectionObserver } from '../../hooks'
 import Button from '../UI/Button'
 import Input from '../UI/Input'
 import Textarea from '../UI/Textarea'

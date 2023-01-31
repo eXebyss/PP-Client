@@ -2,7 +2,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useContext } from 'react'
 
 import { ContentfulContext } from '../../context'
-import useIntersectionObserver from '../../hooks/useIntersectionObserver'
+import { useIntersectionObserver } from '../../hooks'
 import TechStack from '../TechStack'
 import classes from './skills.module.scss'
 import useSkillSort from './useSkillSort'

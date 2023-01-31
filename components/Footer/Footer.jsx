@@ -1,12 +1,14 @@
 import { Codewars, Github, Linkedin } from '@icons-pack/react-simple-icons'
+import { version } from 'logrocket'
 import React from 'react'
 
 import { codewarsUrl, githubUrl, linkedinUrl } from '../../constants'
-import { useBrowserCheck } from '../../hooks'
+import { useAppVersion, useBrowserCheck } from '../../hooks'
 import classes from './footer.module.scss'
 
 function Footer() {
 	const isBrowser = useBrowserCheck()
+	const { appVersion } = useAppVersion()
 
 	const footerCopyRight = (isBrowser && window.location.pathname === '/' && (
 		<b>
@@ -51,6 +53,7 @@ function Footer() {
 						<Codewars className="w-6 h-6 fill-base-content hover:fill-primary" />
 					</a>
 				</div>
+				<p className="text-sm">v{appVersion}</p>
 			</div>
 		</footer>
 	)

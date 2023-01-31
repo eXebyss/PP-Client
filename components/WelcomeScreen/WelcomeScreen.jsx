@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 
 import { ContentfulContext } from '../../context'
-import useIntersectionObserver from '../../hooks/useIntersectionObserver'
+import { useIntersectionObserver } from '../../hooks'
 import { ArrowDown } from '../Icons'
 
 function WelcomeScreen() {

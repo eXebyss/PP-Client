@@ -41,7 +41,7 @@ import {
 	Webpack,
 } from '@icons-pack/react-simple-icons'
 
-import useIntersectionObserver from '../../hooks/useIntersectionObserver'
+import { useIntersectionObserver } from '../../hooks'
 
 const TechStack = () => {
 	const { useAppear } = useIntersectionObserver()
