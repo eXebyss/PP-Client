@@ -1,5 +1,4 @@
 import { Codewars, Github, Linkedin } from '@icons-pack/react-simple-icons'
-import { version } from 'logrocket'
 import React from 'react'
 
 import { codewarsUrl, githubUrl, linkedinUrl } from '../../constants'
