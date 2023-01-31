@@ -41,9 +41,15 @@ import {
 	Webpack,
 } from '@icons-pack/react-simple-icons'
 
+import useIntersectionObserver from '../../hooks/useIntersectionObserver'
+
 const TechStack = () => {
+	const { useAppear } = useIntersectionObserver()
+
+	useAppear('appear', 'disappear')
+
 	return (
-		<div className="flex flex-wrap justify-evenly bg-neutral p-4 rounded-md gap-2">
+		<div className="flex flex-wrap justify-evenly bg-neutral p-4 rounded-md gap-2 disappear">
 			<Html5 className="text-neutral-content hover:text-[#E34F26] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<CssThree className="text-neutral-content hover:text-[#1572B6] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Sass className="text-neutral-content hover:text-[#CC6699] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />

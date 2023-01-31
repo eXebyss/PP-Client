@@ -6,14 +6,18 @@ import { useContext } from 'react'
 import { useState } from 'react'
 
 import { ContentfulContext } from '../../context'
+import useIntersectionObserver from '../../hooks/useIntersectionObserver'
 import classes from './myProjects.module.scss'
 import useProjectSort from './useProjectSort'
 
 const MyProjects = () => {
 	const { personalProjects } = useContext(ContentfulContext)
 	const [currentSlide, setCurrentSlide] = useState(0)
-
 	const sortedArrayOfProjects = useProjectSort(personalProjects)
+
+	const { useAppear } = useIntersectionObserver()
+
+	useAppear('appear', 'disappear')
 
 	return (
 		<div className="hero bg-base-200" id="projects">
@@ -24,7 +28,7 @@ const MyProjects = () => {
 						/ <b>Or</b> Contributed
 					</h2>
 
-					<div className="carousel w-full">
+					<div className="carousel w-full disappear">
 						{sortedArrayOfProjects.map((e, i) => (
 							<div
 								id={i}
@@ -115,7 +119,7 @@ const MyProjects = () => {
 						))}
 					</div>
 
-					<div className="flex justify-center w-full py-2 gap-2">
+					<div className="flex justify-center w-full py-2 gap-2 disappear">
 						{personalProjects.map((_, i) => (
 							<a
 								href={`#${i}`}

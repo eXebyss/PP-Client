@@ -2,12 +2,16 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useContext } from 'react'
 
 import { ContentfulContext } from '../../context'
+import useIntersectionObserver from '../../hooks/useIntersectionObserver'
 import classes from './inspiration.module.scss'
 import useInspirationSort from './useInspirationSort'
 
 const Inspiration = () => {
 	const { inspiration } = useContext(ContentfulContext)
 	const sortedArrayOfInspirationCollection = useInspirationSort(inspiration)
+	const { useAppear } = useIntersectionObserver()
+
+	useAppear('appear', 'disappear')
 
 	return (
 		<div className="hero bg-base-200" id="skills">
@@ -23,7 +27,7 @@ const Inspiration = () => {
 								(element, index) => (
 									<li
 										key={index}
-										className={`${classes.inspirationListItem} text-neutral-content bg-neutral p-2 md:p-4 rounded-md`}
+										className={`text-neutral-content bg-neutral p-2 md:p-4 rounded-md disappear ${classes.inspirationListItem} `}
 									>
 										<h3
 											className={`inline-block ${classes.inspirationTitle}`}

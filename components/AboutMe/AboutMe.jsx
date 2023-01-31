@@ -4,10 +4,16 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useContext } from 'react'
 
 import { ContentfulContext } from '../../context'
+import useIntersectionObserver from '../../hooks/useIntersectionObserver'
 import classes from './aboutMe.module.scss'
 
 const AboutMe = () => {
+	const { useAppear } = useIntersectionObserver()
 	const { portfolioPage } = useContext(ContentfulContext)
+
+	useAppear('appear', 'disappear')
+	useAppear('appearLeft', 'disappearLeft')
+	useAppear('appearRight', 'disappearRight')
 
 	const { avatar, aboutMeDeveloperState, aboutMeDeveloperPosition } =
 		portfolioPage[0].fields
@@ -31,7 +37,7 @@ const AboutMe = () => {
 				</div>
 
 				<div>
-					<p className="py-6 fhd:text-lg">
+					<p className="py-6 fhd:text-lg disappear">
 						Hi 👋, my{' '}
 						<span
 							className="text-primary tooltip"
@@ -41,11 +47,13 @@ const AboutMe = () => {
 						</span>{' '}
 						is,
 					</p>
-					<h2>Mihails Fjodrovs</h2>
-					<div className={classes.aboutMeDeveloperState}>
+					<h2 className="disappearLeft">Mihails Fjodrovs</h2>
+					<div
+						className={`disappearRight ${classes.aboutMeDeveloperState}`}
+					>
 						{documentToReactComponents(aboutMeDeveloperState)}
 					</div>
-					<div className="py-6">
+					<div className="py-6 disappear">
 						{documentToReactComponents(aboutMeDeveloperPosition)}
 					</div>
 				</div>

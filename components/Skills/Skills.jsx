@@ -2,14 +2,17 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useContext } from 'react'
 
 import { ContentfulContext } from '../../context'
+import useIntersectionObserver from '../../hooks/useIntersectionObserver'
 import TechStack from '../TechStack'
 import classes from './skills.module.scss'
 import useSkillSort from './useSkillSort'
 
 const Skills = () => {
 	const { skillScopes, skillSet } = useContext(ContentfulContext)
-
+	const { useAppear } = useIntersectionObserver()
 	const sortedArrayOfSkillSet = useSkillSort(skillSet)
+
+	useAppear('appear', 'disappear')
 
 	return (
 		<div className="hero bg-base-200" id="skills">
@@ -21,7 +24,7 @@ const Skills = () => {
 						stack:
 					</h2>
 					<TechStack />
-					<div className={classes.skillsInfoText}>
+					<div className={`disappear ${classes.skillsInfoText}`}>
 						{documentToReactComponents(
 							skillScopes[0].fields.skillScopeInfo
 						)}
@@ -29,7 +32,7 @@ const Skills = () => {
 					<section className="grid">
 						<div className={classes.skillsGrid}>
 							{sortedArrayOfSkillSet.map((skill, index) => (
-								<div key={index}>
+								<div key={index} className="disappear">
 									{documentToReactComponents(
 										skill.fields.stackInfo
 									)}

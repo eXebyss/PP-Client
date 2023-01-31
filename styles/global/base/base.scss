@@ -9,7 +9,10 @@ html {
 html,
 body {
 	@apply p-0
-        m-0;
+        m-0
+		overflow-x-hidden /** this is a fallback case */
+		overflow-x-clip
+		relative;
 }
 
 a {
@@ -93,19 +96,19 @@ svg {
 
 /* width */
 ::-webkit-scrollbar {
-	@apply w-2 
+	@apply w-2
         2xl:w-2.5;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-	@apply bg-primary-content 
+	@apply bg-primary-content
         rounded;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	@apply bg-primary 
+	@apply bg-primary
         rounded;
 }
 
@@ -116,19 +119,19 @@ svg {
 
 /* width */
 ::-moz-scrollbar {
-	@apply w-2 
+	@apply w-2
         2xl:w-2.5;
 }
 
 /* Track */
 ::-moz-scrollbar-track {
-	@apply bg-primary-content 
+	@apply bg-primary-content
         rounded;
 }
 
 /* Handle */
 ::-moz-scrollbar-thumb {
-	@apply bg-primary 
+	@apply bg-primary
         rounded;
 }
 

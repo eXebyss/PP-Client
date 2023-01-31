@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 
 import { Spinner } from '../../components/Icons'
 import { ContentfulContext } from '../../context'
+import useIntersectionObserver from '../../hooks/useIntersectionObserver'
 import Button from '../UI/Button'
 import Input from '../UI/Input'
 import Textarea from '../UI/Textarea'
@@ -11,6 +12,11 @@ import useContactMe from './useContactMe'
 
 function ContactMe() {
 	const { contactMeForm: contactFormCMSData } = useContext(ContentfulContext)
+	const { useAppear } = useIntersectionObserver()
+
+	useAppear('appear', 'disappear')
+	useAppear('appearLeft', 'disappearLeft')
+	useAppear('appearRight', 'disappearRight')
 
 	const {
 		name,
@@ -33,33 +39,41 @@ function ContactMe() {
 
 	const contactMeForm = (
 		<>
-			<Input
-				text={'What is your name?'}
-				placeholder={'Your name'}
-				type={'text'}
-				value={name}
-				onChange={(e) => setName(e.target.value)}
-			/>
-			<Input
-				text={'What is your e-mail?'}
-				placeholder={'Your e-mail'}
-				type={'email'}
-				value={email}
-				onChange={(e) => setEmail(e.target.value)}
-				onBlur={(e) => blurHandler(e.target.name)}
-			/>
-			{emailDirty && emailErrorMessage && (
-				<div className="text-error mt-2">{emailErrorMessage}</div>
-			)}
-			<Textarea
-				text={'What is your message?'}
-				placeholder={'Your message...'}
-				value={message}
-				onChange={(e) => setMessage(e.target.value)}
-			/>
-			<Button disabled={!formValid} onClick={(e) => handleSendMessage(e)}>
-				Submit
-			</Button>
+			<section className="disappear">
+				<Input
+					text={'What is your name?'}
+					placeholder={'Your name'}
+					type={'text'}
+					value={name}
+					onChange={(e) => setName(e.target.value)}
+				/>
+				<Input
+					text={'What is your e-mail?'}
+					placeholder={'Your e-mail'}
+					type={'email'}
+					value={email}
+					onChange={(e) => setEmail(e.target.value)}
+					onBlur={(e) => blurHandler(e.target.name)}
+				/>
+				{emailDirty && emailErrorMessage && (
+					<div className="text-error mt-2">{emailErrorMessage}</div>
+				)}
+				<Textarea
+					text={'What is your message?'}
+					placeholder={'Your message...'}
+					value={message}
+					onChange={(e) => setMessage(e.target.value)}
+				/>
+			</section>
+
+			<section className="disappearRight">
+				<Button
+					disabled={!formValid}
+					onClick={(e) => handleSendMessage(e)}
+				>
+					Submit
+				</Button>
+			</section>
 		</>
 	)
 
@@ -94,35 +108,37 @@ function ContactMe() {
 					<h2 className="text-5xl font-bold pt-3 md:pt-6">
 						{contactFormData.contactMeTitle}
 					</h2>
-					<div className="text-justify md:text-center py-2 md:py-4">
+					<div className="text-justify md:text-center py-2 md:py-4 disappearLeft">
 						{documentToReactComponents(
 							contactFormData.contactMeFormText
 						)}
 					</div>
 
-					{(isLoading && (
-						<Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
-					)) ||
-						(messageSendSuccess
-							? successMessage
-							: messageSendError
-							? errorMessage
-							: contactMeForm)}
+					<div>
+						{(isLoading && (
+							<Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
+						)) ||
+							(messageSendSuccess
+								? successMessage
+								: messageSendError
+								? errorMessage
+								: contactMeForm)}
 
-					{messageSendSuccess ? (
-						<Toast
-							type="success"
-							message={'Your message has been sent!'}
-						/>
-					) : (
-						''
-					)}
+						{messageSendSuccess ? (
+							<Toast
+								type="success"
+								message={'Your message has been sent!'}
+							/>
+						) : (
+							''
+						)}
 
-					{messageSendError ? (
-						<Toast errorMessage={messageSendError} />
-					) : (
-						''
-					)}
+						{messageSendError ? (
+							<Toast errorMessage={messageSendError} />
+						) : (
+							''
+						)}
+					</div>
 				</form>
 			</div>
 		</div>
