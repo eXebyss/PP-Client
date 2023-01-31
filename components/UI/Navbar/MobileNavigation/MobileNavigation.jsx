@@ -1,17 +1,17 @@
 import ThemeSelector from '../../ThemeSelector'
-import useMobileNavigation from './useMobileNavigation'
+import useNavigation from '../useNavigation'
 
 function MobileNavigation() {
-	const { scrollNavbar, windowPositionY } = useMobileNavigation()
+	const { scrollNavbar } = useNavigation()
 
-	scrollNavbar()
+	scrollNavbar('navbarMobile')
 
 	return (
 		<nav
 			id="navbarMobile"
-			className={`mx-auto navbar bg-base-100 md:hidden ${
-				windowPositionY >= window.innerHeight ? 'sticky' : null
-			} top-0 z-10 px-4 transition-all duration-1000`}
+			className={
+				'mx-auto navbar bg-base-100 md:hidden sticky top-0 z-10 px-4 transition-all duration-1000'
+			}
 		>
 			<label htmlFor="menu-modal" className="btn modal-button">
 				<i className="fa-solid fa-bars" />
