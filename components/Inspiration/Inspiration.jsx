@@ -14,7 +14,7 @@ const Inspiration = () => {
 	useAppear('appear', 'disappear')
 
 	return (
-		<div className="hero bg-base-200" id="skills">
+		<div className="hero bg-base-200" id="inspiration">
 			<div className="hero-content w-full text-center max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl fhd:max-w-5xl 2k:max-w-6xl 4k:max-w-7xl">
 				<div>
 					<h2 className="font-bold pt-4 md:pt-6">Inspired</h2>

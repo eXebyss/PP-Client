@@ -29,6 +29,12 @@ function DesktopNavigation() {
 			</a>
 			<a
 				className="btn btn-ghost normal-case text-sm md:text-base fhd:text-lg"
+				href="#inspiration"
+			>
+				.inspired<span className="text-primary">( )</span>
+			</a>
+			<a
+				className="btn btn-ghost normal-case text-sm md:text-base fhd:text-lg"
 				href="#contact"
 			>
 				.contact<span className="text-primary">( )</span>
