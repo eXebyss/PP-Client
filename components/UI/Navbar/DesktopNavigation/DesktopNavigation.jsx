@@ -39,7 +39,6 @@ function DesktopNavigation() {
 			>
 				.contact<span className="text-primary">( )</span>
 			</a>
-
 			<ThemeSelector />
 		</nav>
 	)

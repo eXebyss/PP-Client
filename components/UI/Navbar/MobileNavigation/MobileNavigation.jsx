@@ -1,14 +1,22 @@
 import ThemeSelector from '../../ThemeSelector'
+import useMobileNavigation from './useMobileNavigation'
 
 function MobileNavigation() {
+	const { scrollNavbar, windowPositionY } = useMobileNavigation()
+
+	scrollNavbar()
+
 	return (
-		<nav className="mx-auto navbar bg-base-100 md:hidden sticky top-0 z-10 px-4">
+		<nav
+			id="navbarMobile"
+			className={`mx-auto navbar bg-base-100 md:hidden ${
+				windowPositionY >= window.innerHeight ? 'sticky' : null
+			} top-0 z-10 px-4 transition-all duration-1000`}
+		>
 			<label htmlFor="menu-modal" className="btn modal-button">
 				<i className="fa-solid fa-bars" />
 			</label>
-
 			<ThemeSelector />
-
 			<input type="checkbox" id="menu-modal" className="modal-toggle" />
 			<label
 				htmlFor="menu-modal"
