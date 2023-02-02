@@ -1,0 +1,10 @@
+.hero-content {
+	@apply max-w-lg
+		md:max-w-xl
+		lg:max-w-2xl
+		xl:max-w-3xl
+		2xl:max-w-4xl
+		fhd:max-w-5xl
+		2k:max-w-6xl
+		4k:max-w-8xl;
+}

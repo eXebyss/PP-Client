@@ -52,7 +52,7 @@ function Footer() {
 						<Codewars className="w-6 h-6 fill-base-content hover:fill-primary" />
 					</a>
 				</div>
-				<p className="text-sm">v{appVersion}</p>
+				<p>v{appVersion}</p>
 			</div>
 		</footer>
 	)

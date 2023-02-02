@@ -104,7 +104,7 @@ function ContactMe() {
 	return (
 		<div className="hero bg-base-200" id="contact">
 			<div className="hero-content text-center w-full">
-				<form className="w-full max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl fhd:max-w-5xl 2k:max-w-6xl 4k:max-w-7xl">
+				<form className="w-full">
 					<h2 className="text-5xl font-bold pt-3 md:pt-6">
 						{contactFormData.contactMeTitle}
 					</h2>

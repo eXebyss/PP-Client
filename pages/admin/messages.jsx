@@ -182,7 +182,7 @@ export default function Messages({ messages, whitelistEmail }) {
 
 				<div className="hero bg-base-200">
 					<div className="hero-content text-center">
-						<div className="w-full max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl fhd:max-w-5xl 2k:max-w-6xl 4k:max-w-7xl">
+						<div className="w-full">
 							<h2 className="justify-center font-bold">
 								📫 Message list:
 							</h2>

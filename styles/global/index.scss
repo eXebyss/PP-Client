@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 @import './base/base.scss';
+@import './components/hero.scss';
 
 @layer utilities {
 	.disappear {
