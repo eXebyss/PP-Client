@@ -16,13 +16,13 @@ function useNavigation() {
 					document.getElementById(id).classList.contains('top-0') &&
 						document.getElementById(id).classList.remove('top-0')
 				} else if (prevScrollPos > currentScrollPos) {
-					document.getElementById(id).classList.remove('-top-20')
-					document.getElementById(id).classList.add('fixed', 'top-0')
+					document.getElementById(id).classList.add('top-0')
 				} else {
 					document
 						.getElementById(id)
-						.classList.remove('fixed', 'top-0')
-					document.getElementById(id).classList.add('-top-20')
+						.classList.add('fixed', '-top-20')
+					document.getElementById(id).classList.contains('top-0') &&
+						document.getElementById(id).classList.remove('top-0')
 				}
 
 				prevScrollPos = currentScrollPos
