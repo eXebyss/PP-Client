@@ -10,13 +10,13 @@ function MobileNavigation() {
 		<nav
 			id="navbarMobile"
 			className={
-				'mx-auto navbar bg-base-100 md:hidden sticky top-0 z-10 px-4 transition-all duration-1000'
+				'mx-auto navbar bg-base-100 md:hidden z-10 px-4 transition-all duration-1000'
 			}
 		>
 			<label htmlFor="menu-modal" className="btn modal-button">
 				<i className="fa-solid fa-bars" />
 			</label>
-			<ThemeSelector />
+			<ThemeSelector styles={'mx-auto'} />
 			<input type="checkbox" id="menu-modal" className="modal-toggle" />
 			<label
 				htmlFor="menu-modal"

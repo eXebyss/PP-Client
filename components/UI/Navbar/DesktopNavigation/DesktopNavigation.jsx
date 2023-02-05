@@ -9,7 +9,7 @@ function DesktopNavigation() {
 	return (
 		<nav
 			id="navbarDesktop"
-			className="mx-auto navbar bg-base-100 hidden md:inline-block text-center sticky top-0 z-10 transition-all duration-1000"
+			className="mx-auto navbar bg-base-100 hidden md:inline-block text-center z-10 transition-all duration-1000"
 		>
 			<a
 				className="btn btn-ghost normal-case text-sm md:text-base fhd:text-lg"
