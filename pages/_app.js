@@ -11,10 +11,13 @@ import '../styles/global/index.scss'
 
 function App({ Component, pageProps: { ...pageProps } }) {
 	process.env.NODE_ENV !== 'development' &&
+		process.env.NEXT_PUBLIC_LOGROCKET_APPID &&
 		LogRocket.init(process.env.NEXT_PUBLIC_LOGROCKET_APPID)
 
 	useEffect(() => {
 		process.env.NODE_ENV !== 'development' &&
+			process.env.process.env.NEXT_PUBLIC_HOTJAR_HJID &&
+			process.env.NEXT_PUBLIC_HOTJAR_HJSV &&
 			hotjar.initialize(
 				process.env.NEXT_PUBLIC_HOTJAR_HJID,
 				process.env.NEXT_PUBLIC_HOTJAR_HJSV

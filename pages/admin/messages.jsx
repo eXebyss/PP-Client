@@ -53,6 +53,7 @@ function MessageList({ props }) {
 
 	if (user) {
 		process.env.NODE_ENV !== 'development' &&
+			process.env.NEXT_PUBLIC_LOGROCKET_APPID &&
 			LogRocket.identify(user.email, {
 				name: user.name,
 				email: user.email,
