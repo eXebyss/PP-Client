@@ -16,7 +16,7 @@ function App({ Component, pageProps: { ...pageProps } }) {
 
 	useEffect(() => {
 		process.env.NODE_ENV !== 'development' &&
-			process.env.process.env.NEXT_PUBLIC_HOTJAR_HJID &&
+			process.env.NEXT_PUBLIC_HOTJAR_HJID &&
 			process.env.NEXT_PUBLIC_HOTJAR_HJSV &&
 			hotjar.initialize(
 				process.env.NEXT_PUBLIC_HOTJAR_HJID,
