@@ -16,7 +16,7 @@ function ContactMe() {
 
 	useAppear('appear', 'disappear')
 	useAppear('appearLeft', 'disappearLeft')
-	useAppear('appearRight', 'disappearRight')
+	useAppear('appearTop', 'disappearTop')
 
 	const {
 		name,
@@ -65,8 +65,7 @@ function ContactMe() {
 					onChange={(e) => setMessage(e.target.value)}
 				/>
 			</section>
-
-			<section className="disappearRight">
+			<section className="disappearTop">
 				<Button
 					disabled={!formValid}
 					onClick={(e) => handleSendMessage(e)}
@@ -113,7 +112,6 @@ function ContactMe() {
 							contactFormData.contactMeFormText
 						)}
 					</div>
-
 					<div>
 						{(isLoading && (
 							<Spinner className="animate-spin h-10 w-10 fill-primary mx-auto my-4" />
@@ -132,7 +130,6 @@ function ContactMe() {
 						) : (
 							''
 						)}
-
 						{messageSendError ? (
 							<Toast errorMessage={messageSendError} />
 						) : (
