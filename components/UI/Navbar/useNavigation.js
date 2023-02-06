@@ -5,10 +5,13 @@ function useNavigation() {
 		useEffect(() => {
 			let prevScrollPos = window.pageYOffset
 
-			window.onscroll = function () {
-				let currentScrollPos = window.pageYOffset
+			window.onscroll = async function () {
+				let currentScrollPos = window.pageYOffsetyarn
 
 				if (prevScrollPos > currentScrollPos) {
+					!document.getElementById(id).classList.contains('top-0') &&
+						document.getElementById(id).classList.add('top-0')
+
 					document.getElementById(id).classList.contains('-top-20') &&
 						document.getElementById(id).classList.remove('-top-20')
 				} else if (prevScrollPos < currentScrollPos) {
@@ -16,6 +19,9 @@ function useNavigation() {
 						.getElementById(id)
 						.classList.contains('-top-20') &&
 						document.getElementById(id).classList.add('-top-20')
+
+					document.getElementById(id).classList.contains('top-0') &&
+						document.getElementById(id).classList.remove('top-0')
 				}
 
 				prevScrollPos = currentScrollPos
