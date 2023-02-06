@@ -6,7 +6,7 @@ function useNavigation() {
 			let prevScrollPos = window.pageYOffset
 
 			window.onscroll = async function () {
-				let currentScrollPos = window.pageYOffsetyarn
+				let currentScrollPos = window.pageYOffset
 
 				if (prevScrollPos > currentScrollPos) {
 					!document.getElementById(id).classList.contains('top-0') &&
