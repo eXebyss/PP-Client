@@ -8,21 +8,14 @@ function useNavigation() {
 			window.onscroll = function () {
 				let currentScrollPos = window.pageYOffset
 
-				if (prevScrollPos < window.innerHeight) {
+				if (prevScrollPos > currentScrollPos) {
 					document.getElementById(id).classList.contains('-top-20') &&
 						document.getElementById(id).classList.remove('-top-20')
-					document.getElementById(id).classList.contains('fixed') &&
-						document.getElementById(id).classList.remove('fixed')
-					document.getElementById(id).classList.contains('top-0') &&
-						document.getElementById(id).classList.remove('top-0')
-				} else if (prevScrollPos > currentScrollPos) {
-					document.getElementById(id).classList.add('top-0')
-				} else {
-					document
+				} else if (prevScrollPos < currentScrollPos) {
+					!document
 						.getElementById(id)
-						.classList.add('fixed', '-top-20')
-					document.getElementById(id).classList.contains('top-0') &&
-						document.getElementById(id).classList.remove('top-0')
+						.classList.contains('-top-20') &&
+						document.getElementById(id).classList.add('-top-20')
 				}
 
 				prevScrollPos = currentScrollPos

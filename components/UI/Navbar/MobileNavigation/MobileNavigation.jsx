@@ -10,7 +10,7 @@ function MobileNavigation() {
 		<nav
 			id="navbarMobile"
 			className={
-				'mx-auto navbar bg-base-100 md:hidden z-10 px-4 transition-all duration-1000'
+				'sticky top-0 z-10 mx-auto navbar bg-base-100 md:hidden px-4 transition-all duration-1000'
 			}
 		>
 			<label htmlFor="menu-modal" className="btn modal-button">

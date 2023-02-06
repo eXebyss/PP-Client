@@ -13,7 +13,7 @@ const AboutMe = () => {
 
 	useAppear('appear', 'disappear')
 	useAppear('appearLeft', 'disappearLeft')
-	useAppear('appearRight', 'disappearRight')
+	useAppear('appearTop', 'disappearTop')
 
 	const { avatar, aboutMeDeveloperState, aboutMeDeveloperPosition } =
 		portfolioPage[0].fields
@@ -49,7 +49,7 @@ const AboutMe = () => {
 					</p>
 					<h2 className="disappearLeft">Mihails Fjodrovs</h2>
 					<div
-						className={`disappearRight ${classes.aboutMeDeveloperState}`}
+						className={`disappearTop ${classes.aboutMeDeveloperState}`}
 					>
 						{documentToReactComponents(aboutMeDeveloperState)}
 					</div>

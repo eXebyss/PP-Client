@@ -9,10 +9,7 @@ html {
 html,
 body {
 	@apply p-0
-        m-0
-		overflow-x-hidden /** this is a fallback case */
-		overflow-x-clip
-		relative;
+        m-0;
 }
 
 a {
@@ -29,6 +26,10 @@ html {
 body {
 	@apply mx-auto
         grid;
+}
+
+main {
+	@apply relative;
 }
 
 h1 {

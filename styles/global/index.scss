@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 @import './base/base.scss';
-@import './components/hero.scss';
+@import './components/index.scss';
 
 @layer utilities {
 	.disappear {
@@ -29,14 +29,14 @@
 		transform: translateX(0);
 	}
 
-	.disappearRight {
+	.disappearTop {
 		opacity: 0;
 		filter: blur(5px);
-		transform: translateX(100%);
+		transform: translateY(100%);
 		transition: all 1s;
 	}
 
-	.appearRight {
+	.appearTop {
 		opacity: 1;
 		filter: blur(0);
 		transform: translateX(0);
