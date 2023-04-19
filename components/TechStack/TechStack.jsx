@@ -6,6 +6,7 @@ import {
 	Bootstrap,
 	Contentful,
 	CssThree,
+	Cypress,
 	Docker,
 	Eslint,
 	Express,
@@ -77,6 +78,7 @@ const TechStack = () => {
 				className="text-neutral-content hover:text-[#8BC0D0] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150"
 				title="Alpine.js"
 			/>
+			<Cypress className="text-neutral-content hover:text-[#17202C] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Graphql className="text-neutral-content hover:text-[#E10098] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Apollographql className="text-neutral-content hover:text-[#311C87] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Socketdotio
