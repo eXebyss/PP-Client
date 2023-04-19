@@ -25,6 +25,7 @@ import {
 	Nextdotjs,
 	Nodedotjs,
 	Php,
+	Pnpm,
 	Postgresql,
 	Prettier,
 	Prisma,
@@ -39,6 +40,7 @@ import {
 	Typescript,
 	Vercel,
 	Webpack,
+	Yarn,
 } from '@icons-pack/react-simple-icons'
 
 import { useIntersectionObserver } from '../../hooks'
@@ -62,6 +64,8 @@ const TechStack = () => {
 				className="text-neutral-content hover:text-[#339933] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150"
 				title="Node.js"
 			/>
+			<Yarn className="text-neutral-content hover:text-[#2C8EBB] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+			<Pnpm className="text-neutral-content hover:text-[#F69220] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Express className="text-neutral-content hover:text-[#000000] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<ReactJs className="animate-spin-slow text-neutral-content hover:text-[#61DAFB] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Redux className="animate-bounce-slow text-neutral-content hover:text-[#764ABC] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />

@@ -1,9 +1,9 @@
 import AboutMe from '../AboutMe'
 import ContactMe from '../ContactMe'
-import Divider from '../Divider'
 import Inspiration from '../Inspiration'
 import MyProjects from '../MyProjects'
 import Skills from '../Skills'
+import Divider from '../UI/Divider'
 import WorkExperience from '../WorkExperience'
 
 function Main() {
