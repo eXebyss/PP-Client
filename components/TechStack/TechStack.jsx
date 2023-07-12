@@ -1,5 +1,6 @@
 import {
 	Alpinedotjs,
+	Amazonaws,
 	Apollographql,
 	Auth0,
 	Axios,
@@ -12,6 +13,7 @@ import {
 	Express,
 	Git,
 	Github,
+	Gitlab,
 	Googleanalytics,
 	Googlecloud,
 	Graphql,
@@ -97,6 +99,7 @@ const TechStack = () => {
 			<Pwa className="text-neutral-content hover:text-[#5A0FC8] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Git className="text-neutral-content hover:text-[#F05032] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Github className="text-neutral-content hover:text-[#181717] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+			<Gitlab className="text-neutral-content hover:text-[#FC6D26] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Docker className="text-neutral-content hover:text-[#2496ED] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Auth0 className="text-neutral-content hover:text-[#EB5424] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Contentful className="text-neutral-content hover:text-[#2478CC] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
@@ -106,6 +109,7 @@ const TechStack = () => {
 			<Hotjar className="text-neutral-content hover:text-[#FD3A5C] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Heroku className="text-neutral-content hover:text-[#430098] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Vercel className="text-neutral-content hover:text-[#000000] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
+			<Amazonaws className="text-neutral-content hover:text-[#232F3E] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Microsoftazure className="text-neutral-content hover:text-[#0078D4] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 			<Magento className="text-neutral-content hover:text-[#EE672F] transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-150" />
 		</div>
